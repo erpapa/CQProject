@@ -28,9 +28,9 @@
     self.title = @"KVO";
     self.p = [[Person alloc] init];
     self.p.age = 20;
-//    [self szy_addObserverBlockForKeyPath:@"name" block:^(id  _Nonnull obj, id  _Nonnull oldVal, id  _Nonnull newVal) {
-//        NSLog(@"触发了KVO监听");
-//    }];
+    [self szy_addObserverBlockForKeyPath:@"name" block:^(id  _Nonnull obj, id  _Nonnull oldVal, id  _Nonnull newVal) {
+        NSLog(@"触发了KVO监听");
+    }];
 //    self addObserver:self.p forKeyPath:@"name" options:<#(NSKeyValueObservingOptions)#> context:<#(nullable void *)#>
     
     
@@ -55,7 +55,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    self.name = @"哈哈哈哈";
+    self.name = @"哈哈哈哈";
 //    self.p = [[Person alloc] init];
     self.p.age = 30;
 }

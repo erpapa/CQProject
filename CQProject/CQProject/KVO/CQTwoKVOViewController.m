@@ -30,6 +30,10 @@
     NSLog(@"触发了Kvo");
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    self.p.age = 40;
+}
+
 
 
 /*
