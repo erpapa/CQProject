@@ -1,0 +1,12 @@
+${PODS_ROOT}/Target Support Files/Pods-CQProject/Pods-CQProject-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
+${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework
+${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework
+${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
+${BUILT_PRODUCTS_DIR}/REFormattedNumberField/REFormattedNumberField.framework
+${BUILT_PRODUCTS_DIR}/RETableViewManager/RETableViewManager.framework
+${BUILT_PRODUCTS_DIR}/REValidation/REValidation.framework
+${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework
+${BUILT_PRODUCTS_DIR}/ReactiveViewModel/ReactiveViewModel.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework
