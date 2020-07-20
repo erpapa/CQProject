@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CQKVOViewController.h
 //  CQProject
 //
 //  Created by CharType on 2020/7/20.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface CQKVOViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END
