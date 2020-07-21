@@ -31,6 +31,7 @@
     [self szy_addObserverBlockForKeyPath:@"name" block:^(id  _Nonnull obj, id  _Nonnull oldVal, id  _Nonnull newVal) {
         NSLog(@"触发了KVO监听");
     }];
+
 //    self addObserver:self.p forKeyPath:@"name" options:<#(NSKeyValueObservingOptions)#> context:<#(nullable void *)#>
     
     

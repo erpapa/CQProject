@@ -20,10 +20,21 @@
     [super viewDidLoad];
     // 第一个参数是添加监听者
     // 第二个是回调者
-//    [self addObserver:self forKeyPath:@"p.age" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
-    [self szy_addObserverBlockForKeyPath:@"p.age" block:^(id  _Nonnull obj, id  _Nonnull oldVal, id  _Nonnull newVal) {
-        NSLog(@"kvo监听回调");
-    }];
+    [self.p addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    NSLog(@"%p", object_getClass(self.p));
+//    @object_getClass(self.p);
+    
+    [self.p removeObserver:self forKeyPath:@"age"];
+    NSLog(@"%p", object_getClass(self.p));
+    [self addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionNew context:nil];
+    NSLog(@"self -> %p", object_getClass(self));
+    
+    [self.p addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+     NSLog(@"%p", object_getClass(self.p));
+    
+//    [self szy_addObserverBlockForKeyPath:@"p.age" block:^(id  _Nonnull obj, id  _Nonnull oldVal, id  _Nonnull newVal) {
+//        NSLog(@"kvo监听回调");
+//    }];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {

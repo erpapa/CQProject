@@ -11,6 +11,7 @@
 #import "Masonry.h"
 #import "YYKit.h"
 #import "CQKVOViewController.h"
+#import "CQGestureRecognizerViewController.h"
 
 @interface CQRootViewController ()<RETableViewManagerDelegate>
 @property (strong, nonatomic) RETableViewManager *tableManager;
@@ -33,13 +34,30 @@
     kvoItem.selectionHandler = ^(RETableViewItem *item) {
         @strongify(self);
         item.selectionStyle = UITableViewCellSelectionStyleNone;
-        Class cls = NSClassFromString(@"NSKVONotifying_CQKVOViewController");
+//        Class cls = NSClassFromString(@"NSKVONotifying_CQKVOViewController");
         
         CQKVOViewController *viewControlleer = [[CQKVOViewController alloc] init];
         viewControlleer.view.backgroundColor = [UIColor whiteColor];
         [self.navigationController pushViewController:viewControlleer animated:YES];
     };
     [self.section addItem:kvoItem];
+    
+    RETableViewItem *gestureRecognizerItem = [[RETableViewItem alloc] initWithTitle:@"手势事件"];
+    gestureRecognizerItem.selectionHandler = ^(RETableViewItem *item) {
+        @strongify(self);
+        item.selectionStyle = UITableViewCellSelectionStyleNone;
+        CQGestureRecognizerViewController *viewControlleer = [[CQGestureRecognizerViewController alloc] init];
+        [self.navigationController pushViewController:viewControlleer animated:YES];
+    };
+    [self.section addItem:gestureRecognizerItem];
+    
+    RETableViewItem *dataItem = [[RETableViewItem alloc] initWithTitle:@"数据结构"];
+    dataItem.selectionHandler = ^(RETableViewItem *item) {
+        @strongify(self);
+        item.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+    };
+    [self.section addItem:dataItem];
     [self.tableView reloadData];
     
 }
