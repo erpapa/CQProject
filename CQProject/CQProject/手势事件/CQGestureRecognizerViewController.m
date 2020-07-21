@@ -7,6 +7,7 @@
 //
 
 #import "CQGestureRecognizerViewController.h"
+#import "UIButton+Expand.h"
 
 @interface CQGestureRecognizerViewController ()
 @property (nonatomic, strong) UIGestureRecognizer *guest;
@@ -34,12 +35,12 @@
         make.top.equalTo(self.view).offset(150);
         make.size.mas_equalTo(CGSizeMake(100, 100));
     }];
-//    [self.view addSubview:self.button];
-//    [self.button mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.view).offset(100);
-//        make.top.equalTo(self.view).offset(100);
-//        make.size.mas_equalTo(CGSizeMake(100, 100));
-//    }];
+    [self.view addSubview:self.button];
+    [self.button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(200);
+        make.top.equalTo(self.view).offset(200);
+        make.size.mas_equalTo(CGSizeMake(100, 100));
+    }];
     
 }
 
@@ -84,6 +85,8 @@
         _button = [[UIButton alloc] init];
         [_button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
         _button.backgroundColor = [UIColor redColor];
+//        _button.expandEdgeInsets = UIEdgeInsetsMake(-10, -10, -10, -10);
+        _button.expandTop = -10;
     }
     return _button;
 }
@@ -92,7 +95,7 @@
     if (!_guest) {
         @weakify(self);
         _guest = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
-            @strongify(self);
+//            @strongify(self);
             NSLog(@"父View的单击手势对象被响应了");
         }];
         _guest.delaysTouchesBegan = YES;
