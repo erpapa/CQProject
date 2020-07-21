@@ -18,6 +18,7 @@ PODS:
   - Masonry (1.0.2)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
+  - Objection (1.6.1)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -43,6 +44,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - Masonry (~> 1.0.2)
   - MLeaksFinder
+  - Objection (= 1.6.1)
   - ReactiveCocoa (~> 2.5)
   - ReactiveViewModel (~> 0.3)
   - RETableViewManager (~> 1.7)
@@ -56,6 +58,7 @@ SPEC REPOS:
     - FBRetainCycleDetector
     - Masonry
     - MLeaksFinder
+    - Objection
     - ReactiveCocoa
     - ReactiveViewModel
     - REFormattedNumberField
@@ -77,6 +80,7 @@ SPEC CHECKSUMS:
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+  Objection: ed03f2219cb22d2b5b893114219fe6c7e3263bde
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   ReactiveViewModel: 58918dcbcec2d3151195ab1ed9163c57a8163999
   REFormattedNumberField: 70fc5fb1218ebd5ee9983820defd12806d5c6ec6
@@ -85,6 +89,6 @@ SPEC CHECKSUMS:
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: e3a38007c7bceecf6aa0b9afd738e82350acae95
+PODFILE CHECKSUM: 101ea561489b41b5863eb46445deadfec0b94aa0
 
 COCOAPODS: 1.7.4

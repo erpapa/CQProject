@@ -14,6 +14,7 @@ target 'CQProject' do
     pod 'RETableViewManager', '~> 1.7'
     pod 'YYKit', :git => 'https://github.com/cfxiao/YYKit.git'
     pod 'MLeaksFinder'
+    pod 'Objection', '1.6.1'
 
 
   target 'CQProjectTests' do

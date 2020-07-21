@@ -3,6 +3,7 @@ ${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
 ${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework
 ${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework
 ${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
+${BUILT_PRODUCTS_DIR}/Objection/Objection.framework
 ${BUILT_PRODUCTS_DIR}/REFormattedNumberField/REFormattedNumberField.framework
 ${BUILT_PRODUCTS_DIR}/RETableViewManager/RETableViewManager.framework
 ${BUILT_PRODUCTS_DIR}/REValidation/REValidation.framework
