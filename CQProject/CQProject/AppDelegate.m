@@ -14,6 +14,8 @@
 @synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    JSObjectionInjector *injector = [JSObjection createInjector];
+    [JSObjection setDefaultInjector:injector];
     return YES;
 }
 

@@ -8,14 +8,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "03FFF8B3-70A6-42DD-BFCB-F7F2D8243582"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CQProject/KVO/CQTwoKVOViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -23,65 +23,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5E8B6A3E-47CD-40DA-BBEE-89B2E1D13111"
+            uuid = "0B88671B-2AAE-486C-967C-35EFCA2D8682"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CQProject/&#x624b;&#x52bf;&#x4e8b;&#x4ef6;/&#x6dfb;&#x52a0;Button&#x7684;&#x54cd;&#x5e94;&#x533a;&#x57df;/UIButton+Expand.m"
+            filePath = "CQProject/&#x7ec4;&#x4ef6;&#x5316;/CQComponentViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "-pointInside:withEvent:"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "-buttonClick"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "03AAA83B-1D0A-4035-9A23-4C63C43E0DCA"
+            uuid = "4895DEC8-717C-4D91-8B59-A3B6F4251F34"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CQProject/&#x624b;&#x52bf;&#x4e8b;&#x4ef6;/&#x6dfb;&#x52a0;Button&#x7684;&#x54cd;&#x5e94;&#x533a;&#x57df;/UIButton+Expand.m"
+            filePath = "CQProject/KVO/CQTwoKVOViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "-pointInside:withEvent:"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "-init"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "03AAA83B-1D0A-4035-9A23-4C63C43E0DCA - 614f21160aa9593d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[UIButton(Expand) pointInside:withEvent:]"
-                  moduleName = "CQProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengqian/Desktop/%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/CQProject/CQProject/CQProject/%E6%89%8B%E5%8A%BF%E4%BA%8B%E4%BB%B6/%E6%B7%BB%E5%8A%A0Button%E7%9A%84%E5%93%8D%E5%BA%94%E5%8C%BA%E5%9F%9F/UIButton+Expand.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "502">
-               </Location>
-               <Location
-                  uuid = "03AAA83B-1D0A-4035-9A23-4C63C43E0DCA - 614f21160aa9593d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[UIButton(Expand) pointInside:withEvent:]"
-                  moduleName = "CQProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengqian/Desktop/%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/CQProject/CQProject/CQProject/%E6%89%8B%E5%8A%BF%E4%BA%8B%E4%BB%B6/%E6%B7%BB%E5%8A%A0Button%E7%9A%84%E5%93%8D%E5%BA%94%E5%8C%BA%E5%9F%9F/UIButton+Expand.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "659">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C892B0C1-1D56-464E-A1DC-15A8DB8F958D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CQProject/&#x624b;&#x52bf;&#x4e8b;&#x4ef6;/View/CQGuestTestView.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "-touchesBegan:withEvent:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

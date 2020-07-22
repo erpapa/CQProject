@@ -12,6 +12,7 @@
 #import "YYKit.h"
 #import "CQKVOViewController.h"
 #import "CQGestureRecognizerViewController.h"
+#import "CQComponentViewController.h"
 
 @interface CQRootViewController ()<RETableViewManagerDelegate>
 @property (strong, nonatomic) RETableViewManager *tableManager;
@@ -58,6 +59,16 @@
         
     };
     [self.section addItem:dataItem];
+    
+    RETableViewItem *componentItem = [[RETableViewItem alloc] initWithTitle:@"组件化中间层"];
+    componentItem.selectionHandler = ^(RETableViewItem *item) {
+        @strongify(self);
+        item.selectionStyle = UITableViewCellSelectionStyleNone;
+        CQComponentViewController *viewController = [[CQComponentViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    };
+    [self.section addItem:componentItem];
+    
     [self.tableView reloadData];
     
 }

@@ -15,7 +15,14 @@
 @end
 
 @implementation CQTwoKVOViewController
-
+objection_register(CQTwoKVOViewController);
+objection_requires(@"p");
+- (instancetype) init {
+    if (self = [super init]) {
+        NSLog(@"初始化了");
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 第一个参数是添加监听者
