@@ -23,6 +23,7 @@ objection_requires(@"p");
     }
     return self;
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 第一个参数是添加监听者

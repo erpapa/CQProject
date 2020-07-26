@@ -13,6 +13,9 @@
 #import "CQKVOViewController.h"
 #import "CQGestureRecognizerViewController.h"
 #import "CQComponentViewController.h"
+#import "CQGCDViewController.h"
+#import "CQUIViewController.h"
+#import "CQOCLViewController.h"
 
 @interface CQRootViewController ()<RETableViewManagerDelegate>
 @property (strong, nonatomic) RETableViewManager *tableManager;
@@ -30,8 +33,19 @@
         make.left.right.width.height.equalTo(self.view);
     }];
     
-    RETableViewItem *kvoItem = [[RETableViewItem alloc] initWithTitle:@"KVO"];
+    
     @weakify(self);
+     RETableViewItem *ocItem = [[RETableViewItem alloc] initWithTitle:@"OC语法特性"];
+        ocItem.selectionHandler = ^(RETableViewItem *item) {
+        @strongify(self);
+        item.selectionStyle = UITableViewCellSelectionStyleNone;
+        CQOCLViewController *viewControlleer = [[CQOCLViewController alloc] init];
+        viewControlleer.view.backgroundColor = [UIColor whiteColor];
+        [self.navigationController pushViewController:viewControlleer animated:YES];
+    };
+    [self.section addItem:ocItem];
+    
+    RETableViewItem *kvoItem = [[RETableViewItem alloc] initWithTitle:@"KVO"];
     kvoItem.selectionHandler = ^(RETableViewItem *item) {
         @strongify(self);
         item.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -68,6 +82,24 @@
         [self.navigationController pushViewController:viewController animated:YES];
     };
     [self.section addItem:componentItem];
+    
+    RETableViewItem *gcdItem = [[RETableViewItem alloc] initWithTitle:@"GCD"];
+    gcdItem.selectionHandler = ^(RETableViewItem *item) {
+        @strongify(self);
+        item.selectionStyle = UITableViewCellSelectionStyleNone;
+        CQGCDViewController *viewController = [[CQGCDViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    };
+    [self.section addItem:gcdItem];
+    
+    RETableViewItem *UIItem = [[RETableViewItem alloc] initWithTitle:@"UI"];
+    UIItem.selectionHandler = ^(RETableViewItem *item) {
+        @strongify(self);
+        item.selectionStyle = UITableViewCellSelectionStyleNone;
+        CQUIViewController *viewController = [[CQUIViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    };
+    [self.section addItem:UIItem];
     
     [self.tableView reloadData];
     

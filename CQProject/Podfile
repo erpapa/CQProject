@@ -15,6 +15,7 @@ target 'CQProject' do
     pod 'YYKit', :git => 'https://github.com/cfxiao/YYKit.git'
     pod 'MLeaksFinder'
     pod 'Objection', '1.6.1'
+    pod "CTMediator"
 
 
   target 'CQProjectTests' do

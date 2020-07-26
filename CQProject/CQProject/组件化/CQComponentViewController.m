@@ -7,6 +7,7 @@
 // 组件化中间层如何通信测试
 
 #import "CQComponentViewController.h"
+#import "Person.h"
 
 @interface CQComponentViewController ()
 @property (nonatomic, strong) UIButton *button;
@@ -27,8 +28,13 @@
 }
 
 - (void)buttonClick {
-    id object = [[JSObjection defaultInjector] getObject:NSClassFromString(@"CQTwoKVOViewController")];
-    [self.navigationController pushViewController:object animated:YES];
+    Person *p = [[Person alloc] init];
+    p.age = 20;
+    id obj = [[CTMediator sharedInstance] performTarget:@"CQTwoKVOViewController" action:@"setP:" params:@{@"p":p} shouldCacheTarget:YES];
+    
+    
+//    id object = [[JSObjection defaultInjector] getObject:NSClassFromString(@"CQTwoKVOViewController")];
+//    [self.navigationController pushViewController:object animated:YES];
 }
 
 - (UIButton *)button {

@@ -15,6 +15,7 @@
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) Person *p;
 @property (nonatomic, strong) UIButton *button;
+@property (nonatomic, copy) NSString *name999;
 @end
 
 @implementation CQKVOViewController
@@ -58,7 +59,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     self.name = @"哈哈哈哈";
 //    self.p = [[Person alloc] init];
-    self.p.age = 30;
+//    self.p.age = 30;
 }
 
 - (void)buttonClick {
