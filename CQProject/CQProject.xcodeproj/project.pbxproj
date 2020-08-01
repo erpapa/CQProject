@@ -34,6 +34,13 @@
 		3BEC4F4924C575CF0085935F /* CQTwoKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC4F4824C575CF0085935F /* CQTwoKVOViewController.m */; };
 		3BEC4F4D24C57A7B0085935F /* CQBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC4F4C24C57A7B0085935F /* CQBaseViewController.m */; };
 		3BEC4F5924C5CA430085935F /* CQGestureRecognizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC4F5824C5CA430085935F /* CQGestureRecognizerViewController.m */; };
+		3BF42D1724CD1CBB00AA6977 /* CQOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF42D1624CD1CBB00AA6977 /* CQOtherViewController.m */; };
+		3BF42D1A24CD1CD300AA6977 /* Target_kvoTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF42D1924CD1CD300AA6977 /* Target_kvoTwo.m */; };
+		3BF42D1D24CD557600AA6977 /* CQURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF42D1C24CD557600AA6977 /* CQURLSessionManager.m */; };
+		3BF42D2124CD857600AA6977 /* CQWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF42D2024CD857600AA6977 /* CQWebViewController.m */; };
+		3BF42D2524CE73E700AA6977 /* CQDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF42D2424CE73E700AA6977 /* CQDownloadManager.m */; };
+		3BF42D2824CE741300AA6977 /* CQDownloadConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF42D2724CE741300AA6977 /* CQDownloadConfig.m */; };
+		3BF42D2E24D28EC200AA6977 /* CQRunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF42D2D24D28EC200AA6977 /* CQRunLoopViewController.m */; };
 		7A50556EA950B7AD99544FAF /* Pods_CQProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DE81A2BD888586EF454870 /* Pods_CQProject.framework */; };
 		DBB70DA760ABD3BDA43C1DDE /* Pods_CQProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A6C31F07F450336ACED9D2 /* Pods_CQProjectUITests.framework */; };
 /* End PBXBuildFile section */
@@ -111,6 +118,20 @@
 		3BEC4F4C24C57A7B0085935F /* CQBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQBaseViewController.m; sourceTree = "<group>"; };
 		3BEC4F5724C5CA430085935F /* CQGestureRecognizerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQGestureRecognizerViewController.h; sourceTree = "<group>"; };
 		3BEC4F5824C5CA430085935F /* CQGestureRecognizerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQGestureRecognizerViewController.m; sourceTree = "<group>"; };
+		3BF42D1524CD1CBB00AA6977 /* CQOtherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQOtherViewController.h; sourceTree = "<group>"; };
+		3BF42D1624CD1CBB00AA6977 /* CQOtherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQOtherViewController.m; sourceTree = "<group>"; };
+		3BF42D1824CD1CD300AA6977 /* Target_kvoTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_kvoTwo.h; sourceTree = "<group>"; };
+		3BF42D1924CD1CD300AA6977 /* Target_kvoTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_kvoTwo.m; sourceTree = "<group>"; };
+		3BF42D1B24CD557600AA6977 /* CQURLSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQURLSessionManager.h; sourceTree = "<group>"; };
+		3BF42D1C24CD557600AA6977 /* CQURLSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQURLSessionManager.m; sourceTree = "<group>"; };
+		3BF42D1F24CD857600AA6977 /* CQWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQWebViewController.h; sourceTree = "<group>"; };
+		3BF42D2024CD857600AA6977 /* CQWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQWebViewController.m; sourceTree = "<group>"; };
+		3BF42D2324CE73E700AA6977 /* CQDownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQDownloadManager.h; sourceTree = "<group>"; };
+		3BF42D2424CE73E700AA6977 /* CQDownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQDownloadManager.m; sourceTree = "<group>"; };
+		3BF42D2624CE741300AA6977 /* CQDownloadConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQDownloadConfig.h; sourceTree = "<group>"; };
+		3BF42D2724CE741300AA6977 /* CQDownloadConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQDownloadConfig.m; sourceTree = "<group>"; };
+		3BF42D2C24D28EC200AA6977 /* CQRunLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQRunLoopViewController.h; sourceTree = "<group>"; };
+		3BF42D2D24D28EC200AA6977 /* CQRunLoopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQRunLoopViewController.m; sourceTree = "<group>"; };
 		44DE81A2BD888586EF454870 /* Pods_CQProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CQProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD9EAD8F0B76B275B8BBE09 /* Pods-CQProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CQProject.release.xcconfig"; path = "Target Support Files/Pods-CQProject/Pods-CQProject.release.xcconfig"; sourceTree = "<group>"; };
 		5F1DFEFFF0570DCAC8513D74 /* Pods-CQProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CQProject.debug.xcconfig"; path = "Target Support Files/Pods-CQProject/Pods-CQProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +214,9 @@
 		3B71A09224C5174D00F695D2 /* CQProject */ = {
 			isa = PBXGroup;
 			children = (
+				3BF42D2224CE73C300AA6977 /* download */,
+				3BF42D1E24CD856100AA6977 /* WebView */,
+				3BF42D1424CD1C9E00AA6977 /* Other */,
 				3BE0026824CBB17800829706 /* OC语法特性 */,
 				3BE0026424CB533700829706 /* UI */,
 				3B51DB0324C82D5300BBE0B4 /* GCD */,
@@ -291,6 +315,8 @@
 				3BE0026224CAFCA300829706 /* NSKVONotifying_CQKVOViewController.m */,
 				3BEC4F4724C575CF0085935F /* CQTwoKVOViewController.h */,
 				3BEC4F4824C575CF0085935F /* CQTwoKVOViewController.m */,
+				3BF42D1824CD1CD300AA6977 /* Target_kvoTwo.h */,
+				3BF42D1924CD1CD300AA6977 /* Target_kvoTwo.m */,
 			);
 			path = KVO;
 			sourceTree = "<group>";
@@ -314,6 +340,8 @@
 		3BEC4F3E24C521F00085935F /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
+				3BF42D2C24D28EC200AA6977 /* CQRunLoopViewController.h */,
+				3BF42D2D24D28EC200AA6977 /* CQRunLoopViewController.m */,
 			);
 			path = RunLoop;
 			sourceTree = "<group>";
@@ -339,6 +367,8 @@
 			children = (
 				3B51DAFE24C7ED2100BBE0B4 /* CQImageDownloader.h */,
 				3B51DAFF24C7ED2100BBE0B4 /* CQImageDownloader.m */,
+				3BF42D1B24CD557600AA6977 /* CQURLSessionManager.h */,
+				3BF42D1C24CD557600AA6977 /* CQURLSessionManager.m */,
 			);
 			path = "AFN框架解析";
 			sourceTree = "<group>";
@@ -359,6 +389,35 @@
 			children = (
 			);
 			path = "数据结构";
+			sourceTree = "<group>";
+		};
+		3BF42D1424CD1C9E00AA6977 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				3BF42D1524CD1CBB00AA6977 /* CQOtherViewController.h */,
+				3BF42D1624CD1CBB00AA6977 /* CQOtherViewController.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		3BF42D1E24CD856100AA6977 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				3BF42D1F24CD857600AA6977 /* CQWebViewController.h */,
+				3BF42D2024CD857600AA6977 /* CQWebViewController.m */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		3BF42D2224CE73C300AA6977 /* download */ = {
+			isa = PBXGroup;
+			children = (
+				3BF42D2324CE73E700AA6977 /* CQDownloadManager.h */,
+				3BF42D2424CE73E700AA6977 /* CQDownloadManager.m */,
+				3BF42D2624CE741300AA6977 /* CQDownloadConfig.h */,
+				3BF42D2724CE741300AA6977 /* CQDownloadConfig.m */,
+			);
+			path = download;
 			sourceTree = "<group>";
 		};
 		73DFD70FD745B45DDE8750AD /* Pods */ = {
@@ -607,23 +666,30 @@
 				3BEC4F4924C575CF0085935F /* CQTwoKVOViewController.m in Sources */,
 				3B71A0CA24C51A8A00F695D2 /* CQRootNavigationViewController.m in Sources */,
 				3B71A09B24C5174D00F695D2 /* CQRootViewController.m in Sources */,
+				3BF42D1724CD1CBB00AA6977 /* CQOtherViewController.m in Sources */,
 				3BEC4F4624C569A20085935F /* Person.m in Sources */,
 				3BE0026324CAFCA300829706 /* NSKVONotifying_CQKVOViewController.m in Sources */,
 				3B9C2EA824C7077500CF811A /* CQComponentViewController.m in Sources */,
 				3BEC4F4224C5222B0085935F /* NSObject+CQKVO.m in Sources */,
 				3BE0027124CBB56000829706 /* CQPerson.m in Sources */,
+				3BF42D2524CE73E700AA6977 /* CQDownloadManager.m in Sources */,
 				3B51DB0624C82DC800BBE0B4 /* CQGCDViewController.m in Sources */,
 				3BEC4F3C24C5216C0085935F /* CQKVOViewController.m in Sources */,
 				3BE0026E24CBB33F00829706 /* CQStudent.m in Sources */,
+				3BF42D2824CE741300AA6977 /* CQDownloadConfig.m in Sources */,
 				3B71A09524C5174D00F695D2 /* AppDelegate.m in Sources */,
 				3B51DB0024C7ED2100BBE0B4 /* CQImageDownloader.m in Sources */,
 				3B6736FC24C7DD31007F0D4C /* CQGuestTestView.m in Sources */,
 				3B9C2EA424C6E85700CF811A /* UIButton+Expand.m in Sources */,
+				3BF42D2E24D28EC200AA6977 /* CQRunLoopViewController.m in Sources */,
 				3BE0026B24CBB2D700829706 /* CQOCLViewController.m in Sources */,
+				3BF42D2124CD857600AA6977 /* CQWebViewController.m in Sources */,
 				3B71A0A624C5174E00F695D2 /* main.m in Sources */,
 				3B51DB0924C8330800BBE0B4 /* CQOperation.m in Sources */,
+				3BF42D1A24CD1CD300AA6977 /* Target_kvoTwo.m in Sources */,
 				3BEC4F5924C5CA430085935F /* CQGestureRecognizerViewController.m in Sources */,
 				3BE0026724CB534B00829706 /* CQUIViewController.m in Sources */,
+				3BF42D1D24CD557600AA6977 /* CQURLSessionManager.m in Sources */,
 				3BEC4F4D24C57A7B0085935F /* CQBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -802,7 +868,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.szy.seebaby.CQProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.szy.seebaby.CQProject.nihao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -821,7 +887,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.szy.seebaby.CQProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.szy.seebaby.CQProject.nihao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -16,6 +16,7 @@
 #import "CQGCDViewController.h"
 #import "CQUIViewController.h"
 #import "CQOCLViewController.h"
+#import "CQRunLoopViewController.h"
 
 @interface CQRootViewController ()<RETableViewManagerDelegate>
 @property (strong, nonatomic) RETableViewManager *tableManager;
@@ -44,6 +45,16 @@
         [self.navigationController pushViewController:viewControlleer animated:YES];
     };
     [self.section addItem:ocItem];
+    
+    RETableViewItem *webViewItem = [[RETableViewItem alloc] initWithTitle:@"H5交互"];
+        webViewItem.selectionHandler = ^(RETableViewItem *item) {
+        @strongify(self);
+        item.selectionStyle = UITableViewCellSelectionStyleNone;
+        CQOCLViewController *viewControlleer = [[CQOCLViewController alloc] init];
+        viewControlleer.view.backgroundColor = [UIColor whiteColor];
+        [self.navigationController pushViewController:viewControlleer animated:YES];
+    };
+    [self.section addItem:webViewItem];
     
     RETableViewItem *kvoItem = [[RETableViewItem alloc] initWithTitle:@"KVO"];
     kvoItem.selectionHandler = ^(RETableViewItem *item) {
@@ -100,6 +111,15 @@
         [self.navigationController pushViewController:viewController animated:YES];
     };
     [self.section addItem:UIItem];
+    
+    RETableViewItem *runLoopItem = [[RETableViewItem alloc] initWithTitle:@"RunLoop"];
+    runLoopItem.selectionHandler = ^(RETableViewItem *item) {
+        @strongify(self);
+        item.selectionStyle = UITableViewCellSelectionStyleNone;
+        CQRunLoopViewController *viewController = [[CQRunLoopViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    };
+    [self.section addItem:runLoopItem];
     
     [self.tableView reloadData];
     

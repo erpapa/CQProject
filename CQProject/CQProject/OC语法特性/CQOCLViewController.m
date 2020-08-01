@@ -22,6 +22,9 @@
     CQPerson *p3 = [CQPerson modelWithJSON:@{@"name2":@"aaa"}];
     CQPerson *p4 = [CQPerson modelWithJSON:@{@"name3":@"aaa"}];
     NSLog(@"哈哈哈哈哈");
+//    [NSTimer scheduledTimerWithTimeInterval:1 block:^(NSTimer * _Nonnull timer) {
+//        
+//    } repeats:YES];
 }
 
 /*

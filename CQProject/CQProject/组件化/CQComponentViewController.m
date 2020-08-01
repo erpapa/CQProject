@@ -30,7 +30,8 @@
 - (void)buttonClick {
     Person *p = [[Person alloc] init];
     p.age = 20;
-    id obj = [[CTMediator sharedInstance] performTarget:@"CQTwoKVOViewController" action:@"setP:" params:@{@"p":p} shouldCacheTarget:YES];
+    id obj = [[CTMediator sharedInstance] performTarget:@"kvoTwo" action:@"CTMediatorViewControllerWith" params:@{@"p":p} shouldCacheTarget:YES];
+    [self.navigationController pushViewController:obj animated:YES];
     
     
 //    id object = [[JSObjection defaultInjector] getObject:NSClassFromString(@"CQTwoKVOViewController")];

@@ -18,18 +18,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"GCD";
-    dispatch_queue_t serialQueue = dispatch_queue_create("test", DISPATCH_QUEUE_SERIAL);
+    [self test8];
     
-    dispatch_async(serialQueue, ^{
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), serialQueue, ^{
-            NSLog(@"延时3秒执行，在子线程");
-        });
+    
+}
+
+- (void)test8 {
+    dispatch_queue_t queue = dispatch_queue_create("test", DISPATCH_QUEUE_SERIAL);
+//    dispatch_queue_t queue = dispatch_queue_create("test", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(queue, ^{
+//        sleep(3);
+        NSLog(@"1 %@",[NSThread currentThread]);
     });
     
-    [self performSelector:@selector(test7) afterDelay:3];
+//    dispatch_sync(queue, ^{
+////        sleep(1);
+//        NSLog(@"2 %@",[NSThread currentThread]);
+//    });
+//
+//    dispatch_async(queue, ^{
+//        NSLog(@"3 %@",[NSThread currentThread]);
+//    });
+//
+//    dispatch_sync(queue, ^{
+////        sleep(5);
+//        NSLog(@"4 %@",[NSThread currentThread]);
+//    });
+//
+//    dispatch_async(queue, ^{
+//        NSLog(@"5 %@",[NSThread currentThread]);
+//    });
+    NSLog(@"6");
     
-    [self test];
-    [self test1];
+//    2、4、6、3、5、1
+
 }
 
 - (void)test7 {
