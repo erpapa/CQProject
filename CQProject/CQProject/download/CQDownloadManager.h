@@ -10,11 +10,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @class CQDownloadConfig;
-
+@class CQDownloadOperation;
 @interface CQDownloadManager : NSObject
 + (CQDownloadManager *)defaultManager;
 + (CQDownloadManager *)defaultManagerwithConfig:(CQDownloadConfig *)config;
 
+- (CQDownloadOperation *)downloadWithUrl:(NSString *)url
+                                progress:(nullable void (^)(NSProgress *downloadProgress))downloadProgressBlock
+                             destination:(nullable NSURL * (^)(NSURL *targetPath, NSURLResponse *response))destination
+                       completionHandler:(nullable void (^)(NSURLResponse *response, NSURL * _Nullable filePath, NSError * _Nullable error))completionHandler;
+
+- (void)addOperationToQueue:(NSOperation *)operation;
 @end
 
 NS_ASSUME_NONNULL_END

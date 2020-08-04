@@ -23,7 +23,9 @@
     
 }
 
+
 - (void)test8 {
+    [self performSelector:@selector(test) withObject:nil afterDelay:1];
     dispatch_queue_t queue = dispatch_queue_create("test", DISPATCH_QUEUE_SERIAL);
 //    dispatch_queue_t queue = dispatch_queue_create("test", DISPATCH_QUEUE_CONCURRENT);
     dispatch_async(queue, ^{
@@ -31,14 +33,26 @@
         NSLog(@"1 %@",[NSThread currentThread]);
     });
     
-//    dispatch_sync(queue, ^{
-////        sleep(1);
-//        NSLog(@"2 %@",[NSThread currentThread]);
-//    });
+    dispatch_async(queue, ^{
+//        sleep(1);
+        NSLog(@"2 %@",[NSThread currentThread]);
+    });
 //
-//    dispatch_async(queue, ^{
-//        NSLog(@"3 %@",[NSThread currentThread]);
-//    });
+    dispatch_sync(queue, ^{
+        NSLog(@"4 %@",[NSThread currentThread]);
+    });
+    
+    dispatch_async(queue, ^{
+        NSLog(@"5 %@",[NSThread currentThread]);
+    });
+    
+    dispatch_async(queue, ^{
+        NSLog(@"6 %@",[NSThread currentThread]);
+    });
+    
+    dispatch_async(queue, ^{
+        NSLog(@"7 %@",[NSThread currentThread]);
+    });
 //
 //    dispatch_sync(queue, ^{
 ////        sleep(5);
@@ -48,7 +62,7 @@
 //    dispatch_async(queue, ^{
 //        NSLog(@"5 %@",[NSThread currentThread]);
 //    });
-    NSLog(@"6");
+//    NSLog(@"6");
     
 //    2、4、6、3、5、1
 

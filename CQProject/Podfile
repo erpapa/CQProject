@@ -16,6 +16,7 @@ target 'CQProject' do
     pod 'MLeaksFinder'
     pod 'Objection', '1.6.1'
     pod "CTMediator"
+    pod "dsBridge"
 
 
   target 'CQProjectTests' do

@@ -7,7 +7,7 @@
 //
 
 #import "CQUIViewController.h"
-
+typedef  void (^MyBlock)(void);
 
 @interface CQUIViewController ()
 @property (nonatomic, strong) UIView *custemView;
@@ -16,6 +16,8 @@
 @property (nonatomic, strong) UIControl *control;
 @property (nonatomic, strong) UIWindow *window;
 @property (nonatomic, strong) UIWindow *window2;
+@property (nonatomic, strong) MyBlock block;
+@property (nonatomic, strong) UIButton *button;
 @end
 
 @implementation CQUIViewController
@@ -23,15 +25,50 @@
     NSLog(@"%s",__func__);
 }
 
+int a = 10;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    __block int b = 10;
+    self.block = ^{
+        NSLog(@"%d", b);
+    };
+    
+    [self buttonTest];
+    
     
 //    BOOL iscache = [YYKeychain setPassword:@"123456" forService:@"com.ashaj.chengqian" account:@"CharType"];
-    NSString *password = [YYKeychain getPasswordForService:@"com.ashaj.chengqian" account:@"CharType"];
     NSLog(@"%s",__func__);
 //    dispatch_queue_get_label(<#dispatch_queue_t  _Nullable queue#>)
     
     
+}
+
+- (void)buttonTest {
+    self.button = [[UIButton alloc] init];
+    [self.view addSubview:self.button];
+    [self.button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(100);
+        make.top.equalTo(self.view).offset(100);
+        make.size.mas_equalTo(CGSizeMake(100, 100));
+    }];
+    self.button.backgroundColor = [UIColor redColor];
+    
+    UITapGestureRecognizer *gest = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
+        NSLog(@"手势1响应了");
+    }];
+    UITapGestureRecognizer *gest2 = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
+        NSLog(@"手势2响应了");
+    }];
+    [self.button addGestureRecognizer:gest2];
+    [self.button addGestureRecognizer:gest];
+    
+    
+//    [self.button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)buttonClick {
+    NSLog(@"button被点击了");
 }
 
 - (void)testWindow {

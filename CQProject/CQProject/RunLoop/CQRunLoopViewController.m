@@ -9,10 +9,15 @@
 #import "CQRunLoopViewController.h"
 
 @interface CQRunLoopViewController ()
-
+@property (nonatomic, strong) CADisplayLink *link;
 @end
 
 @implementation CQRunLoopViewController
+
+- (void)dealloc {
+    [self.link invalidate];
+    NSLog(@"%s",__func__);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,11 +26,34 @@
 //        NSLog(@"block的任务执行");
 //    } repeats:YES];
 //    CATiledLayer 和 DownSampling
-    [self test8];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    });
+    
+    [self test1];
     
     
+}
+
+- (void)test1 {
+    self.link = [CADisplayLink displayLinkWithTarget:[YYWeakProxy proxyWithTarget:self] selector:@selector(displayLink)];
+    NSLog(@"%@",[NSRunLoop currentRunLoop]);
+    [self.link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    NSLog(@"%@",[NSRunLoop currentRunLoop]);
+    
+}
+
+- (void)displayLink {
+    NSLog(@"哈哈哈哈");
+}
+
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if ([self.link isPaused]) {
+        self.link.paused = YES;
+//        [self.link performSelector:@selector(resume)];
+    } else {
+//        [self.link performSelector:@selector(isPaused)];
+        self.link.paused = NO;
+    }
+//    [self.link invalidate];
 }
 
 - (void)test8 {

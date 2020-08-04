@@ -17,6 +17,10 @@
 #import "CQUIViewController.h"
 #import "CQOCLViewController.h"
 #import "CQRunLoopViewController.h"
+#import "CQWebViewController.h"
+#import "YYFPSLabel.h"
+#import "CQDownloadTestViewController.h"
+#import "CQVideoPlayerViewController.h"
 
 @interface CQRootViewController ()<RETableViewManagerDelegate>
 @property (strong, nonatomic) RETableViewManager *tableManager;
@@ -28,6 +32,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    YYFPSLabel *label = [[YYFPSLabel alloc] initWithFrame:CGRectMake(10, 10, 60, 20)];
+    [self.navigationController.view addSubview:label];
+    [self.navigationController.view bringSubviewToFront:label];
     [self.tableManager addSection:self.section];
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -50,7 +57,7 @@
         webViewItem.selectionHandler = ^(RETableViewItem *item) {
         @strongify(self);
         item.selectionStyle = UITableViewCellSelectionStyleNone;
-        CQOCLViewController *viewControlleer = [[CQOCLViewController alloc] init];
+        CQWebViewController *viewControlleer = [[CQWebViewController alloc] init];
         viewControlleer.view.backgroundColor = [UIColor whiteColor];
         [self.navigationController pushViewController:viewControlleer animated:YES];
     };
@@ -120,6 +127,24 @@
         [self.navigationController pushViewController:viewController animated:YES];
     };
     [self.section addItem:runLoopItem];
+    
+    RETableViewItem *downloadItem = [[RETableViewItem alloc] initWithTitle:@"下载功能"];
+    downloadItem.selectionHandler = ^(RETableViewItem *item) {
+        @strongify(self);
+        item.selectionStyle = UITableViewCellSelectionStyleNone;
+        CQDownloadTestViewController *viewController = [[CQDownloadTestViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    };
+    [self.section addItem:downloadItem];
+    
+    RETableViewItem *videoPlayerItem = [[RETableViewItem alloc] initWithTitle:@"视频播放功能"];
+    videoPlayerItem.selectionHandler = ^(RETableViewItem *item) {
+        @strongify(self);
+        item.selectionStyle = UITableViewCellSelectionStyleNone;
+        CQVideoPlayerViewController *viewController = [[CQVideoPlayerViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    };
+    [self.section addItem:videoPlayerItem];
     
     [self.tableView reloadData];
     

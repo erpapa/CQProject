@@ -8,10 +8,12 @@
 
 #import "CQDownloadManager.h"
 #import "CQDownloadConfig.h"
+#import "CQDownloadOperation.h"
 
 @interface CQDownloadManager()
 @property (nonatomic, strong) CQDownloadConfig *downloadConfig;
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
+@property (nonatomic, strong) NSMutableArray *stopOperation;
 @end
 
 @implementation CQDownloadManager
@@ -35,6 +37,27 @@
     return self;
 }
 
+
+- (CQDownloadOperation *)downloadWithUrl:(NSString *)url
+         progress:(nullable void (^)(NSProgress *downloadProgress))downloadProgressBlock
+      destination:(nullable NSURL * (^)(NSURL *targetPath, NSURLResponse *response))destination
+                       completionHandler:(nullable void (^)(NSURLResponse *response, NSURL * _Nullable filePath, NSError * _Nullable error))completionHandler {
+    if (![url isNotBlank]) {
+        return nil;
+    }
+    NSURL *URL = [NSURL URLWithString:url];
+    CQDownloadOperation *operation = [[CQDownloadOperation alloc] initWithUrl:URL progress:downloadProgressBlock destination:destination completionHandler:completionHandler];
+    
+    return operation;
+}
+
+- (void)addOperationToQueue:(NSOperation *)operation {
+    if (operation != nil && [operation isKindOfClass:[NSOperation class]]) {
+        [self.operationQueue addOperation:operation];
+    }
+    
+}
+
 - (CQDownloadConfig *)downloadConfig {
     if (!_downloadConfig) {
         _downloadConfig = [[CQDownloadConfig alloc] init];
@@ -44,4 +67,17 @@
     }
     return _downloadConfig;
 }
+
+- (NSOperationQueue *)operationQueue {
+    if (!_operationQueue) {
+        _operationQueue = [[NSOperationQueue alloc] init];
+        if (self.downloadConfig) {
+            _operationQueue.maxConcurrentOperationCount = self.downloadConfig.maxThreadCount;
+        } else {
+            _operationQueue.maxConcurrentOperationCount = 10;
+        }
+    }
+    return _operationQueue;
+}
+
 @end

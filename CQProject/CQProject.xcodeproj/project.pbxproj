@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		281A32DBFCF3DB9F9E4E6A7E /* Pods_CQProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6E51D4DAFCE3711D665006 /* Pods_CQProjectTests.framework */; };
+		3B021CD424D6721E00D44AF9 /* CQDownloadTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B021CD324D6721E00D44AF9 /* CQDownloadTestViewController.m */; };
+		3B021CDD24D6816B00D44AF9 /* MJDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B021CD724D6816B00D44AF9 /* MJDownloadManager.m */; };
+		3B021CDE24D6816B00D44AF9 /* MJDownloadConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B021CD824D6816B00D44AF9 /* MJDownloadConst.m */; };
+		3B021CDF24D6816B00D44AF9 /* NSString+MJDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B021CDB24D6816B00D44AF9 /* NSString+MJDownload.m */; };
+		3B021CE324D6CFF000D44AF9 /* CQVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B021CE224D6CFF000D44AF9 /* CQVideoPlayerViewController.m */; };
+		3B021CE624D6D08A00D44AF9 /* CQVideoPlayerAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B021CE524D6D08A00D44AF9 /* CQVideoPlayerAVPlayerViewController.m */; };
+		3B021CEB24D7B5EF00D44AF9 /* NSString+CQDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B021CEA24D7B5EF00D44AF9 /* NSString+CQDownload.m */; };
+		3B021CEE24D7B98E00D44AF9 /* CQTwoDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B021CED24D7B98E00D44AF9 /* CQTwoDownloadManager.m */; };
 		3B51DB0024C7ED2100BBE0B4 /* CQImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DAFF24C7ED2100BBE0B4 /* CQImageDownloader.m */; };
 		3B51DB0624C82DC800BBE0B4 /* CQGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DB0524C82DC800BBE0B4 /* CQGCDViewController.m */; };
 		3B51DB0924C8330800BBE0B4 /* CQOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DB0824C8330800BBE0B4 /* CQOperation.m */; };
@@ -41,6 +49,9 @@
 		3BF42D2524CE73E700AA6977 /* CQDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF42D2424CE73E700AA6977 /* CQDownloadManager.m */; };
 		3BF42D2824CE741300AA6977 /* CQDownloadConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF42D2724CE741300AA6977 /* CQDownloadConfig.m */; };
 		3BF42D2E24D28EC200AA6977 /* CQRunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF42D2D24D28EC200AA6977 /* CQRunLoopViewController.m */; };
+		3BF42D3524D5213500AA6977 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 3BF42D3424D5213500AA6977 /* index.html */; };
+		3BF42D3E24D65E9600AA6977 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF42D3D24D65E9600AA6977 /* YYFPSLabel.m */; };
+		3BF42D4224D6683C00AA6977 /* CQDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF42D4124D6683C00AA6977 /* CQDownloadOperation.m */; };
 		7A50556EA950B7AD99544FAF /* Pods_CQProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DE81A2BD888586EF454870 /* Pods_CQProject.framework */; };
 		DBB70DA760ABD3BDA43C1DDE /* Pods_CQProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A6C31F07F450336ACED9D2 /* Pods_CQProjectUITests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +76,23 @@
 /* Begin PBXFileReference section */
 		08963E625E968B6E00D4203A /* Pods-CQProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CQProjectTests.release.xcconfig"; path = "Target Support Files/Pods-CQProjectTests/Pods-CQProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		19A6C31F07F450336ACED9D2 /* Pods_CQProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CQProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B021CD224D6721E00D44AF9 /* CQDownloadTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQDownloadTestViewController.h; sourceTree = "<group>"; };
+		3B021CD324D6721E00D44AF9 /* CQDownloadTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQDownloadTestViewController.m; sourceTree = "<group>"; };
+		3B021CD624D6816B00D44AF9 /* NSString+MJDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJDownload.h"; sourceTree = "<group>"; };
+		3B021CD724D6816B00D44AF9 /* MJDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJDownloadManager.m; sourceTree = "<group>"; };
+		3B021CD824D6816B00D44AF9 /* MJDownloadConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJDownloadConst.m; sourceTree = "<group>"; };
+		3B021CD924D6816B00D44AF9 /* MJDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJDownloadManager.h; sourceTree = "<group>"; };
+		3B021CDA24D6816B00D44AF9 /* MJDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJDownload.h; sourceTree = "<group>"; };
+		3B021CDB24D6816B00D44AF9 /* NSString+MJDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJDownload.m"; sourceTree = "<group>"; };
+		3B021CDC24D6816B00D44AF9 /* MJDownloadConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJDownloadConst.h; sourceTree = "<group>"; };
+		3B021CE124D6CFF000D44AF9 /* CQVideoPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQVideoPlayerViewController.h; sourceTree = "<group>"; };
+		3B021CE224D6CFF000D44AF9 /* CQVideoPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQVideoPlayerViewController.m; sourceTree = "<group>"; };
+		3B021CE424D6D08A00D44AF9 /* CQVideoPlayerAVPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQVideoPlayerAVPlayerViewController.h; sourceTree = "<group>"; };
+		3B021CE524D6D08A00D44AF9 /* CQVideoPlayerAVPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQVideoPlayerAVPlayerViewController.m; sourceTree = "<group>"; };
+		3B021CE924D7B5EF00D44AF9 /* NSString+CQDownload.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+CQDownload.h"; sourceTree = "<group>"; };
+		3B021CEA24D7B5EF00D44AF9 /* NSString+CQDownload.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CQDownload.m"; sourceTree = "<group>"; };
+		3B021CEC24D7B98E00D44AF9 /* CQTwoDownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQTwoDownloadManager.h; sourceTree = "<group>"; };
+		3B021CED24D7B98E00D44AF9 /* CQTwoDownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQTwoDownloadManager.m; sourceTree = "<group>"; };
 		3B51DAFE24C7ED2100BBE0B4 /* CQImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQImageDownloader.h; sourceTree = "<group>"; };
 		3B51DAFF24C7ED2100BBE0B4 /* CQImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQImageDownloader.m; sourceTree = "<group>"; };
 		3B51DB0424C82DC800BBE0B4 /* CQGCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQGCDViewController.h; sourceTree = "<group>"; };
@@ -132,6 +160,11 @@
 		3BF42D2724CE741300AA6977 /* CQDownloadConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQDownloadConfig.m; sourceTree = "<group>"; };
 		3BF42D2C24D28EC200AA6977 /* CQRunLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQRunLoopViewController.h; sourceTree = "<group>"; };
 		3BF42D2D24D28EC200AA6977 /* CQRunLoopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQRunLoopViewController.m; sourceTree = "<group>"; };
+		3BF42D3424D5213500AA6977 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = "../../../../../../掌通家园代码/index.html"; sourceTree = "<group>"; };
+		3BF42D3D24D65E9600AA6977 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		3BF42D3F24D65E9E00AA6977 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		3BF42D4024D6683C00AA6977 /* CQDownloadOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQDownloadOperation.h; sourceTree = "<group>"; };
+		3BF42D4124D6683C00AA6977 /* CQDownloadOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQDownloadOperation.m; sourceTree = "<group>"; };
 		44DE81A2BD888586EF454870 /* Pods_CQProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CQProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD9EAD8F0B76B275B8BBE09 /* Pods-CQProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CQProject.release.xcconfig"; path = "Target Support Files/Pods-CQProject/Pods-CQProject.release.xcconfig"; sourceTree = "<group>"; };
 		5F1DFEFFF0570DCAC8513D74 /* Pods-CQProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CQProject.debug.xcconfig"; path = "Target Support Files/Pods-CQProject/Pods-CQProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +202,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B021CD524D6816B00D44AF9 /* MJDownload */ = {
+			isa = PBXGroup;
+			children = (
+				3B021CD824D6816B00D44AF9 /* MJDownloadConst.m */,
+				3B021CD624D6816B00D44AF9 /* NSString+MJDownload.h */,
+				3B021CDB24D6816B00D44AF9 /* NSString+MJDownload.m */,
+				3B021CD924D6816B00D44AF9 /* MJDownloadManager.h */,
+				3B021CD724D6816B00D44AF9 /* MJDownloadManager.m */,
+				3B021CDA24D6816B00D44AF9 /* MJDownload.h */,
+				3B021CDC24D6816B00D44AF9 /* MJDownloadConst.h */,
+			);
+			path = MJDownload;
+			sourceTree = "<group>";
+		};
+		3B021CE024D6CFCF00D44AF9 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3B021CE724D6D08F00D44AF9 /* AVPlayer */,
+				3B021CE124D6CFF000D44AF9 /* CQVideoPlayerViewController.h */,
+				3B021CE224D6CFF000D44AF9 /* CQVideoPlayerViewController.m */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		3B021CE724D6D08F00D44AF9 /* AVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3B021CE424D6D08A00D44AF9 /* CQVideoPlayerAVPlayerViewController.h */,
+				3B021CE524D6D08A00D44AF9 /* CQVideoPlayerAVPlayerViewController.m */,
+			);
+			path = AVPlayer;
+			sourceTree = "<group>";
+		};
+		3B021CE824D7B5C200D44AF9 /* CQDownload */ = {
+			isa = PBXGroup;
+			children = (
+				3B021CE924D7B5EF00D44AF9 /* NSString+CQDownload.h */,
+				3B021CEA24D7B5EF00D44AF9 /* NSString+CQDownload.m */,
+				3B021CEC24D7B98E00D44AF9 /* CQTwoDownloadManager.h */,
+				3B021CED24D7B98E00D44AF9 /* CQTwoDownloadManager.m */,
+			);
+			path = CQDownload;
+			sourceTree = "<group>";
+		};
 		3B51DB0324C82D5300BBE0B4 /* GCD */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +291,7 @@
 		3B71A09224C5174D00F695D2 /* CQProject */ = {
 			isa = PBXGroup;
 			children = (
+				3B021CE024D6CFCF00D44AF9 /* VideoPlayer */,
 				3BF42D2224CE73C300AA6977 /* download */,
 				3BF42D1E24CD856100AA6977 /* WebView */,
 				3BF42D1424CD1C9E00AA6977 /* Other */,
@@ -340,6 +418,8 @@
 		3BEC4F3E24C521F00085935F /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
+				3BF42D3F24D65E9E00AA6977 /* YYFPSLabel.h */,
+				3BF42D3D24D65E9600AA6977 /* YYFPSLabel.m */,
 				3BF42D2C24D28EC200AA6977 /* CQRunLoopViewController.h */,
 				3BF42D2D24D28EC200AA6977 /* CQRunLoopViewController.m */,
 			);
@@ -405,6 +485,7 @@
 			children = (
 				3BF42D1F24CD857600AA6977 /* CQWebViewController.h */,
 				3BF42D2024CD857600AA6977 /* CQWebViewController.m */,
+				3BF42D3424D5213500AA6977 /* index.html */,
 			);
 			path = WebView;
 			sourceTree = "<group>";
@@ -412,10 +493,16 @@
 		3BF42D2224CE73C300AA6977 /* download */ = {
 			isa = PBXGroup;
 			children = (
+				3B021CE824D7B5C200D44AF9 /* CQDownload */,
+				3B021CD524D6816B00D44AF9 /* MJDownload */,
 				3BF42D2324CE73E700AA6977 /* CQDownloadManager.h */,
 				3BF42D2424CE73E700AA6977 /* CQDownloadManager.m */,
+				3BF42D4024D6683C00AA6977 /* CQDownloadOperation.h */,
+				3BF42D4124D6683C00AA6977 /* CQDownloadOperation.m */,
 				3BF42D2624CE741300AA6977 /* CQDownloadConfig.h */,
 				3BF42D2724CE741300AA6977 /* CQDownloadConfig.m */,
+				3B021CD224D6721E00D44AF9 /* CQDownloadTestViewController.h */,
+				3B021CD324D6721E00D44AF9 /* CQDownloadTestViewController.m */,
 			);
 			path = download;
 			sourceTree = "<group>";
@@ -550,6 +637,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BF42D3524D5213500AA6977 /* index.html in Resources */,
 				3B71A0A324C5174E00F695D2 /* LaunchScreen.storyboard in Resources */,
 				3B71A0A024C5174E00F695D2 /* Assets.xcassets in Resources */,
 				3B71A09E24C5174D00F695D2 /* Main.storyboard in Resources */,
@@ -664,8 +752,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BEC4F4924C575CF0085935F /* CQTwoKVOViewController.m in Sources */,
+				3B021CD424D6721E00D44AF9 /* CQDownloadTestViewController.m in Sources */,
 				3B71A0CA24C51A8A00F695D2 /* CQRootNavigationViewController.m in Sources */,
+				3B021CEB24D7B5EF00D44AF9 /* NSString+CQDownload.m in Sources */,
 				3B71A09B24C5174D00F695D2 /* CQRootViewController.m in Sources */,
+				3B021CE324D6CFF000D44AF9 /* CQVideoPlayerViewController.m in Sources */,
 				3BF42D1724CD1CBB00AA6977 /* CQOtherViewController.m in Sources */,
 				3BEC4F4624C569A20085935F /* Person.m in Sources */,
 				3BE0026324CAFCA300829706 /* NSKVONotifying_CQKVOViewController.m in Sources */,
@@ -678,6 +769,9 @@
 				3BE0026E24CBB33F00829706 /* CQStudent.m in Sources */,
 				3BF42D2824CE741300AA6977 /* CQDownloadConfig.m in Sources */,
 				3B71A09524C5174D00F695D2 /* AppDelegate.m in Sources */,
+				3B021CDE24D6816B00D44AF9 /* MJDownloadConst.m in Sources */,
+				3BF42D3E24D65E9600AA6977 /* YYFPSLabel.m in Sources */,
+				3B021CDF24D6816B00D44AF9 /* NSString+MJDownload.m in Sources */,
 				3B51DB0024C7ED2100BBE0B4 /* CQImageDownloader.m in Sources */,
 				3B6736FC24C7DD31007F0D4C /* CQGuestTestView.m in Sources */,
 				3B9C2EA424C6E85700CF811A /* UIButton+Expand.m in Sources */,
@@ -685,12 +779,16 @@
 				3BE0026B24CBB2D700829706 /* CQOCLViewController.m in Sources */,
 				3BF42D2124CD857600AA6977 /* CQWebViewController.m in Sources */,
 				3B71A0A624C5174E00F695D2 /* main.m in Sources */,
+				3B021CDD24D6816B00D44AF9 /* MJDownloadManager.m in Sources */,
 				3B51DB0924C8330800BBE0B4 /* CQOperation.m in Sources */,
 				3BF42D1A24CD1CD300AA6977 /* Target_kvoTwo.m in Sources */,
 				3BEC4F5924C5CA430085935F /* CQGestureRecognizerViewController.m in Sources */,
+				3B021CEE24D7B98E00D44AF9 /* CQTwoDownloadManager.m in Sources */,
 				3BE0026724CB534B00829706 /* CQUIViewController.m in Sources */,
+				3BF42D4224D6683C00AA6977 /* CQDownloadOperation.m in Sources */,
 				3BF42D1D24CD557600AA6977 /* CQURLSessionManager.m in Sources */,
 				3BEC4F4D24C57A7B0085935F /* CQBaseViewController.m in Sources */,
+				3B021CE624D6D08A00D44AF9 /* CQVideoPlayerAVPlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
