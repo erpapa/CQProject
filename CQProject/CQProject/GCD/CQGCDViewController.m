@@ -11,6 +11,8 @@
 
 @interface CQGCDViewController ()
 @property (nonatomic, strong) NSOperationQueue *queue;
+@property (nonatomic, strong) NSLock *lock;
+@property (nonatomic, strong) dispatch_semaphore_t semaphore;
 @end
 
 @implementation CQGCDViewController
@@ -18,11 +20,56 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"GCD";
-    [self test8];
+    self.lock = [[NSLock alloc] init];
+    self.semaphore = dispatch_semaphore_create(1);
+//    [self test8];
     
+    // 已经在主队列中重复执行任务
+//    [self locktest];
+    //
+//    [self locktest1];
+//    [self locktest3];
+    [self locktest4];
     
 }
 
+- (void)locktest4 {
+    // 信号量的使用不当死锁
+    dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
+    dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
+    sleep(3);
+    dispatch_semaphore_signal(self.semaphore);
+}
+
+- (void)locktest3 {
+    // 同一个线程重复去获取锁 这个时候应该使用递归锁 或者 @synchronized
+    // 使用互斥锁的时候一个线程获取锁之后，做完任务 没有去释放锁，也会有这种问题
+    [self.lock lock];
+    [self locktest2];
+    [self.lock unlock];
+}
+
+- (void)locktest2 {
+    [self.lock lock];
+    sleep(3);
+    [self.lock unlock];
+}
+- (void)locktest1 {
+    // 已经在串行队列执行的过程中同步在这个串行队列中执行任务
+    dispatch_queue_t queue = dispatch_queue_create("死锁线程", DISPATCH_QUEUE_SERIAL);
+    dispatch_async(queue, ^{
+        dispatch_sync(queue, ^{
+            NSLog(@"死锁啦");
+        });
+    });
+}
+
+- (void)locktest {
+    // 在主线程中同步在主队列执行任务
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        NSLog(@"死锁了");
+    });
+}
 
 - (void)test8 {
     [self performSelector:@selector(test) withObject:nil afterDelay:1];

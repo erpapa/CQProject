@@ -21,6 +21,7 @@
 #import "YYFPSLabel.h"
 #import "CQDownloadTestViewController.h"
 #import "CQVideoPlayerViewController.h"
+#import "CQRuntimeViewController.h"
 
 @interface CQRootViewController ()<RETableViewManagerDelegate>
 @property (strong, nonatomic) RETableViewManager *tableManager;
@@ -32,9 +33,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    YYFPSLabel *label = [[YYFPSLabel alloc] initWithFrame:CGRectMake(10, 10, 60, 20)];
-    [self.navigationController.view addSubview:label];
-    [self.navigationController.view bringSubviewToFront:label];
+//    YYFPSLabel *label = [[YYFPSLabel alloc] initWithFrame:CGRectMake(10, 10, 60, 20)];
+//    [self.navigationController.view addSubview:label];
+//    [self.navigationController.view bringSubviewToFront:label];
     [self.tableManager addSection:self.section];
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -118,6 +119,15 @@
         [self.navigationController pushViewController:viewController animated:YES];
     };
     [self.section addItem:UIItem];
+    
+    RETableViewItem *runtimeItem = [[RETableViewItem alloc] initWithTitle:@"runtime"];
+    runtimeItem.selectionHandler = ^(RETableViewItem *item) {
+        @strongify(self);
+        item.selectionStyle = UITableViewCellSelectionStyleNone;
+        CQRuntimeViewController *viewController = [[CQRuntimeViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    };
+    [self.section addItem:runtimeItem];
     
     RETableViewItem *runLoopItem = [[RETableViewItem alloc] initWithTitle:@"RunLoop"];
     runLoopItem.selectionHandler = ^(RETableViewItem *item) {

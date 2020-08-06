@@ -7,6 +7,8 @@
 //
 
 #import "CQUIViewController.h"
+#import "CQTestUIView.h"
+#import "CQTestUIButton.h"
 typedef  void (^MyBlock)(void);
 
 @interface CQUIViewController ()
@@ -17,7 +19,7 @@ typedef  void (^MyBlock)(void);
 @property (nonatomic, strong) UIWindow *window;
 @property (nonatomic, strong) UIWindow *window2;
 @property (nonatomic, strong) MyBlock block;
-@property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) CQTestUIButton *button;
 @end
 
 @implementation CQUIViewController
@@ -45,26 +47,37 @@ int a = 10;
 }
 
 - (void)buttonTest {
-    self.button = [[UIButton alloc] init];
-    [self.view addSubview:self.button];
-    [self.button mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.button = [[CQTestUIButton alloc] init];
+    CQTestUIView *view = [[CQTestUIView alloc] init];
+    [self.view addSubview:view];
+    view.backgroundColor = [UIColor blueColor];
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(100);
         make.top.equalTo(self.view).offset(100);
         make.size.mas_equalTo(CGSizeMake(100, 100));
     }];
+    
+    
+    
+    [view addSubview:self.button];
+    [self.button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(view).offset(80);
+        make.top.equalTo(view).offset(80);
+        make.size.mas_equalTo(CGSizeMake(50, 50));
+    }];
     self.button.backgroundColor = [UIColor redColor];
     
-    UITapGestureRecognizer *gest = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
-        NSLog(@"手势1响应了");
-    }];
-    UITapGestureRecognizer *gest2 = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
-        NSLog(@"手势2响应了");
-    }];
-    [self.button addGestureRecognizer:gest2];
-    [self.button addGestureRecognizer:gest];
+//    UITapGestureRecognizer *gest = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
+//        NSLog(@"手势1响应了");
+//    }];
+//    UITapGestureRecognizer *gest2 = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
+//        NSLog(@"手势2响应了");
+//    }];
+//    [self.button addGestureRecognizer:gest2];
+//    [self.button addGestureRecognizer:gest];
     
     
-//    [self.button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)buttonClick {

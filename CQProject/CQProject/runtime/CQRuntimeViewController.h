@@ -1,8 +1,8 @@
 //
-//  NSKVONotifying_CQKVOViewController.h
+//  CQRuntimeViewController.h
 //  CQProject
 //
-//  Created by CharType on 2020/7/24.
+//  Created by CharType on 2020/8/4.
 //  Copyright © 2020 CharType. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSKVONotifying_CQKVOViewController : CQBaseViewController
+@interface CQRuntimeViewController : CQBaseViewController
 
 @end
 

@@ -9,34 +9,42 @@
 #import "CQRunLoopViewController.h"
 
 @interface CQRunLoopViewController ()
-@property (nonatomic, strong) CADisplayLink *link;
+//@property (nonatomic, strong) CADisplayLink *link;
+@property (nonatomic, strong) UITextView *textView;
 @end
 
 @implementation CQRunLoopViewController
 
 - (void)dealloc {
-    [self.link invalidate];
+//    [self.link invalidate];
     NSLog(@"%s",__func__);
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self addRunLoopObserver];
+    
+    self.textView = [[UITextView alloc] init];
+    [self.view addSubview:self.textView];
+    [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    self.textView.text = @"hahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahhhahahhahhahahhahh";
+    [self addRunLoopObserver];
 //    [NSTimer scheduledTimerWithTimeInterval:2 block:^(NSTimer * _Nonnull timer) {
 //        NSLog(@"block的任务执行");
 //    } repeats:YES];
 //    CATiledLayer 和 DownSampling
     
-    [self test1];
+//    [self test1];
     
     
 }
 
 - (void)test1 {
-    self.link = [CADisplayLink displayLinkWithTarget:[YYWeakProxy proxyWithTarget:self] selector:@selector(displayLink)];
-    NSLog(@"%@",[NSRunLoop currentRunLoop]);
-    [self.link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
-    NSLog(@"%@",[NSRunLoop currentRunLoop]);
+//    self.link = [CADisplayLink displayLinkWithTarget:[YYWeakProxy proxyWithTarget:self] selector:@selector(displayLink)];
+//    NSLog(@"%@",[NSRunLoop currentRunLoop]);
+//    [self.link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+//    NSLog(@"%@",[NSRunLoop currentRunLoop]);
     
 }
 
@@ -46,13 +54,13 @@
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    if ([self.link isPaused]) {
-        self.link.paused = YES;
-//        [self.link performSelector:@selector(resume)];
-    } else {
-//        [self.link performSelector:@selector(isPaused)];
-        self.link.paused = NO;
-    }
+//    if ([self.link isPaused]) {
+//        self.link.paused = YES;
+////        [self.link performSelector:@selector(resume)];
+//    } else {
+////        [self.link performSelector:@selector(isPaused)];
+//        self.link.paused = NO;
+//    }
 //    [self.link invalidate];
 }
 

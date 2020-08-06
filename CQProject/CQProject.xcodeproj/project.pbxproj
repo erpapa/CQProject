@@ -16,6 +16,12 @@
 		3B021CE624D6D08A00D44AF9 /* CQVideoPlayerAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B021CE524D6D08A00D44AF9 /* CQVideoPlayerAVPlayerViewController.m */; };
 		3B021CEB24D7B5EF00D44AF9 /* NSString+CQDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B021CEA24D7B5EF00D44AF9 /* NSString+CQDownload.m */; };
 		3B021CEE24D7B98E00D44AF9 /* CQTwoDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B021CED24D7B98E00D44AF9 /* CQTwoDownloadManager.m */; };
+		3B1F2B3324D9661400EED37A /* CQRuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F2B3224D9661400EED37A /* CQRuntimeViewController.m */; };
+		3B1F2B3624D966DC00EED37A /* CQRuntimeViewController+A.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F2B3524D966DC00EED37A /* CQRuntimeViewController+A.m */; };
+		3B1F2B3924D966EB00EED37A /* CQRuntimeViewController+B.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F2B3824D966EB00EED37A /* CQRuntimeViewController+B.m */; };
+		3B1F2B3C24DA4F1D00EED37A /* CQRuntimeSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F2B3B24DA4F1D00EED37A /* CQRuntimeSubViewController.m */; };
+		3B1F2B3F24DBF57100EED37A /* CQTestUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F2B3E24DBF57100EED37A /* CQTestUIView.m */; };
+		3B1F2B4224DBF76000EED37A /* CQTestUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F2B4124DBF76000EED37A /* CQTestUIButton.m */; };
 		3B51DB0024C7ED2100BBE0B4 /* CQImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DAFF24C7ED2100BBE0B4 /* CQImageDownloader.m */; };
 		3B51DB0624C82DC800BBE0B4 /* CQGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DB0524C82DC800BBE0B4 /* CQGCDViewController.m */; };
 		3B51DB0924C8330800BBE0B4 /* CQOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DB0824C8330800BBE0B4 /* CQOperation.m */; };
@@ -31,7 +37,6 @@
 		3B71A0CA24C51A8A00F695D2 /* CQRootNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71A0C924C51A8A00F695D2 /* CQRootNavigationViewController.m */; };
 		3B9C2EA424C6E85700CF811A /* UIButton+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C2EA324C6E85700CF811A /* UIButton+Expand.m */; };
 		3B9C2EA824C7077500CF811A /* CQComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C2EA724C7077500CF811A /* CQComponentViewController.m */; };
-		3BE0026324CAFCA300829706 /* NSKVONotifying_CQKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0026224CAFCA300829706 /* NSKVONotifying_CQKVOViewController.m */; };
 		3BE0026724CB534B00829706 /* CQUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0026624CB534B00829706 /* CQUIViewController.m */; };
 		3BE0026B24CBB2D700829706 /* CQOCLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0026A24CBB2D700829706 /* CQOCLViewController.m */; };
 		3BE0026E24CBB33F00829706 /* CQStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0026D24CBB33F00829706 /* CQStudent.m */; };
@@ -93,6 +98,18 @@
 		3B021CEA24D7B5EF00D44AF9 /* NSString+CQDownload.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CQDownload.m"; sourceTree = "<group>"; };
 		3B021CEC24D7B98E00D44AF9 /* CQTwoDownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQTwoDownloadManager.h; sourceTree = "<group>"; };
 		3B021CED24D7B98E00D44AF9 /* CQTwoDownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQTwoDownloadManager.m; sourceTree = "<group>"; };
+		3B1F2B3124D9661400EED37A /* CQRuntimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQRuntimeViewController.h; sourceTree = "<group>"; };
+		3B1F2B3224D9661400EED37A /* CQRuntimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQRuntimeViewController.m; sourceTree = "<group>"; };
+		3B1F2B3424D966DC00EED37A /* CQRuntimeViewController+A.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CQRuntimeViewController+A.h"; sourceTree = "<group>"; };
+		3B1F2B3524D966DC00EED37A /* CQRuntimeViewController+A.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CQRuntimeViewController+A.m"; sourceTree = "<group>"; };
+		3B1F2B3724D966EB00EED37A /* CQRuntimeViewController+B.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CQRuntimeViewController+B.h"; sourceTree = "<group>"; };
+		3B1F2B3824D966EB00EED37A /* CQRuntimeViewController+B.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CQRuntimeViewController+B.m"; sourceTree = "<group>"; };
+		3B1F2B3A24DA4F1D00EED37A /* CQRuntimeSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQRuntimeSubViewController.h; sourceTree = "<group>"; };
+		3B1F2B3B24DA4F1D00EED37A /* CQRuntimeSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQRuntimeSubViewController.m; sourceTree = "<group>"; };
+		3B1F2B3D24DBF57100EED37A /* CQTestUIView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQTestUIView.h; sourceTree = "<group>"; };
+		3B1F2B3E24DBF57100EED37A /* CQTestUIView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQTestUIView.m; sourceTree = "<group>"; };
+		3B1F2B4024DBF76000EED37A /* CQTestUIButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQTestUIButton.h; sourceTree = "<group>"; };
+		3B1F2B4124DBF76000EED37A /* CQTestUIButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQTestUIButton.m; sourceTree = "<group>"; };
 		3B51DAFE24C7ED2100BBE0B4 /* CQImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQImageDownloader.h; sourceTree = "<group>"; };
 		3B51DAFF24C7ED2100BBE0B4 /* CQImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQImageDownloader.m; sourceTree = "<group>"; };
 		3B51DB0424C82DC800BBE0B4 /* CQGCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQGCDViewController.h; sourceTree = "<group>"; };
@@ -123,8 +140,6 @@
 		3B9C2EA324C6E85700CF811A /* UIButton+Expand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Expand.m"; sourceTree = "<group>"; };
 		3B9C2EA624C7077500CF811A /* CQComponentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQComponentViewController.h; sourceTree = "<group>"; };
 		3B9C2EA724C7077500CF811A /* CQComponentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQComponentViewController.m; sourceTree = "<group>"; };
-		3BE0026124CAFCA300829706 /* NSKVONotifying_CQKVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSKVONotifying_CQKVOViewController.h; sourceTree = "<group>"; };
-		3BE0026224CAFCA300829706 /* NSKVONotifying_CQKVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSKVONotifying_CQKVOViewController.m; sourceTree = "<group>"; };
 		3BE0026524CB534B00829706 /* CQUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQUIViewController.h; sourceTree = "<group>"; };
 		3BE0026624CB534B00829706 /* CQUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQUIViewController.m; sourceTree = "<group>"; };
 		3BE0026924CBB2D700829706 /* CQOCLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQOCLViewController.h; sourceTree = "<group>"; };
@@ -366,6 +381,10 @@
 			children = (
 				3BE0026524CB534B00829706 /* CQUIViewController.h */,
 				3BE0026624CB534B00829706 /* CQUIViewController.m */,
+				3B1F2B4024DBF76000EED37A /* CQTestUIButton.h */,
+				3B1F2B4124DBF76000EED37A /* CQTestUIButton.m */,
+				3B1F2B3D24DBF57100EED37A /* CQTestUIView.h */,
+				3B1F2B3E24DBF57100EED37A /* CQTestUIView.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -389,8 +408,6 @@
 				3BEC4F4324C5698A0085935F /* Object */,
 				3BEC4F3A24C5216C0085935F /* CQKVOViewController.h */,
 				3BEC4F3B24C5216C0085935F /* CQKVOViewController.m */,
-				3BE0026124CAFCA300829706 /* NSKVONotifying_CQKVOViewController.h */,
-				3BE0026224CAFCA300829706 /* NSKVONotifying_CQKVOViewController.m */,
 				3BEC4F4724C575CF0085935F /* CQTwoKVOViewController.h */,
 				3BEC4F4824C575CF0085935F /* CQTwoKVOViewController.m */,
 				3BF42D1824CD1CD300AA6977 /* Target_kvoTwo.h */,
@@ -429,6 +446,14 @@
 		3BEC4F3F24C521F70085935F /* runtime */ = {
 			isa = PBXGroup;
 			children = (
+				3B1F2B3124D9661400EED37A /* CQRuntimeViewController.h */,
+				3B1F2B3224D9661400EED37A /* CQRuntimeViewController.m */,
+				3B1F2B3A24DA4F1D00EED37A /* CQRuntimeSubViewController.h */,
+				3B1F2B3B24DA4F1D00EED37A /* CQRuntimeSubViewController.m */,
+				3B1F2B3424D966DC00EED37A /* CQRuntimeViewController+A.h */,
+				3B1F2B3524D966DC00EED37A /* CQRuntimeViewController+A.m */,
+				3B1F2B3724D966EB00EED37A /* CQRuntimeViewController+B.h */,
+				3B1F2B3824D966EB00EED37A /* CQRuntimeViewController+B.m */,
 			);
 			path = runtime;
 			sourceTree = "<group>";
@@ -756,12 +781,13 @@
 				3B71A0CA24C51A8A00F695D2 /* CQRootNavigationViewController.m in Sources */,
 				3B021CEB24D7B5EF00D44AF9 /* NSString+CQDownload.m in Sources */,
 				3B71A09B24C5174D00F695D2 /* CQRootViewController.m in Sources */,
+				3B1F2B3324D9661400EED37A /* CQRuntimeViewController.m in Sources */,
 				3B021CE324D6CFF000D44AF9 /* CQVideoPlayerViewController.m in Sources */,
 				3BF42D1724CD1CBB00AA6977 /* CQOtherViewController.m in Sources */,
 				3BEC4F4624C569A20085935F /* Person.m in Sources */,
-				3BE0026324CAFCA300829706 /* NSKVONotifying_CQKVOViewController.m in Sources */,
 				3B9C2EA824C7077500CF811A /* CQComponentViewController.m in Sources */,
 				3BEC4F4224C5222B0085935F /* NSObject+CQKVO.m in Sources */,
+				3B1F2B4224DBF76000EED37A /* CQTestUIButton.m in Sources */,
 				3BE0027124CBB56000829706 /* CQPerson.m in Sources */,
 				3BF42D2524CE73E700AA6977 /* CQDownloadManager.m in Sources */,
 				3B51DB0624C82DC800BBE0B4 /* CQGCDViewController.m in Sources */,
@@ -769,9 +795,13 @@
 				3BE0026E24CBB33F00829706 /* CQStudent.m in Sources */,
 				3BF42D2824CE741300AA6977 /* CQDownloadConfig.m in Sources */,
 				3B71A09524C5174D00F695D2 /* AppDelegate.m in Sources */,
+				3B1F2B3624D966DC00EED37A /* CQRuntimeViewController+A.m in Sources */,
+				3B1F2B3924D966EB00EED37A /* CQRuntimeViewController+B.m in Sources */,
+				3B1F2B3F24DBF57100EED37A /* CQTestUIView.m in Sources */,
 				3B021CDE24D6816B00D44AF9 /* MJDownloadConst.m in Sources */,
 				3BF42D3E24D65E9600AA6977 /* YYFPSLabel.m in Sources */,
 				3B021CDF24D6816B00D44AF9 /* NSString+MJDownload.m in Sources */,
+				3B1F2B3C24DA4F1D00EED37A /* CQRuntimeSubViewController.m in Sources */,
 				3B51DB0024C7ED2100BBE0B4 /* CQImageDownloader.m in Sources */,
 				3B6736FC24C7DD31007F0D4C /* CQGuestTestView.m in Sources */,
 				3B9C2EA424C6E85700CF811A /* UIButton+Expand.m in Sources */,
@@ -959,6 +989,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AH2S7JJ8V8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CQProject/projectPrefixHeader.pch";
 				INFOPLIST_FILE = CQProject/Info.plist;
@@ -978,6 +1009,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AH2S7JJ8V8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CQProject/projectPrefixHeader.pch";
 				INFOPLIST_FILE = CQProject/Info.plist;

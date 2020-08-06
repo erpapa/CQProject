@@ -24,15 +24,33 @@
     NSLog(@"%s",__func__);
 }
 
+- (void)runTests
+{
+    Class class = NSClassFromString(@"NSKVONotifying_CQKVOViewController");
+    unsigned int count;
+    Method *methods = class_copyMethodList(class, &count);
+    for (int i = 0; i < count; i++)
+    {
+        Method method = methods[i];
+        SEL selector = method_getName(method);
+        NSString *name = NSStringFromSelector(selector);
+        NSLog(@"方法 名字 ==== %@",name);
+       
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"KVO";
     self.p = [[Person alloc] init];
-    self.p.age = 20;
-    [self szy_addObserverBlockForKeyPath:@"name" block:^(id  _Nonnull obj, id  _Nonnull oldVal, id  _Nonnull newVal) {
+    self.p.p1 = [[Person alloc] init];
+    [self szy_addObserverBlockForKeyPath:@"p.p1.age" block:^(id  _Nonnull obj, id  _Nonnull oldVal, id  _Nonnull newVal) {
         NSLog(@"触发了KVO监听");
     }];
-
+    [self runTests];
+    
+    
+    
 //    self addObserver:self.p forKeyPath:@"name" options:<#(NSKeyValueObservingOptions)#> context:<#(nullable void *)#>
     
     
@@ -58,6 +76,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     self.name = @"哈哈哈哈";
+    self.p.p1.age = 20;
 //    self.p = [[Person alloc] init];
 //    self.p.age = 30;
 }
