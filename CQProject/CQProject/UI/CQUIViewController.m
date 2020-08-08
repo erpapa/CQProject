@@ -20,6 +20,7 @@ typedef  void (^MyBlock)(void);
 @property (nonatomic, strong) UIWindow *window2;
 @property (nonatomic, strong) MyBlock block;
 @property (nonatomic, strong) CQTestUIButton *button;
+@property (nonatomic, strong) CQTestUIView *testview;
 @end
 
 @implementation CQUIViewController
@@ -48,10 +49,10 @@ int a = 10;
 
 - (void)buttonTest {
     self.button = [[CQTestUIButton alloc] init];
-    CQTestUIView *view = [[CQTestUIView alloc] init];
-    [self.view addSubview:view];
-    view.backgroundColor = [UIColor blueColor];
-    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.testview = [[CQTestUIView alloc] init];
+    [self.view addSubview:self.testview];
+    self.testview.backgroundColor = [UIColor blueColor];
+    [self.testview mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(100);
         make.top.equalTo(self.view).offset(100);
         make.size.mas_equalTo(CGSizeMake(100, 100));
@@ -59,10 +60,10 @@ int a = 10;
     
     
     
-    [view addSubview:self.button];
+    [self.view addSubview:self.button];
     [self.button mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(view).offset(80);
-        make.top.equalTo(view).offset(80);
+        make.left.equalTo(self.view).offset(80);
+        make.top.equalTo(self.view).offset(80);
         make.size.mas_equalTo(CGSizeMake(50, 50));
     }];
     self.button.backgroundColor = [UIColor redColor];
@@ -79,6 +80,21 @@ int a = 10;
     
     [self.button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
 }
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    CGSize size = self.testview.bounds.size;
+//    size.width = 200;
+//    size.height = 200;
+//    self.testview.width = 200;
+//    self.testview.bounds = CGRectMake(0, 0, 200, 200);
+//    self.testview.bounds.size.height = 200;
+
+    [self.testview mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(200, 200));
+    }];
+   
+}
+
 
 - (void)buttonClick {
     NSLog(@"button被点击了");
@@ -131,12 +147,6 @@ int a = 10;
     [self.custemView addGestureRecognizer:tap];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    CALayer *layer = self.custemView.layer;
-//    layer.frame = CGRectMake(100, 100, 200, 200);
-    layer.width = 200;
-    layer.height = 200;
-}
 
 - (NSObject *)getTempObject {
     return [self getAssociatedValueForKey:@selector(getTempObject)];

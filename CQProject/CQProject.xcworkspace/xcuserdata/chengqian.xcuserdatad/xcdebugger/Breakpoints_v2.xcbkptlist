@@ -356,5 +356,85 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01485082-FDCD-4F37-BFDE-549FF2C667C9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CQProject/UI/CQUIViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "-touchesBegan:withEvent:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "01485082-FDCD-4F37-BFDE-549FF2C667C9 - 4c269603a6a2b435"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CQUIViewController touchesBegan:withEvent:]"
+                  moduleName = "CQProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chengqian/Desktop/%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/CQProject/CQProject/CQProject/UI/CQUIViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  uuid = "01485082-FDCD-4F37-BFDE-549FF2C667C9 - b79705135d1996a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__45-[CQUIViewController touchesBegan:withEvent:]_block_invoke"
+                  moduleName = "CQProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chengqian/Desktop/%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/CQProject/CQProject/CQProject/UI/CQUIViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "39E09E22-F67E-45DD-8152-30C686B9C091"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CQProject/iOS&#x5f00;&#x53d1;&#x9ad8;&#x624b;&#x8bfe;/29&#x5728; iOS &#x4e2d;&#x8fdb;&#x884c;&#x9762;&#x5411;&#x6d4b;&#x8bd5;&#x9a71;&#x52a8;&#x5f00;&#x53d1;&#x548c;&#x9762;&#x5411;&#x884c;&#x4e3a;&#x9a71;&#x52a8;&#x5f00;&#x53d1;/CQBDDTestViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "-addnum1:num2:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3CEB30C4-A0A5-4478-8ABA-C6A1862B49A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CQProject/iOS&#x5f00;&#x53d1;&#x9ad8;&#x624b;&#x8bfe;/29&#x5728; iOS &#x4e2d;&#x8fdb;&#x884c;&#x9762;&#x5411;&#x6d4b;&#x8bd5;&#x9a71;&#x52a8;&#x5f00;&#x53d1;&#x548c;&#x9762;&#x5411;&#x884c;&#x4e3a;&#x9a71;&#x52a8;&#x5f00;&#x53d1;/CQBDDTestViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "-dealloc"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

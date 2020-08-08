@@ -35,6 +35,9 @@
 		3B71A0B024C5174E00F695D2 /* CQProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71A0AF24C5174E00F695D2 /* CQProjectTests.m */; };
 		3B71A0BB24C5174E00F695D2 /* CQProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71A0BA24C5174E00F695D2 /* CQProjectUITests.m */; };
 		3B71A0CA24C51A8A00F695D2 /* CQRootNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71A0C924C51A8A00F695D2 /* CQRootNavigationViewController.m */; };
+		3B8F7A3C24DCF94D00378E99 /* CQiOSDevelopmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F7A3B24DCF94D00378E99 /* CQiOSDevelopmentViewController.m */; };
+		3B8F7A4124DDA59800378E99 /* CQBDDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F7A4024DDA59800378E99 /* CQBDDTestViewController.m */; };
+		3B8F7A4324DDC74600378E99 /* CQBDDTestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F7A4224DDC74600378E99 /* CQBDDTestSpec.m */; };
 		3B9C2EA424C6E85700CF811A /* UIButton+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C2EA324C6E85700CF811A /* UIButton+Expand.m */; };
 		3B9C2EA824C7077500CF811A /* CQComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C2EA724C7077500CF811A /* CQComponentViewController.m */; };
 		3BE0026724CB534B00829706 /* CQUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0026624CB534B00829706 /* CQUIViewController.m */; };
@@ -136,6 +139,11 @@
 		3B71A0BC24C5174E00F695D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B71A0C824C51A8A00F695D2 /* CQRootNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQRootNavigationViewController.h; sourceTree = "<group>"; };
 		3B71A0C924C51A8A00F695D2 /* CQRootNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQRootNavigationViewController.m; sourceTree = "<group>"; };
+		3B8F7A3A24DCF94D00378E99 /* CQiOSDevelopmentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQiOSDevelopmentViewController.h; sourceTree = "<group>"; };
+		3B8F7A3B24DCF94D00378E99 /* CQiOSDevelopmentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQiOSDevelopmentViewController.m; sourceTree = "<group>"; };
+		3B8F7A3F24DDA59800378E99 /* CQBDDTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQBDDTestViewController.h; sourceTree = "<group>"; };
+		3B8F7A4024DDA59800378E99 /* CQBDDTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQBDDTestViewController.m; sourceTree = "<group>"; };
+		3B8F7A4224DDC74600378E99 /* CQBDDTestSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQBDDTestSpec.m; sourceTree = "<group>"; };
 		3B9C2EA224C6E85700CF811A /* UIButton+Expand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Expand.h"; sourceTree = "<group>"; };
 		3B9C2EA324C6E85700CF811A /* UIButton+Expand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Expand.m"; sourceTree = "<group>"; };
 		3B9C2EA624C7077500CF811A /* CQComponentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQComponentViewController.h; sourceTree = "<group>"; };
@@ -306,6 +314,7 @@
 		3B71A09224C5174D00F695D2 /* CQProject */ = {
 			isa = PBXGroup;
 			children = (
+				3B8F7A3924DCF8FF00378E99 /* iOS开发高手课 */,
 				3B021CE024D6CFCF00D44AF9 /* VideoPlayer */,
 				3BF42D2224CE73C300AA6977 /* download */,
 				3BF42D1E24CD856100AA6977 /* WebView */,
@@ -343,6 +352,7 @@
 		3B71A0AE24C5174E00F695D2 /* CQProjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				3B8F7A3E24DD8FFC00378E99 /* TestGroup */,
 				3B71A0AF24C5174E00F695D2 /* CQProjectTests.m */,
 				3B71A0B124C5174E00F695D2 /* Info.plist */,
 			);
@@ -356,6 +366,33 @@
 				3B71A0BC24C5174E00F695D2 /* Info.plist */,
 			);
 			path = CQProjectUITests;
+			sourceTree = "<group>";
+		};
+		3B8F7A3924DCF8FF00378E99 /* iOS开发高手课 */ = {
+			isa = PBXGroup;
+			children = (
+				3B8F7A3D24DD780400378E99 /* 29在 iOS 中进行面向测试驱动开发和面向行为驱动开发 */,
+				3B8F7A3A24DCF94D00378E99 /* CQiOSDevelopmentViewController.h */,
+				3B8F7A3B24DCF94D00378E99 /* CQiOSDevelopmentViewController.m */,
+			);
+			path = "iOS开发高手课";
+			sourceTree = "<group>";
+		};
+		3B8F7A3D24DD780400378E99 /* 29在 iOS 中进行面向测试驱动开发和面向行为驱动开发 */ = {
+			isa = PBXGroup;
+			children = (
+				3B8F7A3F24DDA59800378E99 /* CQBDDTestViewController.h */,
+				3B8F7A4024DDA59800378E99 /* CQBDDTestViewController.m */,
+			);
+			path = "29在 iOS 中进行面向测试驱动开发和面向行为驱动开发";
+			sourceTree = "<group>";
+		};
+		3B8F7A3E24DD8FFC00378E99 /* TestGroup */ = {
+			isa = PBXGroup;
+			children = (
+				3B8F7A4224DDC74600378E99 /* CQBDDTestSpec.m */,
+			);
+			path = TestGroup;
 			sourceTree = "<group>";
 		};
 		3B9C2EA124C6E76100CF811A /* 添加Button的响应区域 */ = {
@@ -585,6 +622,7 @@
 				3B71A0A724C5174E00F695D2 /* Sources */,
 				3B71A0A824C5174E00F695D2 /* Frameworks */,
 				3B71A0A924C5174E00F695D2 /* Resources */,
+				4764E993A4561C119859E6B4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -686,6 +724,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4764E993A4561C119859E6B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CQProjectTests/Pods-CQProjectTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CQProjectTests/Pods-CQProjectTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CQProjectTests/Pods-CQProjectTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		797D50047F636F513E001C03 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -791,6 +846,7 @@
 				3BE0027124CBB56000829706 /* CQPerson.m in Sources */,
 				3BF42D2524CE73E700AA6977 /* CQDownloadManager.m in Sources */,
 				3B51DB0624C82DC800BBE0B4 /* CQGCDViewController.m in Sources */,
+				3B8F7A4124DDA59800378E99 /* CQBDDTestViewController.m in Sources */,
 				3BEC4F3C24C5216C0085935F /* CQKVOViewController.m in Sources */,
 				3BE0026E24CBB33F00829706 /* CQStudent.m in Sources */,
 				3BF42D2824CE741300AA6977 /* CQDownloadConfig.m in Sources */,
@@ -804,6 +860,7 @@
 				3B1F2B3C24DA4F1D00EED37A /* CQRuntimeSubViewController.m in Sources */,
 				3B51DB0024C7ED2100BBE0B4 /* CQImageDownloader.m in Sources */,
 				3B6736FC24C7DD31007F0D4C /* CQGuestTestView.m in Sources */,
+				3B8F7A3C24DCF94D00378E99 /* CQiOSDevelopmentViewController.m in Sources */,
 				3B9C2EA424C6E85700CF811A /* UIButton+Expand.m in Sources */,
 				3BF42D2E24D28EC200AA6977 /* CQRunLoopViewController.m in Sources */,
 				3BE0026B24CBB2D700829706 /* CQOCLViewController.m in Sources */,
@@ -827,6 +884,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B71A0B024C5174E00F695D2 /* CQProjectTests.m in Sources */,
+				3B8F7A4324DDC74600378E99 /* CQBDDTestSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

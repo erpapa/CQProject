@@ -17,11 +17,13 @@ target 'CQProject' do
     pod 'Objection', '1.6.1'
     pod "CTMediator"
     pod "dsBridge"
+    
+    
 
 
   target 'CQProjectTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod "Kiwi"
   end
 
   target 'CQProjectUITests' do

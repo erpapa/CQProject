@@ -80,7 +80,7 @@
          <EnvironmentVariable
             key = "DYLD_PRINT_STATISTICS_DETAILS"
             value = "1"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </EnvironmentVariable>
       </EnvironmentVariables>
    </LaunchAction>

@@ -7,7 +7,6 @@
 //
 
 #import "CQRootViewController.h"
-#import "RETableViewManager.h"
 #import "Masonry.h"
 #import "YYKit.h"
 #import "CQKVOViewController.h"
@@ -22,6 +21,7 @@
 #import "CQDownloadTestViewController.h"
 #import "CQVideoPlayerViewController.h"
 #import "CQRuntimeViewController.h"
+#import "CQiOSDevelopmentViewController.h"
 
 @interface CQRootViewController ()<RETableViewManagerDelegate>
 @property (strong, nonatomic) RETableViewManager *tableManager;
@@ -44,6 +44,16 @@
     
     
     @weakify(self);
+    RETableViewItem *iOSDecelopmentItem = [[RETableViewItem alloc] initWithTitle:@"戴铭的iOS开发高手课学习"];
+        iOSDecelopmentItem.selectionHandler = ^(RETableViewItem *item) {
+        @strongify(self);
+        item.selectionStyle = UITableViewCellSelectionStyleNone;
+        CQiOSDevelopmentViewController *viewControlleer = [[CQiOSDevelopmentViewController alloc] init];
+        viewControlleer.view.backgroundColor = [UIColor whiteColor];
+        [self.navigationController pushViewController:viewControlleer animated:YES];
+    };
+    [self.section addItem:iOSDecelopmentItem];
+    
      RETableViewItem *ocItem = [[RETableViewItem alloc] initWithTitle:@"OC语法特性"];
         ocItem.selectionHandler = ^(RETableViewItem *item) {
         @strongify(self);
