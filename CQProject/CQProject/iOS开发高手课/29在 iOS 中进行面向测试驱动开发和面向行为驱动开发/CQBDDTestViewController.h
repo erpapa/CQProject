@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CQBDDTestViewController : CQBaseViewController
 - (int)addnum1:(int)num1 num2:(int)num2;
+- (int)lengthOfLongestSubstring:(NSString *)str;
 @end
 
 NS_ASSUME_NONNULL_END

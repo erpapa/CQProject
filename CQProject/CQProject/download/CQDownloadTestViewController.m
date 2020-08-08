@@ -7,13 +7,10 @@
 //
 
 #import "CQDownloadTestViewController.h"
-#import "CQDownloadManager.h"
-#import "CQDownloadOperation.h"
 #import "MJDownloadManager.h"
 #import "CQTwoDownloadManager.h"
 
 @interface CQDownloadTestViewController ()
-@property (nonatomic, strong) CQDownloadManager *downManager;
 @property (nonatomic, strong) MJDownloadManager *mjDownloadManager;
 @property (nonatomic, strong) CQTwoDownloadManager *cqdownloadManager;
 @property (nonatomic, strong) CQDownloadInfo *info2;
@@ -41,13 +38,6 @@
         NSLog(@"状态改变回调 state %ld,文件路径：%@ 错误信息%@",state,filePath,error);
     }];
     
-}
-
-- (CQDownloadManager *)downManager {
-    if (!_downManager) {
-        _downManager = [CQDownloadManager defaultManager];
-    }
-    return _downManager;
 }
 
 @end

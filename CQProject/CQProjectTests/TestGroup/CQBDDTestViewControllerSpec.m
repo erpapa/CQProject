@@ -26,7 +26,15 @@ describe(@"CQBDDTestViewController", ^{
         int num = [vc addnum1:100 num2:10000];
         [[theValue(num) should] equal:theValue(10100)];
     });
-
+    
+    it(@"测试最长无重复字串", ^{
+        int length1 = [vc lengthOfLongestSubstring:@"abcabc"];
+        [[theValue(length1) should] equal:theValue(3)];
+        
+        int length2 = [vc lengthOfLongestSubstring:@"pwwkew"];
+        [[theValue(length2) should] equal:theValue(3)];
+    });
+    
 });
 
 SPEC_END
