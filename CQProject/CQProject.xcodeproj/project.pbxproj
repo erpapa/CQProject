@@ -37,9 +37,9 @@
 		3B71A0CA24C51A8A00F695D2 /* CQRootNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71A0C924C51A8A00F695D2 /* CQRootNavigationViewController.m */; };
 		3B8F7A3C24DCF94D00378E99 /* CQiOSDevelopmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F7A3B24DCF94D00378E99 /* CQiOSDevelopmentViewController.m */; };
 		3B8F7A4124DDA59800378E99 /* CQBDDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F7A4024DDA59800378E99 /* CQBDDTestViewController.m */; };
-		3B8F7A4324DDC74600378E99 /* CQBDDTestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F7A4224DDC74600378E99 /* CQBDDTestSpec.m */; };
 		3B9C2EA424C6E85700CF811A /* UIButton+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C2EA324C6E85700CF811A /* UIButton+Expand.m */; };
 		3B9C2EA824C7077500CF811A /* CQComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C2EA724C7077500CF811A /* CQComponentViewController.m */; };
+		3BB736F824DE621000D890E2 /* CQBDDTestViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB736F724DE621000D890E2 /* CQBDDTestViewControllerSpec.m */; };
 		3BE0026724CB534B00829706 /* CQUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0026624CB534B00829706 /* CQUIViewController.m */; };
 		3BE0026B24CBB2D700829706 /* CQOCLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0026A24CBB2D700829706 /* CQOCLViewController.m */; };
 		3BE0026E24CBB33F00829706 /* CQStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0026D24CBB33F00829706 /* CQStudent.m */; };
@@ -143,11 +143,11 @@
 		3B8F7A3B24DCF94D00378E99 /* CQiOSDevelopmentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQiOSDevelopmentViewController.m; sourceTree = "<group>"; };
 		3B8F7A3F24DDA59800378E99 /* CQBDDTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQBDDTestViewController.h; sourceTree = "<group>"; };
 		3B8F7A4024DDA59800378E99 /* CQBDDTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQBDDTestViewController.m; sourceTree = "<group>"; };
-		3B8F7A4224DDC74600378E99 /* CQBDDTestSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQBDDTestSpec.m; sourceTree = "<group>"; };
 		3B9C2EA224C6E85700CF811A /* UIButton+Expand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Expand.h"; sourceTree = "<group>"; };
 		3B9C2EA324C6E85700CF811A /* UIButton+Expand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Expand.m"; sourceTree = "<group>"; };
 		3B9C2EA624C7077500CF811A /* CQComponentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQComponentViewController.h; sourceTree = "<group>"; };
 		3B9C2EA724C7077500CF811A /* CQComponentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQComponentViewController.m; sourceTree = "<group>"; };
+		3BB736F724DE621000D890E2 /* CQBDDTestViewControllerSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQBDDTestViewControllerSpec.m; sourceTree = "<group>"; };
 		3BE0026524CB534B00829706 /* CQUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQUIViewController.h; sourceTree = "<group>"; };
 		3BE0026624CB534B00829706 /* CQUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQUIViewController.m; sourceTree = "<group>"; };
 		3BE0026924CBB2D700829706 /* CQOCLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQOCLViewController.h; sourceTree = "<group>"; };
@@ -390,7 +390,7 @@
 		3B8F7A3E24DD8FFC00378E99 /* TestGroup */ = {
 			isa = PBXGroup;
 			children = (
-				3B8F7A4224DDC74600378E99 /* CQBDDTestSpec.m */,
+				3BB736F724DE621000D890E2 /* CQBDDTestViewControllerSpec.m */,
 			);
 			path = TestGroup;
 			sourceTree = "<group>";
@@ -883,8 +883,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BB736F824DE621000D890E2 /* CQBDDTestViewControllerSpec.m in Sources */,
 				3B71A0B024C5174E00F695D2 /* CQProjectTests.m in Sources */,
-				3B8F7A4324DDC74600378E99 /* CQBDDTestSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
