@@ -7,6 +7,7 @@
 //
 
 #import "CQBDDTestViewController.h"
+#import "Person.h"
 
 @interface CQBDDTestViewController ()
 
@@ -27,6 +28,8 @@
     return num1 + num2;
 }
 
+
+// 最长无重复字串
 - (int)lengthOfLongestSubstring:(NSString *)str {
     if (str == nil ||str.length == 0) return 0;
     NSMutableArray *prevArrrays = [NSMutableArray arrayWithCapacity:128];
@@ -45,6 +48,27 @@
         prevArrrays[[str characterAtIndex:i]] = @(i);
     }
     return maxLen;
+}
+
+- (NSObject *)objWithIndex:(NSInteger)index {
+    if (index > 0) {
+        return [[NSObject alloc] init];
+    }
+    return nil;
+}
+
+- (NSObject *)objWithIndex:(NSInteger)index objs:(NSArray *)objs {
+    if (!(objs && objs.count > 0) || (index > [objs count] || objs < 0)) {
+        return nil;
+    }
+    
+    return objs[index];
+}
+
+- (Person *)getPersion {
+    Person *p = [[Person alloc] init];
+    [p setAge:20];
+    return p;
 }
  
 @end

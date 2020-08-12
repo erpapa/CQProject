@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Person : NSObject
 @property (nonatomic, assign) NSInteger age;
 @property (nonatomic, strong) Person *p1;
+- (NSInteger)getInteger;
 @end
 
 NS_ASSUME_NONNULL_END

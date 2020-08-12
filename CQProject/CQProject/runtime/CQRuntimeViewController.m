@@ -13,9 +13,9 @@
 @end
 
 @implementation CQRuntimeViewController
-+ (void)load {
-    NSLog(@"runtime主类中的+load方法被调用");
-}
+//+ (void)load {
+//    NSLog(@"runtime主类中的+load方法被调用");
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

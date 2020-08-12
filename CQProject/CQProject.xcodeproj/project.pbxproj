@@ -40,6 +40,10 @@
 		3B9C2EA424C6E85700CF811A /* UIButton+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C2EA324C6E85700CF811A /* UIButton+Expand.m */; };
 		3B9C2EA824C7077500CF811A /* CQComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C2EA724C7077500CF811A /* CQComponentViewController.m */; };
 		3BB736F824DE621000D890E2 /* CQBDDTestViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB736F724DE621000D890E2 /* CQBDDTestViewControllerSpec.m */; };
+		3BBD030524E13FC8003D9BCE /* CQWeakObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD030424E13FC8003D9BCE /* CQWeakObject.m */; };
+		3BBD031824E17F88003D9BCE /* CQCallStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD031724E17F88003D9BCE /* CQCallStack.m */; };
+		3BBD031B24E23910003D9BCE /* CQOCSubLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD031A24E23910003D9BCE /* CQOCSubLViewController.m */; };
+		3BBD032324E39835003D9BCE /* CQ16InstruMentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD032224E39835003D9BCE /* CQ16InstruMentsViewController.m */; };
 		3BE0026724CB534B00829706 /* CQUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0026624CB534B00829706 /* CQUIViewController.m */; };
 		3BE0026B24CBB2D700829706 /* CQOCLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0026A24CBB2D700829706 /* CQOCLViewController.m */; };
 		3BE0026E24CBB33F00829706 /* CQStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0026D24CBB33F00829706 /* CQStudent.m */; };
@@ -145,6 +149,14 @@
 		3B9C2EA624C7077500CF811A /* CQComponentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQComponentViewController.h; sourceTree = "<group>"; };
 		3B9C2EA724C7077500CF811A /* CQComponentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQComponentViewController.m; sourceTree = "<group>"; };
 		3BB736F724DE621000D890E2 /* CQBDDTestViewControllerSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQBDDTestViewControllerSpec.m; sourceTree = "<group>"; };
+		3BBD030324E13FC8003D9BCE /* CQWeakObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQWeakObject.h; sourceTree = "<group>"; };
+		3BBD030424E13FC8003D9BCE /* CQWeakObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQWeakObject.m; sourceTree = "<group>"; };
+		3BBD031624E17F88003D9BCE /* CQCallStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQCallStack.h; sourceTree = "<group>"; };
+		3BBD031724E17F88003D9BCE /* CQCallStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQCallStack.m; sourceTree = "<group>"; };
+		3BBD031924E23910003D9BCE /* CQOCSubLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQOCSubLViewController.h; sourceTree = "<group>"; };
+		3BBD031A24E23910003D9BCE /* CQOCSubLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQOCSubLViewController.m; sourceTree = "<group>"; };
+		3BBD032124E39835003D9BCE /* CQ16InstruMentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQ16InstruMentsViewController.h; sourceTree = "<group>"; };
+		3BBD032224E39835003D9BCE /* CQ16InstruMentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQ16InstruMentsViewController.m; sourceTree = "<group>"; };
 		3BE0026524CB534B00829706 /* CQUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQUIViewController.h; sourceTree = "<group>"; };
 		3BE0026624CB534B00829706 /* CQUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQUIViewController.m; sourceTree = "<group>"; };
 		3BE0026924CBB2D700829706 /* CQOCLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQOCLViewController.h; sourceTree = "<group>"; };
@@ -362,6 +374,7 @@
 		3B8F7A3924DCF8FF00378E99 /* iOS开发高手课 */ = {
 			isa = PBXGroup;
 			children = (
+				3BBD031F24E397E3003D9BCE /* 16 | 性能监控：衡量 App 质量的那把尺 */,
 				3B8F7A3D24DD780400378E99 /* 29在 iOS 中进行面向测试驱动开发和面向行为驱动开发 */,
 				3B8F7A3A24DCF94D00378E99 /* CQiOSDevelopmentViewController.h */,
 				3B8F7A3B24DCF94D00378E99 /* CQiOSDevelopmentViewController.m */,
@@ -404,6 +417,24 @@
 			path = "组件化";
 			sourceTree = "<group>";
 		};
+		3BBD031524E17F25003D9BCE /* CQCallStack */ = {
+			isa = PBXGroup;
+			children = (
+				3BBD031624E17F88003D9BCE /* CQCallStack.h */,
+				3BBD031724E17F88003D9BCE /* CQCallStack.m */,
+			);
+			path = CQCallStack;
+			sourceTree = "<group>";
+		};
+		3BBD031F24E397E3003D9BCE /* 16 | 性能监控：衡量 App 质量的那把尺 */ = {
+			isa = PBXGroup;
+			children = (
+				3BBD032124E39835003D9BCE /* CQ16InstruMentsViewController.h */,
+				3BBD032224E39835003D9BCE /* CQ16InstruMentsViewController.m */,
+			);
+			path = "16 | 性能监控：衡量 App 质量的那把尺";
+			sourceTree = "<group>";
+		};
 		3BE0026424CB533700829706 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,10 +453,14 @@
 			children = (
 				3BE0026924CBB2D700829706 /* CQOCLViewController.h */,
 				3BE0026A24CBB2D700829706 /* CQOCLViewController.m */,
+				3BBD031924E23910003D9BCE /* CQOCSubLViewController.h */,
+				3BBD031A24E23910003D9BCE /* CQOCSubLViewController.m */,
 				3BE0026C24CBB33F00829706 /* CQStudent.h */,
 				3BE0026D24CBB33F00829706 /* CQStudent.m */,
 				3BE0026F24CBB56000829706 /* CQPerson.h */,
 				3BE0027024CBB56000829706 /* CQPerson.m */,
+				3BBD030324E13FC8003D9BCE /* CQWeakObject.h */,
+				3BBD030424E13FC8003D9BCE /* CQWeakObject.m */,
 			);
 			path = "OC语法特性";
 			sourceTree = "<group>";
@@ -463,6 +498,7 @@
 		3BEC4F3E24C521F00085935F /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
+				3BBD031524E17F25003D9BCE /* CQCallStack */,
 				3BF42D3F24D65E9E00AA6977 /* YYFPSLabel.h */,
 				3BF42D3D24D65E9600AA6977 /* YYFPSLabel.m */,
 				3BF42D2C24D28EC200AA6977 /* CQRunLoopViewController.h */,
@@ -826,6 +862,7 @@
 				3BF42D1724CD1CBB00AA6977 /* CQOtherViewController.m in Sources */,
 				3BEC4F4624C569A20085935F /* Person.m in Sources */,
 				3B9C2EA824C7077500CF811A /* CQComponentViewController.m in Sources */,
+				3BBD031824E17F88003D9BCE /* CQCallStack.m in Sources */,
 				3BEC4F4224C5222B0085935F /* NSObject+CQKVO.m in Sources */,
 				3B1F2B4224DBF76000EED37A /* CQTestUIButton.m in Sources */,
 				3BE0027124CBB56000829706 /* CQPerson.m in Sources */,
@@ -841,12 +878,14 @@
 				3BF42D3E24D65E9600AA6977 /* YYFPSLabel.m in Sources */,
 				3B021CDF24D6816B00D44AF9 /* NSString+MJDownload.m in Sources */,
 				3B1F2B3C24DA4F1D00EED37A /* CQRuntimeSubViewController.m in Sources */,
+				3BBD032324E39835003D9BCE /* CQ16InstruMentsViewController.m in Sources */,
 				3B51DB0024C7ED2100BBE0B4 /* CQImageDownloader.m in Sources */,
 				3B6736FC24C7DD31007F0D4C /* CQGuestTestView.m in Sources */,
 				3B8F7A3C24DCF94D00378E99 /* CQiOSDevelopmentViewController.m in Sources */,
 				3B9C2EA424C6E85700CF811A /* UIButton+Expand.m in Sources */,
 				3BF42D2E24D28EC200AA6977 /* CQRunLoopViewController.m in Sources */,
 				3BE0026B24CBB2D700829706 /* CQOCLViewController.m in Sources */,
+				3BBD030524E13FC8003D9BCE /* CQWeakObject.m in Sources */,
 				3BF42D2124CD857600AA6977 /* CQWebViewController.m in Sources */,
 				3B71A0A624C5174E00F695D2 /* main.m in Sources */,
 				3B021CDD24D6816B00D44AF9 /* MJDownloadManager.m in Sources */,
@@ -855,6 +894,7 @@
 				3BEC4F5924C5CA430085935F /* CQGestureRecognizerViewController.m in Sources */,
 				3B021CEE24D7B98E00D44AF9 /* CQTwoDownloadManager.m in Sources */,
 				3BE0026724CB534B00829706 /* CQUIViewController.m in Sources */,
+				3BBD031B24E23910003D9BCE /* CQOCSubLViewController.m in Sources */,
 				3BF42D1D24CD557600AA6977 /* CQURLSessionManager.m in Sources */,
 				3BEC4F4D24C57A7B0085935F /* CQBaseViewController.m in Sources */,
 				3B021CE624D6D08A00D44AF9 /* CQVideoPlayerAVPlayerViewController.m in Sources */,
@@ -1108,6 +1148,39 @@
 			baseConfigurationReference = E0E33A8CCC2DC284D51FC8B5 /* Pods-CQProjectUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CTMediator\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FBRetainCycleDetector\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MLeaksFinder\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Objection\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/REFormattedNumberField\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RETableViewManager\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/REValidation\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReactiveCocoa\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReactiveViewModel\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/dsBridge\"",
+					"\"${PODS_ROOT}/YYKit/Vendor\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CTMediator/CTMediator.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MLeaksFinder/MLeaksFinder.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry/Masonry.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Objection/Objection.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/REFormattedNumberField/REFormattedNumberField.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RETableViewManager/RETableViewManager.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/REValidation/REValidation.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReactiveCocoa/ReactiveCocoa.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReactiveViewModel/ReactiveViewModel.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYKit/YYKit.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/dsBridge/dsBridge.framework/Headers\"",
+				);
 				INFOPLIST_FILE = CQProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1126,6 +1199,39 @@
 			baseConfigurationReference = C35BBBD340662686362F03D2 /* Pods-CQProjectUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CTMediator\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FBRetainCycleDetector\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MLeaksFinder\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Objection\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/REFormattedNumberField\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RETableViewManager\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/REValidation\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReactiveCocoa\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReactiveViewModel\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/dsBridge\"",
+					"\"${PODS_ROOT}/YYKit/Vendor\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CTMediator/CTMediator.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MLeaksFinder/MLeaksFinder.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry/Masonry.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Objection/Objection.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/REFormattedNumberField/REFormattedNumberField.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RETableViewManager/RETableViewManager.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/REValidation/REValidation.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReactiveCocoa/ReactiveCocoa.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReactiveViewModel/ReactiveViewModel.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYKit/YYKit.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/dsBridge/dsBridge.framework/Headers\"",
+				);
 				INFOPLIST_FILE = CQProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

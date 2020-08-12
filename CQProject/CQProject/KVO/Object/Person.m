@@ -16,4 +16,12 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     NSLog(@"触发了Kvo");
 }
+
+- (void)setAge:(NSInteger)age {
+    _age = age;
+}
+
+- (NSInteger)getInteger {
+    return 2;
+}
 @end

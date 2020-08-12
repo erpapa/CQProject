@@ -8,6 +8,7 @@
 
 #import "CQiOSDevelopmentViewController.h"
 #import "CQBDDTestViewController.h"
+#import "CQ16InstruMentsViewController.h"
 
 @interface CQiOSDevelopmentViewController ()
 @property (nonatomic, strong) UITableView *tableView;
@@ -33,6 +34,14 @@
         [self.navigationController pushViewController:vc animated:YES];
     };
     [self.section addItem:item];
+    
+    RETableViewItem *InstruMentsItem = [[RETableViewItem alloc] initWithTitle:@"16:性能监控"];
+    InstruMentsItem.selectionHandler = ^(id item) {
+        @strongify(self);
+        CQ16InstruMentsViewController *vc = [[CQ16InstruMentsViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    };
+    [self.section addItem:InstruMentsItem];
     
 }
 

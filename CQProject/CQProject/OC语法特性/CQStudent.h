@@ -7,11 +7,12 @@
 //
 
 #import "CQPerson.h"
+@class CQWeakObject;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CQStudent : CQPerson
-
+@property (nonatomic, weak) CQWeakObject *weakObject;
 @end
 
 NS_ASSUME_NONNULL_END

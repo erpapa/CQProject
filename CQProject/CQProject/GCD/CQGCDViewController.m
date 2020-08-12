@@ -22,6 +22,7 @@
     self.title = @"GCD";
     self.lock = [[NSLock alloc] init];
     self.semaphore = dispatch_semaphore_create(1);
+    
 //    [self test8];
     
     // 已经在主队列中重复执行任务
@@ -29,8 +30,21 @@
     //
 //    [self locktest1];
 //    [self locktest3];
-    [self locktest4];
+//    [self locktest4];
     
+    [self serialQueueTest];
+    
+}
+
+- (void)serialQueueTest {
+    dispatch_queue_t queue = dispatch_queue_create("串行", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t concurrentQueue = dispatch_queue_create("并行", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(queue, ^{
+        NSLog(@"2");
+        dispatch_sync(concurrentQueue, ^{
+            NSLog(@"1");
+        });
+    });
 }
 
 - (void)locktest4 {

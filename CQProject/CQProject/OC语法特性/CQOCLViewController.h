@@ -7,11 +7,12 @@
 //
 
 #import "CQBaseViewController.h"
+#import "CQWeakObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
+static CQWeakObject *controllerWeakObject = nil;
 @interface CQOCLViewController : CQBaseViewController
-
+- (void)subBlockTest;
 @end
 
 NS_ASSUME_NONNULL_END
