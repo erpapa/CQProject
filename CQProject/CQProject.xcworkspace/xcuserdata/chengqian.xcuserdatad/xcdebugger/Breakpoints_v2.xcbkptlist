@@ -628,5 +628,21 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9AE3668F-33F9-4FB5-AE71-8A5A2355D7AF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CQProject/iOS&#x5f00;&#x53d1;&#x9ad8;&#x624b;&#x8bfe;/16 | &#x6027;&#x80fd;&#x76d1;&#x63a7;&#xff1a;&#x8861;&#x91cf; App &#x8d28;&#x91cf;&#x7684;&#x90a3;&#x628a;&#x5c3a;/FPS/CQFPSViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "-fpsCount:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

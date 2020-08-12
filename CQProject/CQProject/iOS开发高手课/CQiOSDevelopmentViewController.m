@@ -9,6 +9,7 @@
 #import "CQiOSDevelopmentViewController.h"
 #import "CQBDDTestViewController.h"
 #import "CQ16InstruMentsViewController.h"
+#import "CQPackageViewController.h"
 
 @interface CQiOSDevelopmentViewController ()
 @property (nonatomic, strong) UITableView *tableView;
@@ -41,7 +42,14 @@
         CQ16InstruMentsViewController *vc = [[CQ16InstruMentsViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     };
-    [self.section addItem:InstruMentsItem];
+    
+    RETableViewItem *packageItem = [[RETableViewItem alloc] initWithTitle:@"10:包大小优化"];
+    packageItem.selectionHandler = ^(id item) {
+        @strongify(self);
+        CQPackageViewController *vc = [[CQPackageViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    };
+    [self.section addItem:packageItem];
     
 }
 

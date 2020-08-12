@@ -44,6 +44,9 @@
 		3BBD031824E17F88003D9BCE /* CQCallStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD031724E17F88003D9BCE /* CQCallStack.m */; };
 		3BBD031B24E23910003D9BCE /* CQOCSubLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD031A24E23910003D9BCE /* CQOCSubLViewController.m */; };
 		3BBD032324E39835003D9BCE /* CQ16InstruMentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD032224E39835003D9BCE /* CQ16InstruMentsViewController.m */; };
+		3BBD032724E3AA54003D9BCE /* CQFPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD032624E3AA54003D9BCE /* CQFPSViewController.m */; };
+		3BBD032B24E3C268003D9BCE /* CQCPUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD032A24E3C268003D9BCE /* CQCPUViewController.m */; };
+		3BBD032F24E3EBD4003D9BCE /* CQPackageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD032E24E3EBD4003D9BCE /* CQPackageViewController.m */; };
 		3BE0026724CB534B00829706 /* CQUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0026624CB534B00829706 /* CQUIViewController.m */; };
 		3BE0026B24CBB2D700829706 /* CQOCLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0026A24CBB2D700829706 /* CQOCLViewController.m */; };
 		3BE0026E24CBB33F00829706 /* CQStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0026D24CBB33F00829706 /* CQStudent.m */; };
@@ -157,6 +160,12 @@
 		3BBD031A24E23910003D9BCE /* CQOCSubLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQOCSubLViewController.m; sourceTree = "<group>"; };
 		3BBD032124E39835003D9BCE /* CQ16InstruMentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQ16InstruMentsViewController.h; sourceTree = "<group>"; };
 		3BBD032224E39835003D9BCE /* CQ16InstruMentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQ16InstruMentsViewController.m; sourceTree = "<group>"; };
+		3BBD032524E3AA54003D9BCE /* CQFPSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQFPSViewController.h; sourceTree = "<group>"; };
+		3BBD032624E3AA54003D9BCE /* CQFPSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQFPSViewController.m; sourceTree = "<group>"; };
+		3BBD032924E3C268003D9BCE /* CQCPUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQCPUViewController.h; sourceTree = "<group>"; };
+		3BBD032A24E3C268003D9BCE /* CQCPUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQCPUViewController.m; sourceTree = "<group>"; };
+		3BBD032D24E3EBD4003D9BCE /* CQPackageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQPackageViewController.h; sourceTree = "<group>"; };
+		3BBD032E24E3EBD4003D9BCE /* CQPackageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQPackageViewController.m; sourceTree = "<group>"; };
 		3BE0026524CB534B00829706 /* CQUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQUIViewController.h; sourceTree = "<group>"; };
 		3BE0026624CB534B00829706 /* CQUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQUIViewController.m; sourceTree = "<group>"; };
 		3BE0026924CBB2D700829706 /* CQOCLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQOCLViewController.h; sourceTree = "<group>"; };
@@ -374,6 +383,7 @@
 		3B8F7A3924DCF8FF00378E99 /* iOS开发高手课 */ = {
 			isa = PBXGroup;
 			children = (
+				3BBD032C24E3EBB8003D9BCE /* 10 | 包大小：如何从资源和代码层面实现全方位瘦身？  */,
 				3BBD031F24E397E3003D9BCE /* 16 | 性能监控：衡量 App 质量的那把尺 */,
 				3B8F7A3D24DD780400378E99 /* 29在 iOS 中进行面向测试驱动开发和面向行为驱动开发 */,
 				3B8F7A3A24DCF94D00378E99 /* CQiOSDevelopmentViewController.h */,
@@ -429,10 +439,39 @@
 		3BBD031F24E397E3003D9BCE /* 16 | 性能监控：衡量 App 质量的那把尺 */ = {
 			isa = PBXGroup;
 			children = (
+				3BBD032824E3B0B4003D9BCE /* CPU */,
+				3BBD032424E3AA34003D9BCE /* FPS */,
 				3BBD032124E39835003D9BCE /* CQ16InstruMentsViewController.h */,
 				3BBD032224E39835003D9BCE /* CQ16InstruMentsViewController.m */,
 			);
 			path = "16 | 性能监控：衡量 App 质量的那把尺";
+			sourceTree = "<group>";
+		};
+		3BBD032424E3AA34003D9BCE /* FPS */ = {
+			isa = PBXGroup;
+			children = (
+				3BBD032524E3AA54003D9BCE /* CQFPSViewController.h */,
+				3BBD032624E3AA54003D9BCE /* CQFPSViewController.m */,
+			);
+			path = FPS;
+			sourceTree = "<group>";
+		};
+		3BBD032824E3B0B4003D9BCE /* CPU */ = {
+			isa = PBXGroup;
+			children = (
+				3BBD032924E3C268003D9BCE /* CQCPUViewController.h */,
+				3BBD032A24E3C268003D9BCE /* CQCPUViewController.m */,
+			);
+			path = CPU;
+			sourceTree = "<group>";
+		};
+		3BBD032C24E3EBB8003D9BCE /* 10 | 包大小：如何从资源和代码层面实现全方位瘦身？  */ = {
+			isa = PBXGroup;
+			children = (
+				3BBD032D24E3EBD4003D9BCE /* CQPackageViewController.h */,
+				3BBD032E24E3EBD4003D9BCE /* CQPackageViewController.m */,
+			);
+			path = "10 | 包大小：如何从资源和代码层面实现全方位瘦身？ ";
 			sourceTree = "<group>";
 		};
 		3BE0026424CB533700829706 /* UI */ = {
@@ -852,6 +891,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BBD032724E3AA54003D9BCE /* CQFPSViewController.m in Sources */,
 				3BEC4F4924C575CF0085935F /* CQTwoKVOViewController.m in Sources */,
 				3B021CD424D6721E00D44AF9 /* CQDownloadTestViewController.m in Sources */,
 				3B71A0CA24C51A8A00F695D2 /* CQRootNavigationViewController.m in Sources */,
@@ -862,6 +902,7 @@
 				3BF42D1724CD1CBB00AA6977 /* CQOtherViewController.m in Sources */,
 				3BEC4F4624C569A20085935F /* Person.m in Sources */,
 				3B9C2EA824C7077500CF811A /* CQComponentViewController.m in Sources */,
+				3BBD032B24E3C268003D9BCE /* CQCPUViewController.m in Sources */,
 				3BBD031824E17F88003D9BCE /* CQCallStack.m in Sources */,
 				3BEC4F4224C5222B0085935F /* NSObject+CQKVO.m in Sources */,
 				3B1F2B4224DBF76000EED37A /* CQTestUIButton.m in Sources */,
@@ -869,6 +910,7 @@
 				3B51DB0624C82DC800BBE0B4 /* CQGCDViewController.m in Sources */,
 				3B8F7A4124DDA59800378E99 /* CQBDDTestViewController.m in Sources */,
 				3BEC4F3C24C5216C0085935F /* CQKVOViewController.m in Sources */,
+				3BBD032F24E3EBD4003D9BCE /* CQPackageViewController.m in Sources */,
 				3BE0026E24CBB33F00829706 /* CQStudent.m in Sources */,
 				3B71A09524C5174D00F695D2 /* AppDelegate.m in Sources */,
 				3B1F2B3624D966DC00EED37A /* CQRuntimeViewController+A.m in Sources */,
@@ -1182,6 +1224,7 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/dsBridge/dsBridge.framework/Headers\"",
 				);
 				INFOPLIST_FILE = CQProjectUITests/Info.plist;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1233,6 +1276,7 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/dsBridge/dsBridge.framework/Headers\"",
 				);
 				INFOPLIST_FILE = CQProjectUITests/Info.plist;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
