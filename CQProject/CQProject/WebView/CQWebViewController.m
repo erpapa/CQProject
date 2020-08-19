@@ -25,9 +25,9 @@
     [self.wkwebView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.bottom.equalTo(self.view);
     }];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
-    NSURL *url = [NSURL fileURLWithPath:path];
-    url = [NSURL URLWithString:@"https://www.baidu.com/"];
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
+//    NSURL *url = [NSURL fileURLWithPath:path];
+    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com/"];
     [self.wkwebView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 

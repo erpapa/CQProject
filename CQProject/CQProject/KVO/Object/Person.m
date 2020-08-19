@@ -11,6 +11,7 @@
 @implementation Person
 - (void)dealloc {
     NSLog(@"%s",__func__);
+    
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -24,4 +25,5 @@
 - (NSInteger)getInteger {
     return 2;
 }
+
 @end
