@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "771FF100ED90F638EDC4467688EB68D2"
-               BuildableName = "Objection.framework"
+               BuildableName = "libObjection.a"
                BlueprintName = "Objection"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

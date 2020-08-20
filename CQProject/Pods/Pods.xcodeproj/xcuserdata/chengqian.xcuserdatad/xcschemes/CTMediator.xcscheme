@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6A222DBB9D71B481EE8F2DACD77F8A61"
-               BuildableName = "CTMediator.framework"
+               BuildableName = "libCTMediator.a"
                BlueprintName = "CTMediator"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

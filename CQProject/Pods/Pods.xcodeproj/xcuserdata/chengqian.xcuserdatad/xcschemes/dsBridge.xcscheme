@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1A6F633BD0A4B9EF892715BEB76AC948"
-               BuildableName = "dsBridge.framework"
+               BuildableName = "libdsBridge.a"
                BlueprintName = "dsBridge"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D5A4060DC193E269FE369F036E4781A9"
-               BuildableName = "Kiwi.framework"
+               BuildableName = "libKiwi.a"
                BlueprintName = "Kiwi"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "984187611CBB46151D97BA537B991DBC"
-               BuildableName = "MLeaksFinder.framework"
+               BuildableName = "libMLeaksFinder.a"
                BlueprintName = "MLeaksFinder"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E0AE03408E00A9B9604E42FB67BC477C"
-               BuildableName = "REFormattedNumberField.framework"
+               BuildableName = "libREFormattedNumberField.a"
                BlueprintName = "REFormattedNumberField"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
