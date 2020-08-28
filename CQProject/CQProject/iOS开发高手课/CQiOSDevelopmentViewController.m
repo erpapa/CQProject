@@ -10,7 +10,7 @@
 #import "CQBDDTestViewController.h"
 #import "CQ16InstruMentsViewController.h"
 #import "CQPackageViewController.h"
-#import "CQFas"
+#import "CQFishHookViewController.h"
 
 @interface CQiOSDevelopmentViewController ()
 @property (nonatomic, strong) UITableView *tableView;
@@ -43,6 +43,7 @@
         CQ16InstruMentsViewController *vc = [[CQ16InstruMentsViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     };
+    [self.section addItem:InstruMentsItem];
     
     RETableViewItem *packageItem = [[RETableViewItem alloc] initWithTitle:@"10:包大小优化"];
     packageItem.selectionHandler = ^(id item) {
@@ -51,6 +52,14 @@
         [self.navigationController pushViewController:vc animated:YES];
     };
     [self.section addItem:packageItem];
+    
+    RETableViewItem *fishHookItem = [[RETableViewItem alloc] initWithTitle:@"fishhook学习"];
+    fishHookItem.selectionHandler = ^(id item) {
+        @strongify(self);
+        CQFishHookViewController *vc = [[CQFishHookViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    };
+    [self.section addItem:fishHookItem];
     
 }
 

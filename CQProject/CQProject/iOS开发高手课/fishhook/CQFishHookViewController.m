@@ -15,7 +15,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    NSLog(@"还没有被绑定");
+    NSLog(@"老司机");
 }
 
 @end
