@@ -14,17 +14,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FBRetainCycleDetector.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Kiwi.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MLeaksFinder.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -95,6 +85,11 @@
 			<false/>
 		</dict>
 		<key>dsBridge.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>fishhook.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

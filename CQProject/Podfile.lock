@@ -16,11 +16,9 @@ PODS:
     - AFNetworking/NSURLSession
   - CTMediator (36)
   - dsBridge (3.0.6)
-  - FBRetainCycleDetector (0.1.4)
+  - fishhook (0.2)
   - Kiwi (3.0.0)
   - Masonry (1.0.2)
-  - MLeaksFinder (1.0.0):
-    - FBRetainCycleDetector
   - Objection (1.6.1)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -47,9 +45,9 @@ DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - CTMediator
   - dsBridge
+  - fishhook (= 0.2)
   - Kiwi
   - Masonry (~> 1.0.2)
-  - MLeaksFinder
   - Objection (= 1.6.1)
   - ReactiveCocoa (~> 2.5)
   - ReactiveViewModel (~> 0.3)
@@ -63,10 +61,8 @@ SPEC REPOS:
     - AFNetworking
     - CTMediator
     - dsBridge
-    - FBRetainCycleDetector
     - Kiwi
     - Masonry
-    - MLeaksFinder
     - Objection
     - ReactiveCocoa
     - ReactiveViewModel
@@ -74,6 +70,8 @@ SPEC REPOS:
     - RETableViewManager
     - REValidation
     - SDWebImage
+  trunk:
+    - fishhook
 
 EXTERNAL SOURCES:
   YYKit:
@@ -88,10 +86,9 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CTMediator: 918aa0afe3fa537f380a1fb15e7603a7e19fa0c4
   dsBridge: 48b62ee8a411ad601a88d6f6c8cf6cb634b206b7
-  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
-  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   Objection: ed03f2219cb22d2b5b893114219fe6c7e3263bde
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   ReactiveViewModel: 58918dcbcec2d3151195ab1ed9163c57a8163999
@@ -101,6 +98,6 @@ SPEC CHECKSUMS:
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 32de577c3ac03c7a4889188c8c5d435133521a20
+PODFILE CHECKSUM: 732fecccf1aa553c7a6e1258dc83196a95484b3b
 
 COCOAPODS: 1.9.3

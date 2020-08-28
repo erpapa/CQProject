@@ -13,10 +13,12 @@ target 'CQProject' do
     pod 'REValidation', '~> 0.1.4'
     pod 'RETableViewManager', '~> 1.7'
     pod 'YYKit', :git => 'https://github.com/cfxiao/YYKit.git'
-    pod 'MLeaksFinder'
     pod 'Objection', '1.6.1'
     pod "CTMediator"
     pod "dsBridge"
+#   pod 'MLeaksFinder'
+#   pod 'OOMDetector', '1.3'
+    pod 'fishhook', '0.2'
     
     
 

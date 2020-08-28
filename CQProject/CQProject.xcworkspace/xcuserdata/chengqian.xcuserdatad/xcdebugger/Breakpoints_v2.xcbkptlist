@@ -244,14 +244,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "ABFFB4C9-13B8-4D80-8EEA-E94268632471 - 7dca9f0d626639ff"
+                  uuid = "ABFFB4C9-13B8-4D80-8EEA-E94268632471 - 105f853f0f0f1829"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[AFSecurityPolicy evaluateServerTrust:forDomain:]"
-                  moduleName = "AFNetworking"
+                  moduleName = "CQProject"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengqian/Desktop/%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/CQProject/CQProject/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m"
+                  urlString = "file:///Users/chengqian/Desktop/%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/MyGit/CQProject/CQProject/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "281"
@@ -259,14 +259,14 @@
                   offsetFromSymbolStart = "1001">
                </Location>
                <Location
-                  uuid = "ABFFB4C9-13B8-4D80-8EEA-E94268632471 - 7dca9f0d626639ff"
+                  uuid = "ABFFB4C9-13B8-4D80-8EEA-E94268632471 - 105f853f0f0f1829"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[AFSecurityPolicy evaluateServerTrust:forDomain:]"
-                  moduleName = "AFNetworking"
+                  moduleName = "CQProject"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chengqian/Desktop/%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/CQProject/CQProject/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m"
+                  urlString = "file:///Users/chengqian/Desktop/%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/MyGit/CQProject/CQProject/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "281"

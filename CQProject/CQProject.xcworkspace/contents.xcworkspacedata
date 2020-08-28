@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:CQFishHookViewController.h">
+   </FileRef>
+   <FileRef
+      location = "group:CQFishHookViewController.m">
+   </FileRef>
+   <FileRef
       location = "group:CQProject.xcodeproj">
    </FileRef>
    <FileRef
