@@ -40,6 +40,7 @@
 		3B9C2EA424C6E85700CF811A /* UIButton+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C2EA324C6E85700CF811A /* UIButton+Expand.m */; };
 		3B9C2EA824C7077500CF811A /* CQComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C2EA724C7077500CF811A /* CQComponentViewController.m */; };
 		3BB736F824DE621000D890E2 /* CQBDDTestViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB736F724DE621000D890E2 /* CQBDDTestViewControllerSpec.m */; };
+		3BB8289C24FC0DAA00EA1D56 /* CQFishHookViewController+FishHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB8289B24FC0DAA00EA1D56 /* CQFishHookViewController+FishHook.m */; };
 		3BBD030524E13FC8003D9BCE /* CQWeakObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD030424E13FC8003D9BCE /* CQWeakObject.m */; };
 		3BBD031824E17F88003D9BCE /* CQCallStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD031724E17F88003D9BCE /* CQCallStack.m */; };
 		3BBD031B24E23910003D9BCE /* CQOCSubLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD031A24E23910003D9BCE /* CQOCSubLViewController.m */; };
@@ -154,6 +155,8 @@
 		3B9C2EA624C7077500CF811A /* CQComponentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQComponentViewController.h; sourceTree = "<group>"; };
 		3B9C2EA724C7077500CF811A /* CQComponentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQComponentViewController.m; sourceTree = "<group>"; };
 		3BB736F724DE621000D890E2 /* CQBDDTestViewControllerSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQBDDTestViewControllerSpec.m; sourceTree = "<group>"; };
+		3BB8289A24FC0DAA00EA1D56 /* CQFishHookViewController+FishHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CQFishHookViewController+FishHook.h"; sourceTree = "<group>"; };
+		3BB8289B24FC0DAA00EA1D56 /* CQFishHookViewController+FishHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CQFishHookViewController+FishHook.m"; sourceTree = "<group>"; };
 		3BBD030324E13FC8003D9BCE /* CQWeakObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQWeakObject.h; sourceTree = "<group>"; };
 		3BBD030424E13FC8003D9BCE /* CQWeakObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQWeakObject.m; sourceTree = "<group>"; };
 		3BBD031624E17F88003D9BCE /* CQCallStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQCallStack.h; sourceTree = "<group>"; };
@@ -285,6 +288,8 @@
 		3B3068B524F91329005BD06D /* fishhook */ = {
 			isa = PBXGroup;
 			children = (
+				3BB8289A24FC0DAA00EA1D56 /* CQFishHookViewController+FishHook.h */,
+				3BB8289B24FC0DAA00EA1D56 /* CQFishHookViewController+FishHook.m */,
 				3B3068B724F913AA005BD06D /* CQFishHookViewController.h */,
 				3B3068B624F913AA005BD06D /* CQFishHookViewController.m */,
 			);
@@ -903,6 +908,7 @@
 				3B8F7A4124DDA59800378E99 /* CQBDDTestViewController.m in Sources */,
 				3BEC4F3C24C5216C0085935F /* CQKVOViewController.m in Sources */,
 				3BBD032F24E3EBD4003D9BCE /* CQPackageViewController.m in Sources */,
+				3BB8289C24FC0DAA00EA1D56 /* CQFishHookViewController+FishHook.m in Sources */,
 				3BE0026E24CBB33F00829706 /* CQStudent.m in Sources */,
 				3B71A09524C5174D00F695D2 /* AppDelegate.m in Sources */,
 				3B1F2B3624D966DC00EED37A /* CQRuntimeViewController+A.m in Sources */,
