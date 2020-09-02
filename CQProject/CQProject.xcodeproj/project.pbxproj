@@ -15,6 +15,8 @@
 		3B021CE624D6D08A00D44AF9 /* CQVideoPlayerAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B021CE524D6D08A00D44AF9 /* CQVideoPlayerAVPlayerViewController.m */; };
 		3B021CEB24D7B5EF00D44AF9 /* NSString+CQDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B021CEA24D7B5EF00D44AF9 /* NSString+CQDownload.m */; };
 		3B021CEE24D7B98E00D44AF9 /* CQTwoDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B021CED24D7B98E00D44AF9 /* CQTwoDownloadManager.m */; };
+		3B08914524FE805600F480A3 /* CQFBRetainCycleDetectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B08914424FE805600F480A3 /* CQFBRetainCycleDetectorViewController.m */; };
+		3B08914824FE8B4600F480A3 /* CQFBRetainCycleDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B08914724FE8B4600F480A3 /* CQFBRetainCycleDetector.m */; };
 		3B1F2B3324D9661400EED37A /* CQRuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F2B3224D9661400EED37A /* CQRuntimeViewController.m */; };
 		3B1F2B3624D966DC00EED37A /* CQRuntimeViewController+A.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F2B3524D966DC00EED37A /* CQRuntimeViewController+A.m */; };
 		3B1F2B3924D966EB00EED37A /* CQRuntimeViewController+B.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F2B3824D966EB00EED37A /* CQRuntimeViewController+B.m */; };
@@ -106,6 +108,10 @@
 		3B021CEA24D7B5EF00D44AF9 /* NSString+CQDownload.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CQDownload.m"; sourceTree = "<group>"; };
 		3B021CEC24D7B98E00D44AF9 /* CQTwoDownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQTwoDownloadManager.h; sourceTree = "<group>"; };
 		3B021CED24D7B98E00D44AF9 /* CQTwoDownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQTwoDownloadManager.m; sourceTree = "<group>"; };
+		3B08914324FE805600F480A3 /* CQFBRetainCycleDetectorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQFBRetainCycleDetectorViewController.h; sourceTree = "<group>"; };
+		3B08914424FE805600F480A3 /* CQFBRetainCycleDetectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQFBRetainCycleDetectorViewController.m; sourceTree = "<group>"; };
+		3B08914624FE8B4600F480A3 /* CQFBRetainCycleDetector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQFBRetainCycleDetector.h; sourceTree = "<group>"; };
+		3B08914724FE8B4600F480A3 /* CQFBRetainCycleDetector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQFBRetainCycleDetector.m; sourceTree = "<group>"; };
 		3B1F2B3124D9661400EED37A /* CQRuntimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQRuntimeViewController.h; sourceTree = "<group>"; };
 		3B1F2B3224D9661400EED37A /* CQRuntimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQRuntimeViewController.m; sourceTree = "<group>"; };
 		3B1F2B3424D966DC00EED37A /* CQRuntimeViewController+A.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CQRuntimeViewController+A.h"; sourceTree = "<group>"; };
@@ -285,6 +291,17 @@
 			path = CQDownload;
 			sourceTree = "<group>";
 		};
+		3B08914224FE803D00F480A3 /* FBRetainCycleDetector */ = {
+			isa = PBXGroup;
+			children = (
+				3B08914324FE805600F480A3 /* CQFBRetainCycleDetectorViewController.h */,
+				3B08914424FE805600F480A3 /* CQFBRetainCycleDetectorViewController.m */,
+				3B08914624FE8B4600F480A3 /* CQFBRetainCycleDetector.h */,
+				3B08914724FE8B4600F480A3 /* CQFBRetainCycleDetector.m */,
+			);
+			path = FBRetainCycleDetector;
+			sourceTree = "<group>";
+		};
 		3B3068B524F91329005BD06D /* fishhook */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,6 +415,7 @@
 		3B8F7A3924DCF8FF00378E99 /* iOS开发高手课 */ = {
 			isa = PBXGroup;
 			children = (
+				3B08914224FE803D00F480A3 /* FBRetainCycleDetector */,
 				3B3068B524F91329005BD06D /* fishhook */,
 				3BBD032C24E3EBB8003D9BCE /* 10 | 包大小：如何从资源和代码层面实现全方位瘦身？  */,
 				3BBD031F24E397E3003D9BCE /* 16 | 性能监控：衡量 App 质量的那把尺 */,
@@ -914,6 +932,7 @@
 				3B1F2B3624D966DC00EED37A /* CQRuntimeViewController+A.m in Sources */,
 				3B1F2B3924D966EB00EED37A /* CQRuntimeViewController+B.m in Sources */,
 				3B1F2B3F24DBF57100EED37A /* CQTestUIView.m in Sources */,
+				3B08914824FE8B4600F480A3 /* CQFBRetainCycleDetector.m in Sources */,
 				3B021CDE24D6816B00D44AF9 /* MJDownloadConst.m in Sources */,
 				3BF42D3E24D65E9600AA6977 /* YYFPSLabel.m in Sources */,
 				3B021CDF24D6816B00D44AF9 /* NSString+MJDownload.m in Sources */,
@@ -933,6 +952,7 @@
 				3BF42D1A24CD1CD300AA6977 /* Target_kvoTwo.m in Sources */,
 				3BEC4F5924C5CA430085935F /* CQGestureRecognizerViewController.m in Sources */,
 				3B021CEE24D7B98E00D44AF9 /* CQTwoDownloadManager.m in Sources */,
+				3B08914524FE805600F480A3 /* CQFBRetainCycleDetectorViewController.m in Sources */,
 				3BE0026724CB534B00829706 /* CQUIViewController.m in Sources */,
 				3BBD031B24E23910003D9BCE /* CQOCSubLViewController.m in Sources */,
 				3BF42D1D24CD557600AA6977 /* CQURLSessionManager.m in Sources */,

@@ -44,7 +44,7 @@
     
     
     @weakify(self);
-    RETableViewItem *iOSDecelopmentItem = [[RETableViewItem alloc] initWithTitle:@"戴铭的iOS开发高手课学习"];
+    RETableViewItem *iOSDecelopmentItem = [[RETableViewItem alloc] initWithTitle:@"戴铭的iOS开发学习"];
         iOSDecelopmentItem.selectionHandler = ^(RETableViewItem *item) {
         @strongify(self);
         item.selectionStyle = UITableViewCellSelectionStyleNone;

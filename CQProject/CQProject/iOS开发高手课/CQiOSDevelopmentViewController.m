@@ -11,6 +11,7 @@
 #import "CQ16InstruMentsViewController.h"
 #import "CQPackageViewController.h"
 #import "CQFishHookViewController.h"
+#import "CQFBRetainCycleDetectorViewController.h"
 
 @interface CQiOSDevelopmentViewController ()
 @property (nonatomic, strong) UITableView *tableView;
@@ -60,6 +61,14 @@
         [self.navigationController pushViewController:vc animated:YES];
     };
     [self.section addItem:fishHookItem];
+    
+    RETableViewItem *fbRetainCycleItem = [[RETableViewItem alloc] initWithTitle:@"FBRetainCycleDetector学习"];
+    fbRetainCycleItem.selectionHandler = ^(id item) {
+        @strongify(self);
+        CQFBRetainCycleDetectorViewController *vc = [[CQFBRetainCycleDetectorViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    };
+    [self.section addItem:fbRetainCycleItem];
     
 }
 
