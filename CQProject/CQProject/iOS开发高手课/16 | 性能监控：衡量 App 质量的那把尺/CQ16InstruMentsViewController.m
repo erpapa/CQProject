@@ -9,6 +9,7 @@
 #import "CQ16InstruMentsViewController.h"
 #import "CQFPSViewController.h"
 #import "CQCPUViewController.h"
+#import "CQEnergyViewController.h"
 
 @interface CQ16InstruMentsViewController ()
 @property (nonatomic, strong) UITableView *tableView;
@@ -42,6 +43,16 @@
         [self.navigationController pushViewController:vc animated:YES];
     };
     [self.section addItem:cpuItem];
+    
+    RETableViewItem *energyItem = [[RETableViewItem alloc] initWithTitle:@"电量消耗监控"];
+    energyItem.selectionHandler = ^(id item) {
+        @strongify(self);
+        CQEnergyViewController *vc = [[CQEnergyViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    };
+    [self.section addItem:energyItem];
+    
+    
 }
 
 - (RETableViewManager *)tableManager {

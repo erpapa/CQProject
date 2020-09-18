@@ -6,7 +6,7 @@
 //  Copyright © 2020 CharType. All rights reserved.
 //
 
-#import "CQRootViewController.h"
+#import "CQHomeRootViewController.h"
 #import "Masonry.h"
 #import "YYKit.h"
 #import "CQKVOViewController.h"
@@ -23,16 +23,19 @@
 #import "CQRuntimeViewController.h"
 #import "CQiOSDevelopmentViewController.h"
 
-@interface CQRootViewController ()<RETableViewManagerDelegate>
+@interface CQHomeRootViewController ()<RETableViewManagerDelegate>
 @property (strong, nonatomic) RETableViewManager *tableManager;
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) RETableViewSection *section;
 @end
 
-@implementation CQRootViewController
+@implementation CQHomeRootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[self rac_willDeallocSignal] subscribeNext:^(id x) {
+        
+    }];
 //    YYFPSLabel *label = [[YYFPSLabel alloc] initWithFrame:CGRectMake(10, 10, 60, 20)];
 //    [self.navigationController.view addSubview:label];
 //    [self.navigationController.view bringSubviewToFront:label];
@@ -44,7 +47,7 @@
     
     
     @weakify(self);
-    RETableViewItem *iOSDecelopmentItem = [[RETableViewItem alloc] initWithTitle:@"戴铭的iOS开发学习"];
+    RETableViewItem *iOSDecelopmentItem = [[RETableViewItem alloc] initWithTitle:@"iOS优化"];
         iOSDecelopmentItem.selectionHandler = ^(RETableViewItem *item) {
         @strongify(self);
         item.selectionStyle = UITableViewCellSelectionStyleNone;

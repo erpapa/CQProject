@@ -16,6 +16,7 @@ typedef NS_ENUM(NSUInteger, CQCallStackType) {
 
 @interface CQCallStack : NSObject
 + (NSString *)callStackWithType:(CQCallStackType)type;
++ (void)updateCPU;
 @end
 
 

@@ -15,5 +15,6 @@
 #import "Objection.h"
 #import "CTMediator.h"
 #import "RETableViewManager.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 #endif /* PrefixHeader_CQProject_pch */

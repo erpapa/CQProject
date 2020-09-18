@@ -17,6 +17,7 @@
 		3B021CEE24D7B98E00D44AF9 /* CQTwoDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B021CED24D7B98E00D44AF9 /* CQTwoDownloadManager.m */; };
 		3B08914524FE805600F480A3 /* CQFBRetainCycleDetectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B08914424FE805600F480A3 /* CQFBRetainCycleDetectorViewController.m */; };
 		3B08914824FE8B4600F480A3 /* CQFBRetainCycleDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B08914724FE8B4600F480A3 /* CQFBRetainCycleDetector.m */; };
+		3B08ACF22505B56A00F480A3 /* CQEnergyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B08ACF12505B56A00F480A3 /* CQEnergyViewController.m */; };
 		3B1F2B3324D9661400EED37A /* CQRuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F2B3224D9661400EED37A /* CQRuntimeViewController.m */; };
 		3B1F2B3624D966DC00EED37A /* CQRuntimeViewController+A.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F2B3524D966DC00EED37A /* CQRuntimeViewController+A.m */; };
 		3B1F2B3924D966EB00EED37A /* CQRuntimeViewController+B.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F2B3824D966EB00EED37A /* CQRuntimeViewController+B.m */; };
@@ -29,7 +30,7 @@
 		3B51DB0924C8330800BBE0B4 /* CQOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DB0824C8330800BBE0B4 /* CQOperation.m */; };
 		3B6736FC24C7DD31007F0D4C /* CQGuestTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6736FB24C7DD31007F0D4C /* CQGuestTestView.m */; };
 		3B71A09524C5174D00F695D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71A09424C5174D00F695D2 /* AppDelegate.m */; };
-		3B71A09B24C5174D00F695D2 /* CQRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71A09A24C5174D00F695D2 /* CQRootViewController.m */; };
+		3B71A09B24C5174D00F695D2 /* CQHomeRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71A09A24C5174D00F695D2 /* CQHomeRootViewController.m */; };
 		3B71A09E24C5174D00F695D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B71A09C24C5174D00F695D2 /* Main.storyboard */; };
 		3B71A0A024C5174E00F695D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B71A09F24C5174E00F695D2 /* Assets.xcassets */; };
 		3B71A0A324C5174E00F695D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B71A0A124C5174E00F695D2 /* LaunchScreen.storyboard */; };
@@ -112,6 +113,8 @@
 		3B08914424FE805600F480A3 /* CQFBRetainCycleDetectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQFBRetainCycleDetectorViewController.m; sourceTree = "<group>"; };
 		3B08914624FE8B4600F480A3 /* CQFBRetainCycleDetector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQFBRetainCycleDetector.h; sourceTree = "<group>"; };
 		3B08914724FE8B4600F480A3 /* CQFBRetainCycleDetector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQFBRetainCycleDetector.m; sourceTree = "<group>"; };
+		3B08ACF02505B56A00F480A3 /* CQEnergyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQEnergyViewController.h; sourceTree = "<group>"; };
+		3B08ACF12505B56A00F480A3 /* CQEnergyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQEnergyViewController.m; sourceTree = "<group>"; };
 		3B1F2B3124D9661400EED37A /* CQRuntimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQRuntimeViewController.h; sourceTree = "<group>"; };
 		3B1F2B3224D9661400EED37A /* CQRuntimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQRuntimeViewController.m; sourceTree = "<group>"; };
 		3B1F2B3424D966DC00EED37A /* CQRuntimeViewController+A.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CQRuntimeViewController+A.h"; sourceTree = "<group>"; };
@@ -137,8 +140,8 @@
 		3B71A09024C5174D00F695D2 /* CQProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CQProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B71A09324C5174D00F695D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3B71A09424C5174D00F695D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3B71A09924C5174D00F695D2 /* CQRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQRootViewController.h; sourceTree = "<group>"; };
-		3B71A09A24C5174D00F695D2 /* CQRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQRootViewController.m; sourceTree = "<group>"; };
+		3B71A09924C5174D00F695D2 /* CQHomeRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQHomeRootViewController.h; sourceTree = "<group>"; };
+		3B71A09A24C5174D00F695D2 /* CQHomeRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQHomeRootViewController.m; sourceTree = "<group>"; };
 		3B71A09D24C5174D00F695D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B71A09F24C5174E00F695D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B71A0A224C5174E00F695D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -302,6 +305,22 @@
 			path = FBRetainCycleDetector;
 			sourceTree = "<group>";
 		};
+		3B08ACEF2505B51A00F480A3 /* energy */ = {
+			isa = PBXGroup;
+			children = (
+				3B08ACF02505B56A00F480A3 /* CQEnergyViewController.h */,
+				3B08ACF12505B56A00F480A3 /* CQEnergyViewController.m */,
+			);
+			path = energy;
+			sourceTree = "<group>";
+		};
+		3B08AD322505C58200F480A3 /* IOKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IOKit;
+			sourceTree = "<group>";
+		};
 		3B3068B524F91329005BD06D /* fishhook */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,8 +396,8 @@
 				3BEC4F3824C521490085935F /* KVO */,
 				3B71A09324C5174D00F695D2 /* AppDelegate.h */,
 				3B71A09424C5174D00F695D2 /* AppDelegate.m */,
-				3B71A09924C5174D00F695D2 /* CQRootViewController.h */,
-				3B71A09A24C5174D00F695D2 /* CQRootViewController.m */,
+				3B71A09924C5174D00F695D2 /* CQHomeRootViewController.h */,
+				3B71A09A24C5174D00F695D2 /* CQHomeRootViewController.m */,
 				3B71A0C824C51A8A00F695D2 /* CQRootNavigationViewController.h */,
 				3B71A0C924C51A8A00F695D2 /* CQRootNavigationViewController.m */,
 				3BEC4F4B24C57A7B0085935F /* CQBaseViewController.h */,
@@ -473,6 +492,8 @@
 		3BBD031F24E397E3003D9BCE /* 16 | 性能监控：衡量 App 质量的那把尺 */ = {
 			isa = PBXGroup;
 			children = (
+				3B08AD322505C58200F480A3 /* IOKit */,
+				3B08ACEF2505B51A00F480A3 /* energy */,
 				3BBD032824E3B0B4003D9BCE /* CPU */,
 				3BBD032424E3AA34003D9BCE /* FPS */,
 				3BBD032124E39835003D9BCE /* CQ16InstruMentsViewController.h */,
@@ -910,7 +931,7 @@
 				3B021CD424D6721E00D44AF9 /* CQDownloadTestViewController.m in Sources */,
 				3B71A0CA24C51A8A00F695D2 /* CQRootNavigationViewController.m in Sources */,
 				3B021CEB24D7B5EF00D44AF9 /* NSString+CQDownload.m in Sources */,
-				3B71A09B24C5174D00F695D2 /* CQRootViewController.m in Sources */,
+				3B71A09B24C5174D00F695D2 /* CQHomeRootViewController.m in Sources */,
 				3B1F2B3324D9661400EED37A /* CQRuntimeViewController.m in Sources */,
 				3B021CE324D6CFF000D44AF9 /* CQVideoPlayerViewController.m in Sources */,
 				3BF42D1724CD1CBB00AA6977 /* CQOtherViewController.m in Sources */,
@@ -941,6 +962,7 @@
 				3B51DB0024C7ED2100BBE0B4 /* CQImageDownloader.m in Sources */,
 				3B6736FC24C7DD31007F0D4C /* CQGuestTestView.m in Sources */,
 				3B8F7A3C24DCF94D00378E99 /* CQiOSDevelopmentViewController.m in Sources */,
+				3B08ACF22505B56A00F480A3 /* CQEnergyViewController.m in Sources */,
 				3B9C2EA424C6E85700CF811A /* UIButton+Expand.m in Sources */,
 				3BF42D2E24D28EC200AA6977 /* CQRunLoopViewController.m in Sources */,
 				3BE0026B24CBB2D700829706 /* CQOCLViewController.m in Sources */,
@@ -1131,13 +1153,22 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = P694HZ6867;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CQProject/iOS开发高手课/16\\ |\\ 性能监控：衡量\\ App\\ 质量的那把尺/IOKit",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CQProject/projectPrefixHeader.pch";
 				INFOPLIST_FILE = CQProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CQProject/iOS开发高手课/16\\ |\\ 性能监控：衡量\\ App\\ 质量的那把尺/IOKit",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.szy.seebaby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1154,14 +1185,23 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = P694HZ6867;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CQProject/iOS开发高手课/16\\ |\\ 性能监控：衡量\\ App\\ 质量的那把尺/IOKit",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CQProject/projectPrefixHeader.pch";
 				INFOPLIST_FILE = CQProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_GENERATE_MAP_FILE = YES;
 				LD_MAP_FILE_PATH = "/Users/chengqian/Desktop/$(PRODUCT_NAME)-LinkMap-$(CURRENT_VARIANT)-$(CURRENT_ARCH).txt";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CQProject/iOS开发高手课/16\\ |\\ 性能监控：衡量\\ App\\ 质量的那把尺/IOKit",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.szy.seebaby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
