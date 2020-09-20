@@ -36,6 +36,7 @@
     [[self rac_willDeallocSignal] subscribeNext:^(id x) {
         
     }];
+    self.title = @"首页";
 //    YYFPSLabel *label = [[YYFPSLabel alloc] initWithFrame:CGRectMake(10, 10, 60, 20)];
 //    [self.navigationController.view addSubview:label];
 //    [self.navigationController.view bringSubviewToFront:label];

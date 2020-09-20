@@ -26,57 +26,44 @@
             </objects>
             <point key="canvasLocation" x="-2126" y="157"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="0WV-Zz-deZ">
-            <objects>
-                <tableViewController id="AbI-Su-5vF" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ubj-v2-K15">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kIx-V2-Scs">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kIx-V2-Scs" id="vYx-im-ACe">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="AbI-Su-5vF" id="Q0D-c8-6dk"/>
-                            <outlet property="delegate" destination="AbI-Su-5vF" id="kPR-bl-cso"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="uRG-hp-v5O"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8w0-JB-wmc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="988" y="617"/>
-        </scene>
-        <!--Item-->
+        <!--Root Navigation View Controller-->
         <scene sceneID="PH2-ah-Wx6">
             <objects>
-                <navigationController id="I88-0t-VIx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ivQ-HV-E5y"/>
+                <navigationController id="I88-0t-VIx" customClass="CQRootNavigationViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" selectedImage="questionmark.video" catalog="system" id="ivQ-HV-E5y"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xRa-Uo-436">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="AbI-Su-5vF" kind="relationship" relationship="rootViewController" id="luY-La-N7R"/>
+                        <segue destination="txa-e4-gss" kind="relationship" relationship="rootViewController" id="D4C-YN-7HU"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXF-VY-HKQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-654" y="517"/>
         </scene>
-        <!--Item-->
+        <!--Audio Video View Controller-->
+        <scene sceneID="R1S-CN-ira">
+            <objects>
+                <viewController id="txa-e4-gss" customClass="CQAudioVideoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vsO-hw-XMJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="jvH-7V-KWE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="K5U-5A-z9Q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yy9-eU-EFo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236" y="516"/>
+        </scene>
+        <!--Root Navigation View Controller-->
         <scene sceneID="lwB-kW-fwx">
             <objects>
                 <navigationController id="69i-16-6hC" customClass="CQRootNavigationViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Tkx-FF-VX7"/>
+                    <tabBarItem key="tabBarItem" selectedImage="person.2.fill" catalog="system" id="Tkx-FF-VX7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bn8-Ko-sbE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -106,4 +93,8 @@
             <point key="canvasLocation" x="281" y="-778"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="person.2.fill" catalog="system" width="128" height="80"/>
+        <image name="questionmark.video" catalog="system" width="128" height="83"/>
+    </resources>
 </document>

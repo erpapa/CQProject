@@ -28,6 +28,7 @@
 		3B51DB0024C7ED2100BBE0B4 /* CQImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DAFF24C7ED2100BBE0B4 /* CQImageDownloader.m */; };
 		3B51DB0624C82DC800BBE0B4 /* CQGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DB0524C82DC800BBE0B4 /* CQGCDViewController.m */; };
 		3B51DB0924C8330800BBE0B4 /* CQOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DB0824C8330800BBE0B4 /* CQOperation.m */; };
+		3B568863251662F6000F6993 /* CQPreviewVieew.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B568862251662F6000F6993 /* CQPreviewVieew.m */; };
 		3B6736FC24C7DD31007F0D4C /* CQGuestTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6736FB24C7DD31007F0D4C /* CQGuestTestView.m */; };
 		3B71A09524C5174D00F695D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71A09424C5174D00F695D2 /* AppDelegate.m */; };
 		3B71A09B24C5174D00F695D2 /* CQHomeRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71A09A24C5174D00F695D2 /* CQHomeRootViewController.m */; };
@@ -42,6 +43,8 @@
 		3B8F7A4124DDA59800378E99 /* CQBDDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F7A4024DDA59800378E99 /* CQBDDTestViewController.m */; };
 		3B9C2EA424C6E85700CF811A /* UIButton+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C2EA324C6E85700CF811A /* UIButton+Expand.m */; };
 		3B9C2EA824C7077500CF811A /* CQComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C2EA724C7077500CF811A /* CQComponentViewController.m */; };
+		3BA7F22F25158CDF00D00607 /* CQAudioVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA7F22E25158CDF00D00607 /* CQAudioVideoViewController.m */; };
+		3BA7F237251646E300D00607 /* CQCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA7F236251646E300D00607 /* CQCameraViewController.m */; };
 		3BB736F824DE621000D890E2 /* CQBDDTestViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB736F724DE621000D890E2 /* CQBDDTestViewControllerSpec.m */; };
 		3BB8289C24FC0DAA00EA1D56 /* CQFishHookViewController+FishHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB8289B24FC0DAA00EA1D56 /* CQFishHookViewController+FishHook.m */; };
 		3BBD030524E13FC8003D9BCE /* CQWeakObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD030424E13FC8003D9BCE /* CQWeakObject.m */; };
@@ -135,6 +138,8 @@
 		3B51DB0524C82DC800BBE0B4 /* CQGCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQGCDViewController.m; sourceTree = "<group>"; };
 		3B51DB0724C8330800BBE0B4 /* CQOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQOperation.h; sourceTree = "<group>"; };
 		3B51DB0824C8330800BBE0B4 /* CQOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQOperation.m; sourceTree = "<group>"; };
+		3B568861251662F6000F6993 /* CQPreviewVieew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQPreviewVieew.h; sourceTree = "<group>"; };
+		3B568862251662F6000F6993 /* CQPreviewVieew.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQPreviewVieew.m; sourceTree = "<group>"; };
 		3B6736FA24C7DD31007F0D4C /* CQGuestTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQGuestTestView.h; sourceTree = "<group>"; };
 		3B6736FB24C7DD31007F0D4C /* CQGuestTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQGuestTestView.m; sourceTree = "<group>"; };
 		3B71A09024C5174D00F695D2 /* CQProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CQProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +168,10 @@
 		3B9C2EA324C6E85700CF811A /* UIButton+Expand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Expand.m"; sourceTree = "<group>"; };
 		3B9C2EA624C7077500CF811A /* CQComponentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQComponentViewController.h; sourceTree = "<group>"; };
 		3B9C2EA724C7077500CF811A /* CQComponentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQComponentViewController.m; sourceTree = "<group>"; };
+		3BA7F22D25158CDF00D00607 /* CQAudioVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQAudioVideoViewController.h; sourceTree = "<group>"; };
+		3BA7F22E25158CDF00D00607 /* CQAudioVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQAudioVideoViewController.m; sourceTree = "<group>"; };
+		3BA7F235251646E300D00607 /* CQCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQCameraViewController.h; sourceTree = "<group>"; };
+		3BA7F236251646E300D00607 /* CQCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQCameraViewController.m; sourceTree = "<group>"; };
 		3BB736F724DE621000D890E2 /* CQBDDTestViewControllerSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQBDDTestViewControllerSpec.m; sourceTree = "<group>"; };
 		3BB8289A24FC0DAA00EA1D56 /* CQFishHookViewController+FishHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CQFishHookViewController+FishHook.h"; sourceTree = "<group>"; };
 		3BB8289B24FC0DAA00EA1D56 /* CQFishHookViewController+FishHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CQFishHookViewController+FishHook.m"; sourceTree = "<group>"; };
@@ -343,6 +352,15 @@
 			path = GCD;
 			sourceTree = "<group>";
 		};
+		3B568860251662A7000F6993 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B568861251662F6000F6993 /* CQPreviewVieew.h */,
+				3B568862251662F6000F6993 /* CQPreviewVieew.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3B6736F924C7DD0C007F0D4C /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,27 +395,10 @@
 		3B71A09224C5174D00F695D2 /* CQProject */ = {
 			isa = PBXGroup;
 			children = (
-				3B8F7A3924DCF8FF00378E99 /* iOS开发高手课 */,
-				3B021CE024D6CFCF00D44AF9 /* VideoPlayer */,
-				3BF42D2224CE73C300AA6977 /* download */,
-				3BF42D1E24CD856100AA6977 /* WebView */,
-				3BF42D1424CD1C9E00AA6977 /* Other */,
-				3BE0026824CBB17800829706 /* OC语法特性 */,
-				3BE0026424CB533700829706 /* UI */,
-				3B51DB0324C82D5300BBE0B4 /* GCD */,
-				3B9C2EA524C706B600CF811A /* 组件化 */,
-				3BEC4F5A24C68C170085935F /* 数据结构 */,
-				3BEC4F5624C5C9CD0085935F /* 手势事件 */,
-				3BEC4F4E24C596BB0085935F /* AFN框架解析 */,
-				3BEC4F3F24C521F70085935F /* runtime */,
-				3BEC4F3E24C521F00085935F /* RunLoop */,
-				3BEC4F3D24C521D20085935F /* Category */,
-				3BEC4F3924C521530085935F /* KVC */,
-				3BEC4F3824C521490085935F /* KVO */,
+				3BA7F23125158F6C00D00607 /* AudioVideo */,
+				3BA7F23025158F5300D00607 /* home */,
 				3B71A09324C5174D00F695D2 /* AppDelegate.h */,
 				3B71A09424C5174D00F695D2 /* AppDelegate.m */,
-				3B71A09924C5174D00F695D2 /* CQHomeRootViewController.h */,
-				3B71A09A24C5174D00F695D2 /* CQHomeRootViewController.m */,
 				3B71A0C824C51A8A00F695D2 /* CQRootNavigationViewController.h */,
 				3B71A0C924C51A8A00F695D2 /* CQRootNavigationViewController.m */,
 				3BEC4F4B24C57A7B0085935F /* CQBaseViewController.h */,
@@ -478,6 +479,60 @@
 				3B9C2EA724C7077500CF811A /* CQComponentViewController.m */,
 			);
 			path = "组件化";
+			sourceTree = "<group>";
+		};
+		3BA7F23025158F5300D00607 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				3B71A09924C5174D00F695D2 /* CQHomeRootViewController.h */,
+				3B71A09A24C5174D00F695D2 /* CQHomeRootViewController.m */,
+				3B8F7A3924DCF8FF00378E99 /* iOS开发高手课 */,
+				3B021CE024D6CFCF00D44AF9 /* VideoPlayer */,
+				3BF42D2224CE73C300AA6977 /* download */,
+				3BF42D1E24CD856100AA6977 /* WebView */,
+				3BF42D1424CD1C9E00AA6977 /* Other */,
+				3BE0026824CBB17800829706 /* OC语法特性 */,
+				3BE0026424CB533700829706 /* UI */,
+				3B51DB0324C82D5300BBE0B4 /* GCD */,
+				3B9C2EA524C706B600CF811A /* 组件化 */,
+				3BEC4F5A24C68C170085935F /* 数据结构 */,
+				3BEC4F5624C5C9CD0085935F /* 手势事件 */,
+				3BEC4F4E24C596BB0085935F /* AFN框架解析 */,
+				3BEC4F3F24C521F70085935F /* runtime */,
+				3BEC4F3E24C521F00085935F /* RunLoop */,
+				3BEC4F3D24C521D20085935F /* Category */,
+				3BEC4F3924C521530085935F /* KVC */,
+				3BEC4F3824C521490085935F /* KVO */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		3BA7F23125158F6C00D00607 /* AudioVideo */ = {
+			isa = PBXGroup;
+			children = (
+				3BA7F2332516467900D00607 /* Camera */,
+				3BA7F22D25158CDF00D00607 /* CQAudioVideoViewController.h */,
+				3BA7F22E25158CDF00D00607 /* CQAudioVideoViewController.m */,
+			);
+			path = AudioVideo;
+			sourceTree = "<group>";
+		};
+		3BA7F2332516467900D00607 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				3B568860251662A7000F6993 /* View */,
+				3BA7F2342516469400D00607 /* ViewController */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		3BA7F2342516469400D00607 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3BA7F235251646E300D00607 /* CQCameraViewController.h */,
+				3BA7F236251646E300D00607 /* CQCameraViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		3BBD031524E17F25003D9BCE /* CQCallStack */ = {
@@ -939,15 +994,18 @@
 				3B9C2EA824C7077500CF811A /* CQComponentViewController.m in Sources */,
 				3B3068B824F913AA005BD06D /* CQFishHookViewController.m in Sources */,
 				3BBD032B24E3C268003D9BCE /* CQCPUViewController.m in Sources */,
+				3BA7F22F25158CDF00D00607 /* CQAudioVideoViewController.m in Sources */,
 				3BBD031824E17F88003D9BCE /* CQCallStack.m in Sources */,
 				3BEC4F4224C5222B0085935F /* NSObject+CQKVO.m in Sources */,
 				3B1F2B4224DBF76000EED37A /* CQTestUIButton.m in Sources */,
 				3BE0027124CBB56000829706 /* CQPerson.m in Sources */,
 				3B51DB0624C82DC800BBE0B4 /* CQGCDViewController.m in Sources */,
 				3B8F7A4124DDA59800378E99 /* CQBDDTestViewController.m in Sources */,
+				3B568863251662F6000F6993 /* CQPreviewVieew.m in Sources */,
 				3BEC4F3C24C5216C0085935F /* CQKVOViewController.m in Sources */,
 				3BBD032F24E3EBD4003D9BCE /* CQPackageViewController.m in Sources */,
 				3BB8289C24FC0DAA00EA1D56 /* CQFishHookViewController+FishHook.m in Sources */,
+				3BA7F237251646E300D00607 /* CQCameraViewController.m in Sources */,
 				3BE0026E24CBB33F00829706 /* CQStudent.m in Sources */,
 				3B71A09524C5174D00F695D2 /* AppDelegate.m in Sources */,
 				3B1F2B3624D966DC00EED37A /* CQRuntimeViewController+A.m in Sources */,
