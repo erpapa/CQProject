@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CQPreviewVieew.h"
-#import "CQCameraOverlayView.h"
+@class CQPreviewView,CQCameraOverlayView;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CQCameraView : UIView
-@property (strong, nonatomic) CQPreviewVieew *previewView;
+@property (strong, nonatomic) CQPreviewView *previewView;
 @property (strong, nonatomic) CQCameraOverlayView *controlsView;
 @end
 

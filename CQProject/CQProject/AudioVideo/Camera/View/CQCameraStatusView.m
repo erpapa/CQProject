@@ -34,4 +34,19 @@
     }];
 }
 
+- (CQFlashControl *)flashControl {
+    if (!_flashControl) {
+        _flashControl = [[CQFlashControl alloc] init];
+    }
+    return _flashControl;
+}
+
+- (UILabel *)elapsedTimeLabel {
+    if (!_elapsedTimeLabel) {
+        _elapsedTimeLabel = [[UILabel alloc] init];
+    }
+    return _elapsedTimeLabel;
+}
+
+
 @end

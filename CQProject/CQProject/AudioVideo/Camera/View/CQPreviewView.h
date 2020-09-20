@@ -1,5 +1,5 @@
 //
-//  CQPreviewVieew.h
+//  CQPreviewView.h
 //  CQProject
 //
 //  Created by CharType on 2020/9/20.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CQPreviewVieew : UIView
+@interface CQPreviewView : UIView
 @property (nonatomic, strong) AVCaptureSession *session;
 // 是否聚焦
 @property (nonatomic, assign) BOOL isFocusEnabled;

@@ -1,14 +1,14 @@
 //
-//  CQPreviewVieew.m
+//  CQPreviewView.m
 //  CQProject
 //
 //  Created by CharType on 2020/9/20.
 //  Copyright © 2020 CharType. All rights reserved.
 // 预览View
 
-#import "CQPreviewVieew.h"
+#import "CQPreviewView.h"
 
-@interface CQPreviewVieew()
+@interface CQPreviewView()
 @property (nonatomic, strong) UIView *focusBoxView;
 @property (nonatomic, strong) UIView *exposureBoxView;
 @property (nonatomic, strong) YYTimer *timer;
@@ -17,7 +17,7 @@
 @property (nonatomic, strong) UITapGestureRecognizer *doubleDoubleTapRecognizer;
 @end
 
-@implementation CQPreviewVieew
+@implementation CQPreviewView
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
