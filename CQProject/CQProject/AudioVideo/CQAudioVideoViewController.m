@@ -8,8 +8,9 @@
 
 #import "CQAudioVideoViewController.h"
 #import "CQCameraViewController.h"
+#import "CQVideoEncodeViewController.h"
 
-@interface CQAudioVideoViewController ()
+@interface CQAudioVideoViewController ()<RETableViewManagerDelegate>
 @property (strong, nonatomic) RETableViewManager *tableManager;
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) RETableViewSection *section;
@@ -33,7 +34,7 @@
     }];
     
     @weakify(self);
-    RETableViewItem *iOSDecelopmentItem = [[RETableViewItem alloc] initWithTitle:@"相机"];
+    RETableViewItem *iOSDecelopmentItem = [[RETableViewItem alloc] initWithTitle:@"视频捕捉"];
         iOSDecelopmentItem.selectionHandler = ^(RETableViewItem *item) {
         @strongify(self);
         item.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -41,6 +42,15 @@
         [self.navigationController pushViewController:viewController animated:YES];
     };
     [self.section addItem:iOSDecelopmentItem];
+    
+    RETableViewItem *videoEncodeItem = [[RETableViewItem alloc] initWithTitle:@"视频编码Demo"];
+    videoEncodeItem.selectionHandler = ^(RETableViewItem *item) {
+        @strongify(self);
+        item.selectionStyle = UITableViewCellSelectionStyleNone;
+        CQVideoEncodeViewController *viewController = [[CQVideoEncodeViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    };
+    [self.section addItem:videoEncodeItem];
 }
 
 - (UITableView *)tableView {

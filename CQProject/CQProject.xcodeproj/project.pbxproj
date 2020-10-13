@@ -47,6 +47,7 @@
 		3B71A0B024C5174E00F695D2 /* CQProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71A0AF24C5174E00F695D2 /* CQProjectTests.m */; };
 		3B71A0BB24C5174E00F695D2 /* CQProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71A0BA24C5174E00F695D2 /* CQProjectUITests.m */; };
 		3B71A0CA24C51A8A00F695D2 /* CQRootNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71A0C924C51A8A00F695D2 /* CQRootNavigationViewController.m */; };
+		3B76B09D25264FF100B39028 /* CQVideoEncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B76B09C25264FF100B39028 /* CQVideoEncodeViewController.m */; };
 		3B8F7A3C24DCF94D00378E99 /* CQiOSDevelopmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F7A3B24DCF94D00378E99 /* CQiOSDevelopmentViewController.m */; };
 		3B8F7A4124DDA59800378E99 /* CQBDDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8F7A4024DDA59800378E99 /* CQBDDTestViewController.m */; };
 		3B9C2EA424C6E85700CF811A /* UIButton+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C2EA324C6E85700CF811A /* UIButton+Expand.m */; };
@@ -185,6 +186,8 @@
 		3B71A0BC24C5174E00F695D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B71A0C824C51A8A00F695D2 /* CQRootNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQRootNavigationViewController.h; sourceTree = "<group>"; };
 		3B71A0C924C51A8A00F695D2 /* CQRootNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQRootNavigationViewController.m; sourceTree = "<group>"; };
+		3B76B09B25264FF100B39028 /* CQVideoEncodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQVideoEncodeViewController.h; sourceTree = "<group>"; };
+		3B76B09C25264FF100B39028 /* CQVideoEncodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQVideoEncodeViewController.m; sourceTree = "<group>"; };
 		3B8F7A3A24DCF94D00378E99 /* CQiOSDevelopmentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQiOSDevelopmentViewController.h; sourceTree = "<group>"; };
 		3B8F7A3B24DCF94D00378E99 /* CQiOSDevelopmentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQiOSDevelopmentViewController.m; sourceTree = "<group>"; };
 		3B8F7A3F24DDA59800378E99 /* CQBDDTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQBDDTestViewController.h; sourceTree = "<group>"; };
@@ -470,6 +473,15 @@
 			path = CQProjectUITests;
 			sourceTree = "<group>";
 		};
+		3B76B09A25264FA100B39028 /* VideoEncode */ = {
+			isa = PBXGroup;
+			children = (
+				3B76B09B25264FF100B39028 /* CQVideoEncodeViewController.h */,
+				3B76B09C25264FF100B39028 /* CQVideoEncodeViewController.m */,
+			);
+			path = VideoEncode;
+			sourceTree = "<group>";
+		};
 		3B8F7A3924DCF8FF00378E99 /* iOS开发高手课 */ = {
 			isa = PBXGroup;
 			children = (
@@ -548,6 +560,7 @@
 		3BA7F23125158F6C00D00607 /* AudioVideo */ = {
 			isa = PBXGroup;
 			children = (
+				3B76B09A25264FA100B39028 /* VideoEncode */,
 				3BA7F2332516467900D00607 /* Camera */,
 				3BA7F22D25158CDF00D00607 /* CQAudioVideoViewController.h */,
 				3BA7F22E25158CDF00D00607 /* CQAudioVideoViewController.m */,
@@ -1063,6 +1076,7 @@
 				3B5688662516E6C4000F6993 /* CQCameraView.m in Sources */,
 				3B021CDF24D6816B00D44AF9 /* NSString+MJDownload.m in Sources */,
 				3B5688692516E76E000F6993 /* CQCameraStatusView.m in Sources */,
+				3B76B09D25264FF100B39028 /* CQVideoEncodeViewController.m in Sources */,
 				3B1F2B3C24DA4F1D00EED37A /* CQRuntimeSubViewController.m in Sources */,
 				3BBD032324E39835003D9BCE /* CQ16InstruMentsViewController.m in Sources */,
 				3B51DB0024C7ED2100BBE0B4 /* CQImageDownloader.m in Sources */,
