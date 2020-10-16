@@ -22,22 +22,23 @@
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *preViewLayer;
 //帧id
 //@property (nonatomic, assign) int frrameId;
-// 捕捉队列
-@property (nonatomic, strong) dispatch_queue_t captureQueue;
-// 编码队列
-@property (nonatomic, strong) dispatch_queue_t encodeQueue;
-
-// 写入流数据
-@property (nonatomic, strong) NSFileHandle *fileHandele;
+//// 捕捉队列
+//@property (nonatomic, strong) dispatch_queue_t captureQueue;
+//// 编码队列
+//@property (nonatomic, strong) dispatch_queue_t encodeQueue;
+//
+//// 写入流数据
+//@property (nonatomic, strong) NSFileHandle *fileHandele;
 
 @end
 
 @implementation CQVideoEncodeViewController
 {
-    // 编码session
-    VTCompressionSessionRef encodeingSession;
-    // 编码格式
-    CMFormatDescriptionRef formar;
+    dispatch_queue_t cCaptureQueue; //捕获队列
+    dispatch_queue_t cEncodeQueue;  //编码队列
+    VTCompressionSessionRef cEncodeingSession;//编码session
+    CMFormatDescriptionRef format; //编码格式
+    NSFileHandle *fileHandele;
     int  frameId; //帧ID
 }
 
@@ -56,93 +57,190 @@
 - (void)startCapture {
     // 创建session
     self.captureSession = [[AVCaptureSession alloc] init];
-    // 设置捕捉分辨率 分辨率修改测试
     self.captureSession.sessionPreset = AVCaptureSessionPreset640x480;
-    // 创建队列
-    self.captureQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    self.encodeQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    //使用函数dispath_get_global_queue去得到队列
+    cCaptureQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    cEncodeQueue  = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
-    AVCaptureDevice *inputDevice = nil;
-//    NSArray *devices = [AVCaptureDeviceDiscoverySession discoverySessionWithDeviceTypes:@[AVCaptureDeviceTypeBuiltInWideAngleCamera,
-//                                                                                          AVCaptureDeviceTypeBuiltInTelephotoCamera] mediaType:AVMediaTypeVideo position:AVCaptureDevicePositionBack].devices;
-    
+    AVCaptureDevice *inputCamera = nil;
+    //获取iPhone视频捕捉的设备，例如前置摄像头、后置摄像头......
     NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
     for (AVCaptureDevice *device in devices) {
+        
+        //拿到后置摄像头
         if ([device position] == AVCaptureDevicePositionBack) {
-            inputDevice = device;
-            break;
+            
+            inputCamera = device;
         }
     }
     
-    // 将设备封装成AVCaptureDeviceInput对象
-    self.captureInput = [[AVCaptureDeviceInput alloc] initWithDevice:inputDevice error:nil];
-    // 判断是否能添加设备
+    //将捕捉设备 封装成 AVCaptureDeviceInput 对象
+    self.captureInput = [[AVCaptureDeviceInput alloc]initWithDevice:inputCamera error:nil];
+    
+    //判断是否能加入后置摄像头作为输入设备
     if ([self.captureSession canAddInput:self.captureInput]) {
+        
+        //将设备添加到会话中
         [self.captureSession addInput:self.captureInput];
-    } else {
-        NSLog(@"获取输入设备失败");
-        return;
+        
+        
     }
     
-    // 配置输出设备
-    self.captureVideoDataOutput = [[AVCaptureVideoDataOutput alloc] init];
     
-    // 设置最后丢弃的videoFrame未NO
-    //TODO:test
+    //配置输出
+    self.captureVideoDataOutput = [[AVCaptureVideoDataOutput alloc]init];
+    
+    //设置丢弃最后的video frame 为NO
     [self.captureVideoDataOutput setAlwaysDiscardsLateVideoFrames:NO];
     
-    //YUV 4:2:0
-    // 设置video的视屏捕捉像素点压缩方式为420
-//    [self.captureVideoDataOutput setVideoSettings:@{(id)kCVPixelBufferPixelFormatTypeKey : @(kCVPixelFormatType_420YpCbCr8BiPlanarFullRange)}];
+    //设置video的视频捕捉的像素点压缩方式为 420
     [self.captureVideoDataOutput setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_420YpCbCr8BiPlanarFullRange] forKey:(id)kCVPixelBufferPixelFormatTypeKey]];
-    // 设置捕捉代理和捕捉队列
-    [self.captureVideoDataOutput setSampleBufferDelegate:self queue:self.captureQueue];
-    // 判断是否能添加输出
+    
+    //设置捕捉代理 和 捕捉队列
+    [self.captureVideoDataOutput setSampleBufferDelegate:self queue:cCaptureQueue];
+    
+    //判断是否能添加输出
     if ([self.captureSession canAddOutput:self.captureVideoDataOutput]) {
+        
+        //添加输出
         [self.captureSession addOutput:self.captureVideoDataOutput];
-    } else {
-        NSLog(@"输出设备添加失败");
-        return;
     }
-    // 创建连接
+    
+    //创建连接
     AVCaptureConnection *connection = [self.captureVideoDataOutput connectionWithMediaType:AVMediaTypeVideo];
     
-    // 设置视屏捕捉方向
+    //设置连接的方向
     [connection setVideoOrientation:AVCaptureVideoOrientationPortrait];
     
-    // 初始化图层
-    self.preViewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.captureSession];
+    //初始化图层
+    self.preViewLayer = [[AVCaptureVideoPreviewLayer alloc]initWithSession:self.captureSession];
     
-    // 设置视屏内容拉伸设置
+    //设置视频重力
     [self.preViewLayer setVideoGravity:AVLayerVideoGravityResizeAspect];
     
-    // 设置图层的fream
-    [self.preViewLayer setFrame:CGRectMake(0, 164, self.view.width, self.view.height - 160)];
+    //设置图层的frame
+    [self.preViewLayer setFrame:self.view.bounds];
     
-    // 添加图层
+    //添加图层
     [self.view.layer addSublayer:self.preViewLayer];
     
-    // 文件写入沙盒
-    NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"chengqian.h264"];
-    // 先移除已经存在的文件
+    
+    //文件写入沙盒
+    NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES)lastObject]stringByAppendingPathComponent:@"cc_video.h264"];
+   // NSString *filePath = [NSHomeDirectory()stringByAppendingPathComponent:@"/Documents/cc_video.h264"];
+    
+    
+    //先移除已存在的文件
     [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
     
-    // 新建文件
+    //新建文件
     BOOL createFile = [[NSFileManager defaultManager] createFileAtPath:filePath contents:nil attributes:nil];
     if (!createFile) {
-        NSLog(@"创建文件失败");
-    } else {
-        NSLog(@"创建文件成功");
+        
+        NSLog(@"create file failed");
+    }else
+    {
+        NSLog(@"create file success");
+
     }
     
-    NSLog(@"fileePath = %@", filePath);
-    // 初始化FileHandele
-    self.fileHandele = [NSFileHandle fileHandleForWritingAtPath:filePath];
+    NSLog(@"filePaht = %@",filePath);
+    fileHandele = [NSFileHandle fileHandleForWritingAtPath:filePath];
     
-    // 初始化videoToolBox
+    
+    //初始化videoToolbBox
     [self initVideoToolBox];
-    // 开始捕捉
+    
+    //开始捕捉
     [self.captureSession startRunning];
+    
+//    // 设置捕捉分辨率 分辨率修改测试
+//    self.captureSession.sessionPreset = AVCaptureSessionPreset640x480;
+//    // 创建队列
+//    self.captureQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    self.encodeQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//
+//    AVCaptureDevice *inputDevice = nil;
+////    NSArray *devices = [AVCaptureDeviceDiscoverySession discoverySessionWithDeviceTypes:@[AVCaptureDeviceTypeBuiltInWideAngleCamera,
+////                                                                                          AVCaptureDeviceTypeBuiltInTelephotoCamera] mediaType:AVMediaTypeVideo position:AVCaptureDevicePositionBack].devices;
+//
+//    NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+//    for (AVCaptureDevice *device in devices) {
+//        if ([device position] == AVCaptureDevicePositionBack) {
+//            inputDevice = device;
+//            break;
+//        }
+//    }
+//
+//    // 将设备封装成AVCaptureDeviceInput对象
+//    self.captureInput = [[AVCaptureDeviceInput alloc] initWithDevice:inputDevice error:nil];
+//    // 判断是否能添加设备
+//    if ([self.captureSession canAddInput:self.captureInput]) {
+//        [self.captureSession addInput:self.captureInput];
+//    } else {
+//        NSLog(@"获取输入设备失败");
+//        return;
+//    }
+//
+//    // 配置输出设备
+//    self.captureVideoDataOutput = [[AVCaptureVideoDataOutput alloc] init];
+//
+//    // 设置最后丢弃的videoFrame未NO
+//    //TODO:test
+//    [self.captureVideoDataOutput setAlwaysDiscardsLateVideoFrames:NO];
+//
+//    //YUV 4:2:0
+//    // 设置video的视屏捕捉像素点压缩方式为420
+////    [self.captureVideoDataOutput setVideoSettings:@{(id)kCVPixelBufferPixelFormatTypeKey : @(kCVPixelFormatType_420YpCbCr8BiPlanarFullRange)}];
+//    [self.captureVideoDataOutput setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_420YpCbCr8BiPlanarFullRange] forKey:(id)kCVPixelBufferPixelFormatTypeKey]];
+//    // 设置捕捉代理和捕捉队列
+//    [self.captureVideoDataOutput setSampleBufferDelegate:self queue:self.captureQueue];
+//    // 判断是否能添加输出
+//    if ([self.captureSession canAddOutput:self.captureVideoDataOutput]) {
+//        [self.captureSession addOutput:self.captureVideoDataOutput];
+//    } else {
+//        NSLog(@"输出设备添加失败");
+//        return;
+//    }
+//    // 创建连接
+//    AVCaptureConnection *connection = [self.captureVideoDataOutput connectionWithMediaType:AVMediaTypeVideo];
+//
+//    // 设置视屏捕捉方向
+//    [connection setVideoOrientation:AVCaptureVideoOrientationPortrait];
+//
+//    // 初始化图层
+//    self.preViewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.captureSession];
+//
+//    // 设置视屏内容拉伸设置
+//    [self.preViewLayer setVideoGravity:AVLayerVideoGravityResizeAspect];
+//
+//    // 设置图层的fream
+//    [self.preViewLayer setFrame:CGRectMake(0, 164, self.view.width, self.view.height - 160)];
+//
+//    // 添加图层
+//    [self.view.layer addSublayer:self.preViewLayer];
+//
+//    // 文件写入沙盒
+//    NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"chengqian.h264"];
+//    // 先移除已经存在的文件
+//    [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
+//
+//    // 新建文件
+//    BOOL createFile = [[NSFileManager defaultManager] createFileAtPath:filePath contents:nil attributes:nil];
+//    if (!createFile) {
+//        NSLog(@"创建文件失败");
+//    } else {
+//        NSLog(@"创建文件成功");
+//    }
+//
+//    NSLog(@"fileePath = %@", filePath);
+//    // 初始化FileHandele
+//    self.fileHandele = [NSFileHandle fileHandleForWritingAtPath:filePath];
+//
+//    // 初始化videoToolBox
+//    [self initVideoToolBox];
+//    // 开始捕捉
+//    [self.captureSession startRunning];
 }
 
 - (void)stopCapture {
@@ -153,14 +251,14 @@
     // 结束VideoToolBox
     [self endVideoToolBox];
     // 关闭文件
-    [self.fileHandele closeFile];
+    [fileHandele closeFile];
     
-    self.fileHandele = nil;
+    fileHandele = nil;
 }
 
 // 初始化VideToolBox
 - (void) initVideoToolBox {
-    dispatch_async(self.encodeQueue, ^{
+    dispatch_async(cEncodeQueue, ^{
         frameId = 0;
         int width  = 480;
         int height = 640;
@@ -175,7 +273,7 @@
         //参数8：回调  当VTCompressionSessionEncodeFrame被调用压缩一次后会被异步调用.注:当你设置NULL的时候,你需要调用VTCompressionSessionEncodeFrameWithOutputHandler方法进行压缩帧处理,支持iOS9.0以上
         //参数9：outputCallbackRefCon: 回调客户定义的参考值
         //参数10：compressionSessionOut: 编码会话变量
-        OSStatus statusCode = VTCompressionSessionCreate(NULL, width, height, kCMVideoCodecType_H264, NULL, NULL, NULL, didCompressH264, (__bridge  void *)(self), &encodeingSession);
+        OSStatus statusCode = VTCompressionSessionCreate(NULL, width, height, kCMVideoCodecType_H264, NULL, NULL, NULL, didCompressH264, (__bridge  void *)(self), &cEncodeingSession);
         NSLog(@"H264:VTCompressionSessionCreate:%d",(int)statusCode);
         if (statusCode != 0) {
             return;
@@ -183,36 +281,36 @@
         
         
         //设置实时编码输出（避免延迟）
-        VTSessionSetProperty(encodeingSession, kVTCompressionPropertyKey_RealTime, kCFBooleanTrue);
-        VTSessionSetProperty(encodeingSession, kVTCompressionPropertyKey_ProfileLevel,kVTProfileLevel_H264_Baseline_AutoLevel);
+        VTSessionSetProperty(cEncodeingSession, kVTCompressionPropertyKey_RealTime, kCFBooleanTrue);
+        VTSessionSetProperty(cEncodeingSession, kVTCompressionPropertyKey_ProfileLevel,kVTProfileLevel_H264_Baseline_AutoLevel);
         
         //是否产生B帧(因为B帧在解码时并不是必要的,是可以抛弃B帧的)
-        VTSessionSetProperty(encodeingSession, kVTCompressionPropertyKey_AllowFrameReordering, kCFBooleanFalse);
+        VTSessionSetProperty(cEncodeingSession, kVTCompressionPropertyKey_AllowFrameReordering, kCFBooleanFalse);
         
         //设置关键帧（GOPsize）间隔，GOP太小的话图像会模糊
         int frameInterval = 10;
         CFNumberRef frameIntervalRaf = CFNumberCreate(kCFAllocatorDefault, kCFNumberIntType, &frameInterval);
-        VTSessionSetProperty(encodeingSession, kVTCompressionPropertyKey_MaxKeyFrameInterval, frameIntervalRaf);
+        VTSessionSetProperty(cEncodeingSession, kVTCompressionPropertyKey_MaxKeyFrameInterval, frameIntervalRaf);
         
         //设置期望帧率，不是实际帧率
         int fps = 10;
         CFNumberRef fpsRef = CFNumberCreate(kCFAllocatorDefault, kCFNumberIntType, &fps);
-        VTSessionSetProperty(encodeingSession, kVTCompressionPropertyKey_ExpectedFrameRate, fpsRef);
+        VTSessionSetProperty(cEncodeingSession, kVTCompressionPropertyKey_ExpectedFrameRate, fpsRef);
         
         //码率的理解：码率大了话就会非常清晰，但同时文件也会比较大。码率小的话，图像有时会模糊，但也勉强能看
         //码率计算公式，参考印象笔记
         //设置码率、上限、单位是bps
         int bitRate = width * height * 3 * 4 * 8;
         CFNumberRef bitRateRef = CFNumberCreate(kCFAllocatorDefault, kCFNumberSInt32Type, &bitRate);
-        VTSessionSetProperty(encodeingSession, kVTCompressionPropertyKey_AverageBitRate, bitRateRef);
+        VTSessionSetProperty(cEncodeingSession, kVTCompressionPropertyKey_AverageBitRate, bitRateRef);
         
         //设置码率，均值，单位是byte
         int bigRateLimit = width * height * 3 * 4;
         CFNumberRef bitRateLimitRef = CFNumberCreate(kCFAllocatorDefault, kCFNumberSInt32Type, &bigRateLimit);
-        VTSessionSetProperty(encodeingSession, kVTCompressionPropertyKey_DataRateLimits, bitRateLimitRef);
+        VTSessionSetProperty(cEncodeingSession, kVTCompressionPropertyKey_DataRateLimits, bitRateLimitRef);
         
         //开始编码
-        VTCompressionSessionPrepareToEncodeFrames(encodeingSession);
+        VTCompressionSessionPrepareToEncodeFrames(cEncodeingSession);
         
     });
 }
@@ -234,12 +332,12 @@
     //参数6：ourceFrameRefCon: 回调函数会引用你设置的这个帧的参考值.
     //参数7：infoFlagsOut: 指向一个VTEncodeInfoFlags来接受一个编码操作.如果使用异步运行,kVTEncodeInfo_Asynchronous被设置；同步运行,kVTEncodeInfo_FrameDropped被设置；设置NULL为不想接受这个信息.
     
-    OSStatus statusCode = VTCompressionSessionEncodeFrame(encodeingSession, imageBuffer, presentationTimeStamp, kCMTimeInvalid, NULL, NULL, &flags);
+    OSStatus statusCode = VTCompressionSessionEncodeFrame(cEncodeingSession, imageBuffer, presentationTimeStamp, kCMTimeInvalid, NULL, NULL, &flags);
     if (statusCode != noErr) {
         NSLog(@"编码失败 code = %d",(int)statusCode);
-        VTCompressionSessionInvalidate(encodeingSession);
-        CFRelease(encodeingSession);
-        encodeingSession = NULL;
+        VTCompressionSessionInvalidate(cEncodeingSession);
+        CFRelease(cEncodeingSession);
+        cEncodeingSession = NULL;
         return;
     }
     NSLog(@"一帧数据开始编码");
@@ -330,15 +428,15 @@ void didCompressH264(void *outputCallbackRefCon, void *SourceFrameRefCon,OSStatu
     
     NSData *byteHeader = [NSData dataWithBytes:bytes length:length];
     
-    [self.fileHandele writeData:byteHeader];
-    [self.fileHandele writeData:sps];
-    [self.fileHandele writeData:byteHeader];
-    [self.fileHandele writeData:pps];
+    [fileHandele writeData:byteHeader];
+    [fileHandele writeData:sps];
+    [fileHandele writeData:byteHeader];
+    [fileHandele writeData:pps];
 }
 
 - (void)gotEncodeData:(NSData *)data isKeyFrame:(BOOL)isKeyFrame {
     NSLog(@"gotEncodeData %d",(int)[data length]);
-    if (self.fileHandele != NULL) {
+    if (fileHandele != NULL) {
         // 添加4个字节的H264协议startCode分隔符
         //一般来说编码器编出的首帧数据为PPS & SPS
         //H264编码时，在每个NAL前添加起始码 0x000001,解码器在码流中检测起始码，当前NAL结束。
@@ -356,25 +454,23 @@ void didCompressH264(void *outputCallbackRefCon, void *SourceFrameRefCon,OSStatu
         // 头字节
         NSData *byteHeader = [NSData dataWithBytes:bytes length:length];
         // 写入头字节
-        [self.fileHandele writeData:byteHeader];
+        [fileHandele writeData:byteHeader];
         // 写入h264数据
-        [self.fileHandele writeData:data];
+        [fileHandele writeData:data];
     }
 }
 
 - (void)endVideoToolBox {
-    if (encodeingSession == NULL) {
-        return;
-    }
-    VTCompressionSessionCompleteFrames(encodeingSession, kCMTimeInvalid);
-    VTCompressionSessionInvalidate(encodeingSession);
-    CFRelease(encodeingSession);
-    encodeingSession = NULL;
+    
+    VTCompressionSessionCompleteFrames(cEncodeingSession, kCMTimeInvalid);
+    VTCompressionSessionInvalidate(cEncodeingSession);
+    CFRelease(cEncodeingSession);
+    cEncodeingSession = NULL;
 }
 
 #pragma  mark - AVCaptureVideoDataOutputSampleBufferDelegate
 - (void)captureOutput:(AVCaptureOutput *)output didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
-    dispatch_async(self.encodeQueue, ^{
+    dispatch_async(cEncodeQueue, ^{
         [self enCode:sampleBuffer];
     });
 }
