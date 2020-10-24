@@ -22,6 +22,7 @@
 #import "CQVideoPlayerViewController.h"
 #import "CQRuntimeViewController.h"
 #import "CQiOSDevelopmentViewController.h"
+//#import "AppOrderFiles.h"
 
 @interface CQHomeRootViewController ()<RETableViewManagerDelegate>
 @property (strong, nonatomic) RETableViewManager *tableManager;
@@ -172,6 +173,13 @@
     
     [self.tableView reloadData];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+//    AppOrderFiles(^(NSString *orderFilePath) {
+//        NSLog(@"生成order文件成功 path : %s",orderFilePath);
+//    });
 }
 
 - (UITableView *)tableView {

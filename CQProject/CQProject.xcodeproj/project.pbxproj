@@ -186,6 +186,8 @@
 		3B71A0BC24C5174E00F695D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B71A0C824C51A8A00F695D2 /* CQRootNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQRootNavigationViewController.h; sourceTree = "<group>"; };
 		3B71A0C924C51A8A00F695D2 /* CQRootNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQRootNavigationViewController.m; sourceTree = "<group>"; };
+		3B71EB972541CCDF00C6A13D /* AppOrderFiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppOrderFiles.h; sourceTree = "<group>"; };
+		3B71EB982541CCDF00C6A13D /* AppOrderFiles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppOrderFiles.m; sourceTree = "<group>"; };
 		3B76B09B25264FF100B39028 /* CQVideoEncodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQVideoEncodeViewController.h; sourceTree = "<group>"; };
 		3B76B09C25264FF100B39028 /* CQVideoEncodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQVideoEncodeViewController.m; sourceTree = "<group>"; };
 		3B8F7A3A24DCF94D00378E99 /* CQiOSDevelopmentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQiOSDevelopmentViewController.h; sourceTree = "<group>"; };
@@ -436,6 +438,7 @@
 		3B71A09224C5174D00F695D2 /* CQProject */ = {
 			isa = PBXGroup;
 			children = (
+				3B71EB892541C95A00C6A13D /* ClangHook */,
 				3BA7F23125158F6C00D00607 /* AudioVideo */,
 				3BA7F23025158F5300D00607 /* home */,
 				3B71A09324C5174D00F695D2 /* AppDelegate.h */,
@@ -471,6 +474,23 @@
 				3B71A0BC24C5174E00F695D2 /* Info.plist */,
 			);
 			path = CQProjectUITests;
+			sourceTree = "<group>";
+		};
+		3B71EB892541C95A00C6A13D /* ClangHook */ = {
+			isa = PBXGroup;
+			children = (
+				3B71EB962541CCDF00C6A13D /* AppOrderFiles */,
+			);
+			path = ClangHook;
+			sourceTree = "<group>";
+		};
+		3B71EB962541CCDF00C6A13D /* AppOrderFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3B71EB972541CCDF00C6A13D /* AppOrderFiles.h */,
+				3B71EB982541CCDF00C6A13D /* AppOrderFiles.m */,
+			);
+			path = AppOrderFiles;
 			sourceTree = "<group>";
 		};
 		3B76B09A25264FA100B39028 /* VideoEncode */ = {
@@ -1292,6 +1312,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/CQProject/iOS开发高手课/16\\ |\\ 性能监控：衡量\\ App\\ 质量的那把尺/IOKit",
 				);
+				"ORDER_FILE[arch=*]" = ./app.order;
+				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.cq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1325,6 +1347,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/CQProject/iOS开发高手课/16\\ |\\ 性能监控：衡量\\ App\\ 质量的那把尺/IOKit",
 				);
+				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ashaj.cq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

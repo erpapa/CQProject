@@ -1,0 +1,20 @@
++[CQFishHookViewController(FishHook) load]
++[CQRuntimeViewController(A) load]
++[CQCallStack load]
++[CQRuntimeSubViewController load]
+_main
+-[AppDelegate window]
+-[AppDelegate setWindow:]
+-[AppDelegate application:didFinishLaunchingWithOptions:]
+-[CQRootNavigationViewController viewDidLoad]
+-[CQHomeRootViewController viewDidLoad]
+___copy_helper_block_e8_32r
+___copy_helper_block_e8_32s
+___copy_helper_block_e8_32s40s
+-[CQHomeRootViewController tableManager]
+-[CQHomeRootViewController tableView]
+-[CQHomeRootViewController section]
+___39-[CQHomeRootViewController viewDidLoad]_block_invoke_2
+___destroy_helper_block_e8_32s
+___copy_helper_block_e8_32w
+-[CQHomeRootViewController viewWillAppear:]
