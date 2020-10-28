@@ -30,6 +30,14 @@
 		3B51DB0024C7ED2100BBE0B4 /* CQImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DAFF24C7ED2100BBE0B4 /* CQImageDownloader.m */; };
 		3B51DB0624C82DC800BBE0B4 /* CQGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DB0524C82DC800BBE0B4 /* CQGCDViewController.m */; };
 		3B51DB0924C8330800BBE0B4 /* CQOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DB0824C8330800BBE0B4 /* CQOperation.m */; };
+		3B55177B2549642200CAC3BE /* CQSystemCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B55177A2549642200CAC3BE /* CQSystemCapture.m */; };
+		3B5517812549AA9600CAC3BE /* CQAudioEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5517802549AA9600CAC3BE /* CQAudioEncoder.m */; };
+		3B5517872549AAB500CAC3BE /* CQAudioiDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5517862549AAB500CAC3BE /* CQAudioiDecoder.m */; };
+		3B55178D2549AAF300CAC3BE /* CQAudioPCMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B55178C2549AAF300CAC3BE /* CQAudioPCMPlayer.m */; };
+		3B5517932549AB3000CAC3BE /* CQVideoEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5517922549AB3000CAC3BE /* CQVideoEncoder.m */; };
+		3B5517992549AB7F00CAC3BE /* CQVideoDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5517982549AB7F00CAC3BE /* CQVideoDecoder.m */; };
+		3B55179F2549ABB100CAC3BE /* CQAudioConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B55179E2549ABB100CAC3BE /* CQAudioConfig.m */; };
+		3B5517A52549ABF000CAC3BE /* CQAEAGLLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5517A42549ABF000CAC3BE /* CQAEAGLLayer.m */; };
 		3B568863251662F6000F6993 /* CQPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B568862251662F6000F6993 /* CQPreviewView.m */; };
 		3B5688662516E6C4000F6993 /* CQCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5688652516E6C4000F6993 /* CQCameraView.m */; };
 		3B5688692516E76E000F6993 /* CQCameraStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5688682516E76E000F6993 /* CQCameraStatusView.m */; };
@@ -38,6 +46,7 @@
 		3B5688722516ECC0000F6993 /* CQCameraModeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5688712516ECC0000F6993 /* CQCameraModeView.m */; };
 		3B5688752516ED79000F6993 /* CQCaptureButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5688742516ED79000F6993 /* CQCaptureButton.m */; };
 		3B6736FC24C7DD31007F0D4C /* CQGuestTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6736FB24C7DD31007F0D4C /* CQGuestTestView.m */; };
+		3B67A0E82547184900E400FE /* CQAudioVideoToolBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B67A0E72547184800E400FE /* CQAudioVideoToolBoxViewController.m */; };
 		3B71A09524C5174D00F695D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71A09424C5174D00F695D2 /* AppDelegate.m */; };
 		3B71A09B24C5174D00F695D2 /* CQHomeRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71A09A24C5174D00F695D2 /* CQHomeRootViewController.m */; };
 		3B71A09E24C5174D00F695D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B71A09C24C5174D00F695D2 /* Main.storyboard */; };
@@ -151,6 +160,22 @@
 		3B51DB0524C82DC800BBE0B4 /* CQGCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQGCDViewController.m; sourceTree = "<group>"; };
 		3B51DB0724C8330800BBE0B4 /* CQOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQOperation.h; sourceTree = "<group>"; };
 		3B51DB0824C8330800BBE0B4 /* CQOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQOperation.m; sourceTree = "<group>"; };
+		3B5517792549642100CAC3BE /* CQSystemCapture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQSystemCapture.h; sourceTree = "<group>"; };
+		3B55177A2549642200CAC3BE /* CQSystemCapture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQSystemCapture.m; sourceTree = "<group>"; };
+		3B55177F2549AA9600CAC3BE /* CQAudioEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQAudioEncoder.h; sourceTree = "<group>"; };
+		3B5517802549AA9600CAC3BE /* CQAudioEncoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQAudioEncoder.m; sourceTree = "<group>"; };
+		3B5517852549AAB500CAC3BE /* CQAudioiDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQAudioiDecoder.h; sourceTree = "<group>"; };
+		3B5517862549AAB500CAC3BE /* CQAudioiDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQAudioiDecoder.m; sourceTree = "<group>"; };
+		3B55178B2549AAF300CAC3BE /* CQAudioPCMPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQAudioPCMPlayer.h; sourceTree = "<group>"; };
+		3B55178C2549AAF300CAC3BE /* CQAudioPCMPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQAudioPCMPlayer.m; sourceTree = "<group>"; };
+		3B5517912549AB3000CAC3BE /* CQVideoEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQVideoEncoder.h; sourceTree = "<group>"; };
+		3B5517922549AB3000CAC3BE /* CQVideoEncoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQVideoEncoder.m; sourceTree = "<group>"; };
+		3B5517972549AB7F00CAC3BE /* CQVideoDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQVideoDecoder.h; sourceTree = "<group>"; };
+		3B5517982549AB7F00CAC3BE /* CQVideoDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQVideoDecoder.m; sourceTree = "<group>"; };
+		3B55179D2549ABB100CAC3BE /* CQAudioConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQAudioConfig.h; sourceTree = "<group>"; };
+		3B55179E2549ABB100CAC3BE /* CQAudioConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQAudioConfig.m; sourceTree = "<group>"; };
+		3B5517A32549ABF000CAC3BE /* CQAEAGLLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQAEAGLLayer.h; sourceTree = "<group>"; };
+		3B5517A42549ABF000CAC3BE /* CQAEAGLLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQAEAGLLayer.m; sourceTree = "<group>"; };
 		3B568861251662F6000F6993 /* CQPreviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQPreviewView.h; sourceTree = "<group>"; };
 		3B568862251662F6000F6993 /* CQPreviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQPreviewView.m; sourceTree = "<group>"; };
 		3B5688642516E6C4000F6993 /* CQCameraView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQCameraView.h; sourceTree = "<group>"; };
@@ -168,6 +193,8 @@
 		3B5688762516EDA4000F6993 /* CQCameeraDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQCameeraDefine.h; sourceTree = "<group>"; };
 		3B6736FA24C7DD31007F0D4C /* CQGuestTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQGuestTestView.h; sourceTree = "<group>"; };
 		3B6736FB24C7DD31007F0D4C /* CQGuestTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQGuestTestView.m; sourceTree = "<group>"; };
+		3B67A0E62547184800E400FE /* CQAudioVideoToolBoxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQAudioVideoToolBoxViewController.h; sourceTree = "<group>"; };
+		3B67A0E72547184800E400FE /* CQAudioVideoToolBoxViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQAudioVideoToolBoxViewController.m; sourceTree = "<group>"; };
 		3B71A09024C5174D00F695D2 /* CQProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CQProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B71A09324C5174D00F695D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3B71A09424C5174D00F695D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -382,6 +409,74 @@
 			path = GCD;
 			sourceTree = "<group>";
 		};
+		3B550F362547FD1D00CAC3BE /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				3B5517792549642100CAC3BE /* CQSystemCapture.h */,
+				3B55177A2549642200CAC3BE /* CQSystemCapture.m */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
+		3B550F372547FD2F00CAC3BE /* AVCoder */ = {
+			isa = PBXGroup;
+			children = (
+				3B550F392547FD4C00CAC3BE /* VideoEncoder */,
+				3B550F382547FD3F00CAC3BE /* AudioEncoder */,
+				3B55179D2549ABB100CAC3BE /* CQAudioConfig.h */,
+				3B55179E2549ABB100CAC3BE /* CQAudioConfig.m */,
+			);
+			path = AVCoder;
+			sourceTree = "<group>";
+		};
+		3B550F382547FD3F00CAC3BE /* AudioEncoder */ = {
+			isa = PBXGroup;
+			children = (
+				3B55177F2549AA9600CAC3BE /* CQAudioEncoder.h */,
+				3B5517802549AA9600CAC3BE /* CQAudioEncoder.m */,
+				3B5517852549AAB500CAC3BE /* CQAudioiDecoder.h */,
+				3B5517862549AAB500CAC3BE /* CQAudioiDecoder.m */,
+				3B55178B2549AAF300CAC3BE /* CQAudioPCMPlayer.h */,
+				3B55178C2549AAF300CAC3BE /* CQAudioPCMPlayer.m */,
+			);
+			path = AudioEncoder;
+			sourceTree = "<group>";
+		};
+		3B550F392547FD4C00CAC3BE /* VideoEncoder */ = {
+			isa = PBXGroup;
+			children = (
+				3B5517912549AB3000CAC3BE /* CQVideoEncoder.h */,
+				3B5517922549AB3000CAC3BE /* CQVideoEncoder.m */,
+				3B5517972549AB7F00CAC3BE /* CQVideoDecoder.h */,
+				3B5517982549AB7F00CAC3BE /* CQVideoDecoder.m */,
+			);
+			path = VideoEncoder;
+			sourceTree = "<group>";
+		};
+		3B550F3A2547FD7000CAC3BE /* AVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3B550F3B2547FD8400CAC3BE /* VideoPlayer */,
+			);
+			path = AVPlayer;
+			sourceTree = "<group>";
+		};
+		3B550F3B2547FD8400CAC3BE /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3B5517A32549ABF000CAC3BE /* CQAEAGLLayer.h */,
+				3B5517A42549ABF000CAC3BE /* CQAEAGLLayer.m */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		3B5517722549624100CAC3BE /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flutter;
+			sourceTree = "<group>";
+		};
 		3B568860251662A7000F6993 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +508,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		3B67A0E5254717FE00E400FE /* AudioVideoToolBoxDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3B550F3A2547FD7000CAC3BE /* AVPlayer */,
+				3B550F372547FD2F00CAC3BE /* AVCoder */,
+				3B550F362547FD1D00CAC3BE /* Capture */,
+				3B67A0E62547184800E400FE /* CQAudioVideoToolBoxViewController.h */,
+				3B67A0E72547184800E400FE /* CQAudioVideoToolBoxViewController.m */,
+			);
+			path = AudioVideoToolBoxDemo;
+			sourceTree = "<group>";
+		};
 		3B71A08724C5174D00F695D2 = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +545,7 @@
 		3B71A09224C5174D00F695D2 /* CQProject */ = {
 			isa = PBXGroup;
 			children = (
+				3B5517722549624100CAC3BE /* Flutter */,
 				3B71EB892541C95A00C6A13D /* ClangHook */,
 				3BA7F23125158F6C00D00607 /* AudioVideo */,
 				3BA7F23025158F5300D00607 /* home */,
@@ -580,6 +688,7 @@
 		3BA7F23125158F6C00D00607 /* AudioVideo */ = {
 			isa = PBXGroup;
 			children = (
+				3B67A0E5254717FE00E400FE /* AudioVideoToolBoxDemo */,
 				3B76B09A25264FA100B39028 /* VideoEncode */,
 				3BA7F2332516467900D00607 /* Camera */,
 				3BA7F22D25158CDF00D00607 /* CQAudioVideoViewController.h */,
@@ -1085,10 +1194,14 @@
 				3BB8289C24FC0DAA00EA1D56 /* CQFishHookViewController+FishHook.m in Sources */,
 				3B0358B0251763AF00597A26 /* NSFileManager+CQ.m in Sources */,
 				3BA7F237251646E300D00607 /* CQCameraViewController.m in Sources */,
+				3B55177B2549642200CAC3BE /* CQSystemCapture.m in Sources */,
+				3B5517932549AB3000CAC3BE /* CQVideoEncoder.m in Sources */,
+				3B67A0E82547184900E400FE /* CQAudioVideoToolBoxViewController.m in Sources */,
 				3BE0026E24CBB33F00829706 /* CQStudent.m in Sources */,
 				3B71A09524C5174D00F695D2 /* AppDelegate.m in Sources */,
 				3B1F2B3624D966DC00EED37A /* CQRuntimeViewController+A.m in Sources */,
 				3B1F2B3924D966EB00EED37A /* CQRuntimeViewController+B.m in Sources */,
+				3B5517872549AAB500CAC3BE /* CQAudioiDecoder.m in Sources */,
 				3B1F2B3F24DBF57100EED37A /* CQTestUIView.m in Sources */,
 				3B08914824FE8B4600F480A3 /* CQFBRetainCycleDetector.m in Sources */,
 				3B021CDE24D6816B00D44AF9 /* MJDownloadConst.m in Sources */,
@@ -1097,7 +1210,9 @@
 				3B021CDF24D6816B00D44AF9 /* NSString+MJDownload.m in Sources */,
 				3B5688692516E76E000F6993 /* CQCameraStatusView.m in Sources */,
 				3B76B09D25264FF100B39028 /* CQVideoEncodeViewController.m in Sources */,
+				3B5517A52549ABF000CAC3BE /* CQAEAGLLayer.m in Sources */,
 				3B1F2B3C24DA4F1D00EED37A /* CQRuntimeSubViewController.m in Sources */,
+				3B5517992549AB7F00CAC3BE /* CQVideoDecoder.m in Sources */,
 				3BBD032324E39835003D9BCE /* CQ16InstruMentsViewController.m in Sources */,
 				3B51DB0024C7ED2100BBE0B4 /* CQImageDownloader.m in Sources */,
 				3B6736FC24C7DD31007F0D4C /* CQGuestTestView.m in Sources */,
@@ -1105,12 +1220,15 @@
 				3B08ACF22505B56A00F480A3 /* CQEnergyViewController.m in Sources */,
 				3B9C2EA424C6E85700CF811A /* UIButton+Expand.m in Sources */,
 				3BF42D2E24D28EC200AA6977 /* CQRunLoopViewController.m in Sources */,
+				3B55178D2549AAF300CAC3BE /* CQAudioPCMPlayer.m in Sources */,
 				3BE0026B24CBB2D700829706 /* CQOCLViewController.m in Sources */,
 				3BBD030524E13FC8003D9BCE /* CQWeakObject.m in Sources */,
 				3BF42D2124CD857600AA6977 /* CQWebViewController.m in Sources */,
 				3B71A0A624C5174E00F695D2 /* main.m in Sources */,
 				3B021CDD24D6816B00D44AF9 /* MJDownloadManager.m in Sources */,
+				3B55179F2549ABB100CAC3BE /* CQAudioConfig.m in Sources */,
 				3B51DB0924C8330800BBE0B4 /* CQOperation.m in Sources */,
+				3B5517812549AA9600CAC3BE /* CQAudioEncoder.m in Sources */,
 				3B56886F2516EA2E000F6993 /* CQFlashControl.m in Sources */,
 				3BF42D1A24CD1CD300AA6977 /* Target_kvoTwo.m in Sources */,
 				3BEC4F5924C5CA430085935F /* CQGestureRecognizerViewController.m in Sources */,

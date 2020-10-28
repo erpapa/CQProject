@@ -9,6 +9,7 @@
 #import "CQAudioVideoViewController.h"
 #import "CQCameraViewController.h"
 #import "CQVideoEncodeViewController.h"
+#import "CQAudioVideoToolBoxViewController.h"
 
 @interface CQAudioVideoViewController ()<RETableViewManagerDelegate>
 @property (strong, nonatomic) RETableViewManager *tableManager;
@@ -43,7 +44,7 @@
     };
     [self.section addItem:iOSDecelopmentItem];
     
-    RETableViewItem *videoEncodeItem = [[RETableViewItem alloc] initWithTitle:@"视频编码Demo"];
+    RETableViewItem *videoEncodeItem = [[RETableViewItem alloc] initWithTitle:@"视频编码解码Demo"];
     videoEncodeItem.selectionHandler = ^(RETableViewItem *item) {
         @strongify(self);
         item.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -51,6 +52,15 @@
         [self.navigationController pushViewController:viewController animated:YES];
     };
     [self.section addItem:videoEncodeItem];
+    
+    RETableViewItem *audioVideoToolBoxItem = [[RETableViewItem alloc] initWithTitle:@"音视频编码解码封装"];
+    audioVideoToolBoxItem.selectionHandler = ^(RETableViewItem *item) {
+        @strongify(self);
+        item.selectionStyle = UITableViewCellSelectionStyleNone;
+        CQAudioVideoToolBoxViewController *viewController = [[CQAudioVideoToolBoxViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    };
+    [self.section addItem:audioVideoToolBoxItem];
 }
 
 - (UITableView *)tableView {
