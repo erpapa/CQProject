@@ -6,8 +6,8 @@
 //  Copyright © 2020 CharType. All rights reserved.
 //
 
-#import "CQAudioiDecoder.h"
+#import "CQAudioDecoder.h"
 
-@implementation CQAudioiDecoder
+@implementation CQAudioDecoder
 
 @end

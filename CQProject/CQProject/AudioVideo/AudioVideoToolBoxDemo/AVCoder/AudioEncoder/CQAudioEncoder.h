@@ -7,11 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
+@class CQAudioConfig;
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface CQAudioEncoder : NSObject
-
+@protocol CQAudioEncoderDelegate <NSObject>
+- (void)audioEncoderCallBack:(NSData *)aacData;
 @end
 
-NS_ASSUME_NONNULL_END
+@interface CQAudioEncoder : NSObject
+@property (nonatomic, strong) CQAudioConfig *config;
+@property (nonatomic, weak) id<CQAudioEncoderDelegate> delegate;
+- (instancetype)initWithConfig:(CQAudioConfig *)config;
+- (void)encodeAudioSamepleBuffer:(CMSampleBufferRef)sampleBuffer;
+// 将sampleBuffer数据提取出PCM数据，返回给ViewController,可以直接播放pcm数据
+- (NSData *)convertAudioSamepleBufferToPcmData:(CMSampleBufferRef)sampleBuffer;
+@end
+

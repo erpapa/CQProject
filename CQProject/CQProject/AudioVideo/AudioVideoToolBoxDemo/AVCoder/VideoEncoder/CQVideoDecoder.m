@@ -7,6 +7,7 @@
 //
 
 #import "CQVideoDecoder.h"
+#import "CQAudioConfig.h"
 
 @implementation CQVideoDecoder
 

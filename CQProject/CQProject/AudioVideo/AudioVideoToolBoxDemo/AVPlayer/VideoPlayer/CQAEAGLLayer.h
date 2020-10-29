@@ -8,10 +8,10 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface CQAEAGLLayer : CAEAGLLayer
-
+@property (nonatomic, strong) CVPixelBufferRef pixelBuffer;
+- (id)initWithFrame:(CGRect)frame;
+- (void)resetRenderBuffer;
 @end
 
-NS_ASSUME_NONNULL_END
