@@ -142,7 +142,7 @@
             return;
         }
         
-        // 设置是什么编码输出 避免延迟
+        // 设置是实时编码输出 避免延迟
         VTSessionSetProperty(encodeingSession,kVTCompressionPropertyKey_RealTime,kCFBooleanTrue);
         VTSessionSetProperty(encodeingSession, kVTCompressionPropertyKey_ProfileLevel, kVTProfileLevel_H264_Baseline_AutoLevel);
         

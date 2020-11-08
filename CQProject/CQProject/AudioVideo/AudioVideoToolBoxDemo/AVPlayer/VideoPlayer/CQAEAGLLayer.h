@@ -10,7 +10,7 @@
 
 
 @interface CQAEAGLLayer : CAEAGLLayer
-@property (nonatomic, strong) CVPixelBufferRef pixelBuffer;
+@property CVPixelBufferRef pixelBuffer;
 - (id)initWithFrame:(CGRect)frame;
 - (void)resetRenderBuffer;
 @end
