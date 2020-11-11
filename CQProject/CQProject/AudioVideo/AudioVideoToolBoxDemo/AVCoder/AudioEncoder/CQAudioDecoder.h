@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AVFoundation/AVFoundation.h>
 @class CQAudioConfig;
 
 @protocol CQAudioDecoderDelegate <NSObject>
