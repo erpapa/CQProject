@@ -6,7 +6,7 @@
 //  Copyright © 2016年 casa. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 extern NSString * _Nonnull const kCTMediatorParamsKeySwiftTargetModuleName;
 

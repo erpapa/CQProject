@@ -6,6 +6,8 @@
 //  Copyright © 2020 casa. All rights reserved.
 //
 
+#if TARGET_OS_IOS
+
 #import "CTMediator+HandyTools.h"
 
 @implementation CTMediator (HandyTools)
@@ -62,3 +64,5 @@
 }
 
 @end
+
+#endif

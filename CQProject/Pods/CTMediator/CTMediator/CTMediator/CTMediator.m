@@ -8,6 +8,7 @@
 
 #import "CTMediator.h"
 #import <objc/runtime.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 NSString * const kCTMediatorParamsKeySwiftTargetModuleName = @"kCTMediatorParamsKeySwiftTargetModuleName";
 
@@ -26,6 +27,7 @@ NSString * const kCTMediatorParamsKeySwiftTargetModuleName = @"kCTMediatorParams
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         mediator = [[CTMediator alloc] init];
+        [mediator cachedTarget]; // 同时把cachedTarget初始化，避免多线程重复初始化
     });
     return mediator;
 }
@@ -84,7 +86,7 @@ NSString * const kCTMediatorParamsKeySwiftTargetModuleName = @"kCTMediatorParams
     } else {
         targetClassString = [NSString stringWithFormat:@"Target_%@", targetName];
     }
-    NSObject *target = self.cachedTarget[targetClassString];
+    NSObject *target = [self safeFetchCachedTarget:targetClassString];
     if (target == nil) {
         Class targetClass = NSClassFromString(targetClassString);
         target = [[targetClass alloc] init];
@@ -101,7 +103,7 @@ NSString * const kCTMediatorParamsKeySwiftTargetModuleName = @"kCTMediatorParams
     }
     
     if (shouldCacheTarget) {
-        self.cachedTarget[targetClassString] = target;
+        [self safeSetCachedTarget:target key:targetClassString];
     }
 
     if ([target respondsToSelector:action]) {
@@ -114,7 +116,9 @@ NSString * const kCTMediatorParamsKeySwiftTargetModuleName = @"kCTMediatorParams
         } else {
             // 这里也是处理无响应请求的地方，在notFound都没有的时候，这个demo是直接return了。实际开发过程中，可以用前面提到的固定的target顶上的。
             [self NoTargetActionResponseWithTargetString:targetClassString selectorString:actionString originParams:params];
-            [self.cachedTarget removeObjectForKey:targetClassString];
+            @synchronized (self) {
+                [self.cachedTarget removeObjectForKey:targetClassString];
+            }
             return nil;
         }
     }
@@ -128,7 +132,9 @@ NSString * const kCTMediatorParamsKeySwiftTargetModuleName = @"kCTMediatorParams
     if (fullTargetName == nil) {
         return;
     }
-    [self.cachedTarget removeObjectForKey:fullTargetName];
+    @synchronized (self) {
+        [self.cachedTarget removeObjectForKey:fullTargetName];
+    }
 }
 
 #pragma mark - private methods
@@ -220,6 +226,19 @@ NSString * const kCTMediatorParamsKeySwiftTargetModuleName = @"kCTMediatorParams
     }
     return _cachedTarget;
 }
+
+- (NSObject *)safeFetchCachedTarget:(NSString *)key {
+    @synchronized (self) {
+        return self.cachedTarget[key];
+    }
+}
+
+- (void)safeSetCachedTarget:(NSObject *)target key:(NSString *)key {
+    @synchronized (self) {
+        self.cachedTarget[key] = target;
+    }
+}
+
 
 @end
 

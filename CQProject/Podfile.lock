@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - CTMediator (36)
+  - CTMediator (44)
   - dsBridge (3.0.6)
   - FBRetainCycleDetector (0.1.4)
   - fishhook (0.2)
@@ -59,10 +59,12 @@ DEPENDENCIES:
   - YYKit (from `https://github.com/cfxiao/YYKit.git`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs:
+  trunk:
     - AFNetworking
     - CTMediator
     - dsBridge
+    - FBRetainCycleDetector
+    - fishhook
     - Kiwi
     - Masonry
     - Objection
@@ -72,9 +74,6 @@ SPEC REPOS:
     - RETableViewManager
     - REValidation
     - SDWebImage
-  trunk:
-    - FBRetainCycleDetector
-    - fishhook
 
 EXTERNAL SOURCES:
   YYKit:
@@ -87,7 +86,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  CTMediator: 918aa0afe3fa537f380a1fb15e7603a7e19fa0c4
+  CTMediator: 933dba523da87bf875e4a7e8728945fbc512f1d2
   dsBridge: 48b62ee8a411ad601a88d6f6c8cf6cb634b206b7
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
@@ -104,4 +103,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: f957aef2ab034360405f68eae396653902f7cbd2
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0
