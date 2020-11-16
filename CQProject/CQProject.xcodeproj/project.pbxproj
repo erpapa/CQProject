@@ -470,13 +470,6 @@
 			path = VideoPlayer;
 			sourceTree = "<group>";
 		};
-		3B5517722549624100CAC3BE /* Flutter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Flutter;
-			sourceTree = "<group>";
-		};
 		3B568860251662A7000F6993 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -545,7 +538,6 @@
 		3B71A09224C5174D00F695D2 /* CQProject */ = {
 			isa = PBXGroup;
 			children = (
-				3B5517722549624100CAC3BE /* Flutter */,
 				3B71EB892541C95A00C6A13D /* ClangHook */,
 				3BA7F23125158F6C00D00607 /* AudioVideo */,
 				3BA7F23025158F5300D00607 /* home */,
@@ -673,13 +665,11 @@
 				3BE0026424CB533700829706 /* UI */,
 				3B51DB0324C82D5300BBE0B4 /* GCD */,
 				3B9C2EA524C706B600CF811A /* 组件化 */,
-				3BEC4F5A24C68C170085935F /* 数据结构 */,
 				3BEC4F5624C5C9CD0085935F /* 手势事件 */,
 				3BEC4F4E24C596BB0085935F /* AFN框架解析 */,
 				3BEC4F3F24C521F70085935F /* runtime */,
 				3BEC4F3E24C521F00085935F /* RunLoop */,
 				3BEC4F3D24C521D20085935F /* Category */,
-				3BEC4F3924C521530085935F /* KVC */,
 				3BEC4F3824C521490085935F /* KVO */,
 			);
 			path = home;
@@ -812,13 +802,6 @@
 			path = KVO;
 			sourceTree = "<group>";
 		};
-		3BEC4F3924C521530085935F /* KVC */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = KVC;
-			sourceTree = "<group>";
-		};
 		3BEC4F3D24C521D20085935F /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -884,13 +867,6 @@
 				3BEC4F5824C5CA430085935F /* CQGestureRecognizerViewController.m */,
 			);
 			path = "手势事件";
-			sourceTree = "<group>";
-		};
-		3BEC4F5A24C68C170085935F /* 数据结构 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "数据结构";
 			sourceTree = "<group>";
 		};
 		3BF42D1424CD1C9E00AA6977 /* Other */ = {
