@@ -16,6 +16,8 @@
 @property (nonatomic, strong) UIButton *button;
 @property (nonatomic, strong) UIButton *view1;
 @property (nonatomic, strong) UIButton *view2;
+@property (nonatomic, strong) UIView *view3;
+@property (nonatomic, strong) UIControl *control;
 @end
 
 @implementation CQGestureRecognizerViewController
@@ -25,30 +27,45 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"手势事件";
-    [self.view addSubview:self.testView];
-    [self.testView addGestureRecognizer:self.guest];
-    [self.testView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.right.bottom.equalTo(self.view);
+    self.control = [[UIControl alloc] initWithFrame:CGRectMake(100, 300, 200, 200)];
+    self.control.backgroundColor = [UIColor blueColor];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
+        NSLog(@"手势被响应了");
+    }];
+    [self.control addGestureRecognizer:tap];
+    [self.view addSubview:self.control];
+//    [self.view addGestureRecognizer:self.guest];
+    [self.control addSubview:self.button];
+//    [self.testView addGestureRecognizer:self.guest];
+    [self.button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.equalTo(self.control);
+        make.size.mas_equalTo(CGSizeMake(200, 100));
     }];
     
-    [self.testView addSubview:self.view1];
-    [self.view1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.testView).offset(100);
-        make.top.equalTo(self.testView).offset(100);
-        make.size.mas_equalTo(CGSizeMake(100, 100));
-    }];
-    [self.testView addSubview:self.view2];
-    [self.view2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.testView).offset(150);
-        make.top.equalTo(self.testView).offset(150);
-        make.size.mas_equalTo(CGSizeMake(100, 100));
-    }];
-    [self.testView addSubview:self.button];
-    [self.button mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.testView).offset(200);
-        make.top.equalTo(self.testView).offset(200);
-        make.size.mas_equalTo(CGSizeMake(100, 100));
-    }];
+//    [self.button addSubview:self.view3];
+//    [self.view3 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(self.button).offset(100);
+//        make.top.equalTo(self.button).offset(100);
+//        make.size.mas_equalTo(CGSizeMake(100, 100));
+//    }];
+//    [self.testView addSubview:self.view1];
+//    [self.view1 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(self.testView).offset(100);
+//        make.top.equalTo(self.testView).offset(100);
+//        make.size.mas_equalTo(CGSizeMake(100, 100));
+//    }];
+//    [self.testView addSubview:self.view2];
+//    [self.view2 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(self.testView).offset(150);
+//        make.top.equalTo(self.testView).offset(150);
+//        make.size.mas_equalTo(CGSizeMake(100, 100));
+//    }];
+//    [self.testView addSubview:self.button];
+//    [self.button mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(self.testView).offset(200);
+//        make.top.equalTo(self.testView).offset(200);
+//        make.size.mas_equalTo(CGSizeMake(100, 100));
+//    }];
     
 }
 
@@ -65,6 +82,20 @@
         _testView = [[CQGuestTestView alloc] init];
     }
     return _testView;
+}
+
+- (UIView *)view3 {
+    if (!_view3) {
+        _view3 = [[UIView alloc] init];
+        _view3.backgroundColor = [UIColor whiteColor];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(view3Click)];
+        [_view3 addGestureRecognizer:tap];
+    }
+    return _view3;
+}
+
+- (void)view3Click {
+    NSLog(@"%s",__func__);
 }
 
 - (UIButton *)view1 {
@@ -98,11 +129,17 @@
     return _view2;
 }
 
+- (void)buttonGuestClick {
+    NSLog(@"%s",__func__);
+}
+
 - (UIButton *)button {
     if (!_button) {
         _button = [[UIButton alloc] init];
         [_button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
         _button.backgroundColor = [UIColor redColor];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonGuestClick)];
+        [_button addGestureRecognizer:tap];
 //        _button.expandEdgeInsets = UIEdgeInsetsMake(-10, -10, -10, -10);
 //        _button.expandTop = -10;
     }

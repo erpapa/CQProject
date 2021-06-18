@@ -22,6 +22,7 @@
 #import "CQVideoPlayerViewController.h"
 #import "CQRuntimeViewController.h"
 #import "CQiOSDevelopmentViewController.h"
+#import "CQPerson.h"
 //#import "AppOrderFiles.h"
 
 @interface CQHomeRootViewController ()<RETableViewManagerDelegate>
@@ -47,15 +48,20 @@
         make.left.right.width.height.equalTo(self.view);
     }];
     
-    
+
     @weakify(self);
     RETableViewItem *iOSDecelopmentItem = [[RETableViewItem alloc] initWithTitle:@"iOS优化"];
         iOSDecelopmentItem.selectionHandler = ^(RETableViewItem *item) {
         @strongify(self);
-        item.selectionStyle = UITableViewCellSelectionStyleNone;
-        CQiOSDevelopmentViewController *viewControlleer = [[CQiOSDevelopmentViewController alloc] init];
-        viewControlleer.view.backgroundColor = [UIColor whiteColor];
-        [self.navigationController pushViewController:viewControlleer animated:YES];
+//        item.selectionStyle = UITableViewCellSelectionStyleNone;
+//        CQiOSDevelopmentViewController *viewControlleer = [[CQiOSDevelopmentViewController alloc] init];
+//        viewControlleer.view.backgroundColor = [UIColor whiteColor];
+//        [self.navigationController pushViewController:viewControlleer animated:YES];
+            
+            dispatch_async(dispatch_get_global_queue(0, 0), ^{
+               // 测试在一个子线程递归
+//                [self subThreadCall:2];
+            });
     };
     [self.section addItem:iOSDecelopmentItem];
     
@@ -181,6 +187,11 @@
 //        NSLog(@"生成order文件成功 path : %s",orderFilePath);
 //    });
 }
+
+- (void)subThreadCall:(int)a {
+    [self subThreadCall:1];
+}
+
 
 - (UITableView *)tableView {
     if (!_tableView) {

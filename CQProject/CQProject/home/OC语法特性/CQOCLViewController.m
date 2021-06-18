@@ -14,6 +14,7 @@
 @interface CQOCLViewController ()
 @property (nonatomic, strong) CQStudent *student;
 @property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) void (^myBlock)(void);
 @end
 
 @implementation CQOCLViewController
@@ -24,7 +25,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self myBlockSuperTest];
+//    [self myBlockSuperTest];
+    __block NSObject *object = [[NSObject alloc] init];
+    [self setAssociateValue:@(1) withKey:&object];
+    NSNumber *m1 = [self getAssociatedValueForKey:&object];
+    NSLog(@"m1 == %@",m1);
+    @weakify(self);
+    self.myBlock = ^{
+        @strongify(self);
+        [self setAssociateValue:@(2) withKey:&object];
+    };
+    NSNumber *m2 = [self getAssociatedValueForKey:&object];
+    NSLog(@"m2 == %@",m2);
+    self.myBlock();
+    NSNumber *m3 = [self getAssociatedValueForKey:&object];
+    NSLog(@"m3 == %@",m3);
 }
 
 - (void)myBlockSuperTest {
