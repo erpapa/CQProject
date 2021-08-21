@@ -89,6 +89,7 @@
 		3BF42D2E24D28EC200AA6977 /* CQRunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF42D2D24D28EC200AA6977 /* CQRunLoopViewController.m */; };
 		3BF42D3E24D65E9600AA6977 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF42D3D24D65E9600AA6977 /* YYFPSLabel.m */; };
 		84202E6E33BB5326884C2857 /* libPods-CQProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7EA02AFF1C5BFB20CFD989 /* libPods-CQProjectTests.a */; };
+		888B6FC4267C7CA20052E801 /* 01你拥有的最宝贵的财富是什么.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 888B6FC3267C7CA20052E801 /* 01你拥有的最宝贵的财富是什么.mp3 */; };
 		BEB4DC81F674F62BDF54037D /* libPods-CQProjectUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17DFB3FC68D020EC5429D245 /* libPods-CQProjectUITests.a */; };
 		D6FD2EF2790E9969F14B23A6 /* libPods-CQProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D374E657B19FA8C43B92F63 /* libPods-CQProject.a */; };
 /* End PBXBuildFile section */
@@ -282,6 +283,7 @@
 		4BD9EAD8F0B76B275B8BBE09 /* Pods-CQProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CQProject.release.xcconfig"; path = "Target Support Files/Pods-CQProject/Pods-CQProject.release.xcconfig"; sourceTree = "<group>"; };
 		5F1DFEFFF0570DCAC8513D74 /* Pods-CQProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CQProject.debug.xcconfig"; path = "Target Support Files/Pods-CQProject/Pods-CQProject.debug.xcconfig"; sourceTree = "<group>"; };
 		7D374E657B19FA8C43B92F63 /* libPods-CQProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CQProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		888B6FC3267C7CA20052E801 /* 01你拥有的最宝贵的财富是什么.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01你拥有的最宝贵的财富是什么.mp3"; sourceTree = "<group>"; };
 		C35BBBD340662686362F03D2 /* Pods-CQProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CQProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-CQProjectUITests/Pods-CQProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DC7EA02AFF1C5BFB20CFD989 /* libPods-CQProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CQProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E33A8CCC2DC284D51FC8B5 /* Pods-CQProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CQProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-CQProjectUITests/Pods-CQProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -550,6 +552,7 @@
 				3BEC4F4A24C576A90085935F /* projectPrefixHeader.pch */,
 				3B71A09C24C5174D00F695D2 /* Main.storyboard */,
 				3B71A09F24C5174E00F695D2 /* Assets.xcassets */,
+				888B6FC3267C7CA20052E801 /* 01你拥有的最宝贵的财富是什么.mp3 */,
 				3B71A0A124C5174E00F695D2 /* LaunchScreen.storyboard */,
 				3B71A0A424C5174E00F695D2 /* Info.plist */,
 				3B71A0A524C5174E00F695D2 /* main.m */,
@@ -1031,6 +1034,7 @@
 				3B71A0A324C5174E00F695D2 /* LaunchScreen.storyboard in Resources */,
 				3B71A0A024C5174E00F695D2 /* Assets.xcassets in Resources */,
 				3B71A09E24C5174D00F695D2 /* Main.storyboard in Resources */,
+				888B6FC4267C7CA20052E801 /* 01你拥有的最宝贵的财富是什么.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

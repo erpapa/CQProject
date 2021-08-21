@@ -20,6 +20,9 @@
 @implementation CQOCLViewController
 
 - (void)dealloc {
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        NSLog(@"延时打印 self %@", self);
+//    });
     NSLog(@"%s",__func__);
 }
 

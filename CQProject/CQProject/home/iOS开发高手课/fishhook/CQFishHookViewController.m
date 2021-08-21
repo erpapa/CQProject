@@ -6,7 +6,7 @@
 //
 
 #import "CQFishHookViewController.h"
-#import <fishhook/fishhook.h>
+//#import <fishhook/fishhook.h>
 
 @interface CQFishHookViewController ()
 @end

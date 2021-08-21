@@ -7,13 +7,13 @@
 //
 
 #import "CQFBRetainCycleDetectorViewController.h"
-#import <FBRetainCycleDetector/FBRetainCycleDetector.h>
+//#import <FBRetainCycleDetector/FBRetainCycleDetector.h>
 #import "CQFBRetainCycleDetector.h"
 
 @interface CQFBRetainCycleDetectorViewController ()
 @property (nonatomic, copy) void (^myBlock)(void);
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, strong) FBRetainCycleDetector *detector;
+//@property (nonatomic, strong) FBRetainCycleDetector *detector;
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) CQFBRetainCycleDetector *object;
 @end
@@ -52,10 +52,10 @@
 }
 
 - (void)testRetainCycle {
-    FBRetainCycleDetector *detector = [[FBRetainCycleDetector alloc] init];
-    [detector addCandidate:self];
-    NSSet *retainCycles = [detector findRetainCycles];
-    NSLog(@"%@", retainCycles);
+//    FBRetainCycleDetector *detector = [[FBRetainCycleDetector alloc] init];
+//    [detector addCandidate:self];
+//    NSSet *retainCycles = [detector findRetainCycles];
+//    NSLog(@"%@", retainCycles);
 }
 
 - (void)viewDidDisappear:(BOOL)animated {

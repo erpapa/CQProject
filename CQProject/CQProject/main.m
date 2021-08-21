@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-#import <FBRetainCycleDetector/FBAssociationManager.h>
+//#import <FBRetainCycleDetector/FBAssociationManager.h>
 
 int main(int argc, char * argv[]) {
-    [FBAssociationManager hook];
+//    [FBAssociationManager hook];
     NSString * appDelegateClassName;
     @autoreleasepool {
         appDelegateClassName = NSStringFromClass([AppDelegate class]);

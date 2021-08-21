@@ -29,12 +29,27 @@
 @property (strong, nonatomic) RETableViewManager *tableManager;
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) RETableViewSection *section;
+@property (copy, nonatomic) NSString *name;
 @end
 
 @implementation CQHomeRootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    for (int i = 0;i < 1000; i++) {
+        dispatch_async(queue, ^{
+            self.name = [NSString stringNamed:@"kasjhdkajhdkajsdhkajsdkadsjhdkajhdskjhd"];
+        });
+    }
+    
+//    for (int i = 0;i < 1000; i++) {
+//        dispatch_async(queue, ^{
+//            self.name = [NSString stringNamed:@"asdf"];
+//        });
+//    }
+    
     [[self rac_willDeallocSignal] subscribeNext:^(id x) {
         
     }];

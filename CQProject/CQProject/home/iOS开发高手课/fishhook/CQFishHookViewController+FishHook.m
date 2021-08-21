@@ -19,21 +19,21 @@
 }
 
 - (void)bindExchangeMethod {
-    struct rebinding ex;
-       // 需要hook的函数名 C字符串
-       ex.name = "method_exchangeImplementations";
-       // 新的函数地址
-       ex.replacement = myExchange;
-       // 指向原函数地址
-       ex.replaced = (void *)&exhangeP;
-       // rebinding结构体数组
-       struct rebinding rebs[1] = {ex};
-       int isbind = rebind_symbols(rebs, 1);
-       if (isbind == 0) {
-           NSLog(@"绑定成功");
-       } else {
-           NSLog(@"绑定失败");
-       }
+//    struct rebinding ex;
+//       // 需要hook的函数名 C字符串
+//       ex.name = "method_exchangeImplementations";
+//       // 新的函数地址
+//       ex.replacement = myExchange;
+//       // 指向原函数地址
+//       ex.replaced = (void *)&exhangeP;
+//       // rebinding结构体数组
+//       struct rebinding rebs[1] = {ex};
+//       int isbind = rebind_symbols(rebs, 1);
+//       if (isbind == 0) {
+//           NSLog(@"绑定成功");
+//       } else {
+//           NSLog(@"绑定失败");
+//       }
 }
 
 void (*exhangeP)(Method _Nonnull m1,Method _Nonnull m2);

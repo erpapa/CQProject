@@ -19,7 +19,7 @@ target 'CQProject' do
 #   pod 'MLeaksFinder'
 #   pod 'OOMDetector', '1.3'
     pod 'fishhook', '0.2'
-    pod 'FBRetainCycleDetector'
+#    pod 'FBRetainCycleDetector'
     
     
 

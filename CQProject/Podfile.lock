@@ -16,7 +16,6 @@ PODS:
     - AFNetworking/NSURLSession
   - CTMediator (44)
   - dsBridge (3.0.6)
-  - FBRetainCycleDetector (0.1.4)
   - fishhook (0.2)
   - Kiwi (3.0.0)
   - Masonry (1.0.2)
@@ -46,7 +45,6 @@ DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - CTMediator
   - dsBridge
-  - FBRetainCycleDetector
   - fishhook (= 0.2)
   - Kiwi
   - Masonry (~> 1.0.2)
@@ -63,7 +61,6 @@ SPEC REPOS:
     - AFNetworking
     - CTMediator
     - dsBridge
-    - FBRetainCycleDetector
     - fishhook
     - Kiwi
     - Masonry
@@ -88,7 +85,6 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CTMediator: 933dba523da87bf875e4a7e8728945fbc512f1d2
   dsBridge: 48b62ee8a411ad601a88d6f6c8cf6cb634b206b7
-  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
@@ -101,6 +97,6 @@ SPEC CHECKSUMS:
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: f957aef2ab034360405f68eae396653902f7cbd2
+PODFILE CHECKSUM: f5ab0890545253220cc487d905a49c77a5abbab9
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1
