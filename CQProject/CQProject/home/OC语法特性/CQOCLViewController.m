@@ -13,6 +13,7 @@
 
 @interface CQOCLViewController ()
 @property (nonatomic, strong) CQStudent *student;
+@property (nonatomic, strong) CQPerson *person;
 @property (nonatomic, strong) UIButton *button;
 @property (nonatomic, strong) void (^myBlock)(void);
 @end
@@ -28,6 +29,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.student = [[CQStudent alloc] init];
+    self.person = [[CQPerson alloc] init];
 //    [self myBlockSuperTest];
     __block NSObject *object = [[NSObject alloc] init];
     [self setAssociateValue:@(1) withKey:&object];
@@ -68,6 +71,7 @@
 
 - (void)weeakObjectTest {
     self.student = [[CQStudent alloc] init];
+    self.person = [[CQPerson alloc] init];
     self.student.weakObject = [[CQWeakObject alloc] init];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [controllerWeakObject test];
