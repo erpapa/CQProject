@@ -20,7 +20,7 @@
 		3B08914524FE805600F480A3 /* CQFBRetainCycleDetectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B08914424FE805600F480A3 /* CQFBRetainCycleDetectorViewController.m */; };
 		3B08914824FE8B4600F480A3 /* CQFBRetainCycleDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B08914724FE8B4600F480A3 /* CQFBRetainCycleDetector.m */; };
 		3B08ACF22505B56A00F480A3 /* CQEnergyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B08ACF12505B56A00F480A3 /* CQEnergyViewController.m */; };
-		3B1F2B3324D9661400EED37A /* CQRuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F2B3224D9661400EED37A /* CQRuntimeViewController.m */; };
+		3B1F2B3324D9661400EED37A /* CQRuntimeViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F2B3224D9661400EED37A /* CQRuntimeViewController.mm */; };
 		3B1F2B3624D966DC00EED37A /* CQRuntimeViewController+A.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F2B3524D966DC00EED37A /* CQRuntimeViewController+A.m */; };
 		3B1F2B3924D966EB00EED37A /* CQRuntimeViewController+B.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F2B3824D966EB00EED37A /* CQRuntimeViewController+B.m */; };
 		3B1F2B3C24DA4F1D00EED37A /* CQRuntimeSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F2B3B24DA4F1D00EED37A /* CQRuntimeSubViewController.m */; };
@@ -142,7 +142,7 @@
 		3B08ACF02505B56A00F480A3 /* CQEnergyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQEnergyViewController.h; sourceTree = "<group>"; };
 		3B08ACF12505B56A00F480A3 /* CQEnergyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQEnergyViewController.m; sourceTree = "<group>"; };
 		3B1F2B3124D9661400EED37A /* CQRuntimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQRuntimeViewController.h; sourceTree = "<group>"; };
-		3B1F2B3224D9661400EED37A /* CQRuntimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQRuntimeViewController.m; sourceTree = "<group>"; };
+		3B1F2B3224D9661400EED37A /* CQRuntimeViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CQRuntimeViewController.mm; sourceTree = "<group>"; };
 		3B1F2B3424D966DC00EED37A /* CQRuntimeViewController+A.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CQRuntimeViewController+A.h"; sourceTree = "<group>"; };
 		3B1F2B3524D966DC00EED37A /* CQRuntimeViewController+A.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CQRuntimeViewController+A.m"; sourceTree = "<group>"; };
 		3B1F2B3724D966EB00EED37A /* CQRuntimeViewController+B.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CQRuntimeViewController+B.h"; sourceTree = "<group>"; };
@@ -284,6 +284,7 @@
 		5F1DFEFFF0570DCAC8513D74 /* Pods-CQProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CQProject.debug.xcconfig"; path = "Target Support Files/Pods-CQProject/Pods-CQProject.debug.xcconfig"; sourceTree = "<group>"; };
 		7D374E657B19FA8C43B92F63 /* libPods-CQProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CQProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		888B6FC3267C7CA20052E801 /* 01你拥有的最宝贵的财富是什么.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01你拥有的最宝贵的财富是什么.mp3"; sourceTree = "<group>"; };
+		88949DFA272808D600E7E39F /* MJClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJClassInfo.h; sourceTree = "<group>"; };
 		C35BBBD340662686362F03D2 /* Pods-CQProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CQProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-CQProjectUITests/Pods-CQProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DC7EA02AFF1C5BFB20CFD989 /* libPods-CQProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CQProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E33A8CCC2DC284D51FC8B5 /* Pods-CQProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CQProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-CQProjectUITests/Pods-CQProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -540,6 +541,7 @@
 		3B71A09224C5174D00F695D2 /* CQProject */ = {
 			isa = PBXGroup;
 			children = (
+				88949DFA272808D600E7E39F /* MJClassInfo.h */,
 				3B71EB892541C95A00C6A13D /* ClangHook */,
 				3BA7F23125158F6C00D00607 /* AudioVideo */,
 				3BA7F23025158F5300D00607 /* home */,
@@ -830,7 +832,7 @@
 			isa = PBXGroup;
 			children = (
 				3B1F2B3124D9661400EED37A /* CQRuntimeViewController.h */,
-				3B1F2B3224D9661400EED37A /* CQRuntimeViewController.m */,
+				3B1F2B3224D9661400EED37A /* CQRuntimeViewController.mm */,
 				3B1F2B3A24DA4F1D00EED37A /* CQRuntimeSubViewController.h */,
 				3B1F2B3B24DA4F1D00EED37A /* CQRuntimeSubViewController.m */,
 				3B1F2B3424D966DC00EED37A /* CQRuntimeViewController+A.h */,
@@ -1151,7 +1153,7 @@
 				3B71A0CA24C51A8A00F695D2 /* CQRootNavigationViewController.m in Sources */,
 				3B021CEB24D7B5EF00D44AF9 /* NSString+CQDownload.m in Sources */,
 				3B71A09B24C5174D00F695D2 /* CQHomeRootViewController.m in Sources */,
-				3B1F2B3324D9661400EED37A /* CQRuntimeViewController.m in Sources */,
+				3B1F2B3324D9661400EED37A /* CQRuntimeViewController.mm in Sources */,
 				3B021CE324D6CFF000D44AF9 /* CQVideoPlayerViewController.m in Sources */,
 				3BF42D1724CD1CBB00AA6977 /* CQOtherViewController.m in Sources */,
 				3BEC4F4624C569A20085935F /* Person.m in Sources */,
